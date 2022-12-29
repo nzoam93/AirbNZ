@@ -1,0 +1,39 @@
+/* body{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    margin: 5px;
+} */
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: right; */
+    /* padding: 5px; */
+}
+
+.loginLinks {
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* margin-right: 5px; */
+}
+
+#signup{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+#login {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#login:hover{
+    background-color: rgb(214, 214, 214);
+}
+
+#signup:hover{
+    background-color: rgb(214, 214, 214);
+}

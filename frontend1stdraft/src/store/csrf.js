@@ -1,6 +1,3 @@
-//these commented out methods make sure that there is an authenticity token present by first doing a get request and then...
-//...setting the resutlant token under the key of X-CSRF-Token
-
 // export const restoreCSRF = async ()=>{
 //     let res = await csrfFetch('/api/session')
 //     storeCSRFToken(res)
@@ -17,8 +14,6 @@ const csrfFetch = async (url, options = {}) => {
     options.method = options.method || 'GET';
     if (options.method.toUpperCase() !== 'GET'){
         options.headers['Content-Type'] = options.headers['Content-Type'] || 'application/json';
-        //this token is the token that is provided by the Rails app (in the application controller)
-        //this line causes it to be retrieved from sessionStorage (this sessionStorage can be seen in Google Dev tools)
         options.headers['X-CSRF-Token'] = sessionStorage.getItem('X-CSRF-Token');
     }
 
