@@ -48,8 +48,10 @@ function SignupFormPage() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          placeholder="email"
         />
       </label>
+      <br />
       <label>
         Username
         <input
@@ -57,8 +59,10 @@ function SignupFormPage() {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
+          placeholder="username"
         />
       </label>
+      <br />
       <label>
         Password
         <input
@@ -66,8 +70,10 @@ function SignupFormPage() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          placeholder="password"
         />
       </label>
+      <br />
       <label>
         Confirm Password
         <input
@@ -75,8 +81,10 @@ function SignupFormPage() {
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           required
+          placeholder="confirm password"
         />
       </label>
+      <br />
       <button type="submit">Sign Up</button>
     </form>
   );

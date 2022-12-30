@@ -61,3 +61,11 @@ body{
     padding: 5px;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
 }
+
+/* makes the icons not appear super large */
+.icon{
+	max-height: 35px;
+	color: red;
+	background-color: transparent;
+	border: none;
+}

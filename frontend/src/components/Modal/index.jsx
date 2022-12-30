@@ -8,11 +8,14 @@ export default function Modal() {
     const toggleModal = () => {
         setModal(!modal);
     }
+    // const loginClick = () => {
+    //     toggleModal();
+    // }
     return (
         <>
             <button
             onClick={toggleModal}
-            className="btn-modal"
+            className="btn-modal icon"
             >
                 <i className="fa-solid fa-user-circle" />
             </button>
@@ -22,9 +25,10 @@ export default function Modal() {
                     <div className="overlay" onClick={toggleModal}></div> {/* overlay is the rest of the document (of the viewport) */}
                     <div className="modal-content">
                         <ul>
-                            <li onClick={toggleModal}> <NavLink to="/signup" id='signup' >Sign Up</NavLink> </li>
-                            <li onClick={toggleModal}> <NavLink to="/login" id='login' >Log In</NavLink> </li>
-                            <li> AirbNZ Your Home</li>
+                            <li id="login" onClick={toggleModal}> <NavLink to="/login" id='login' >Log in</NavLink> </li>
+                            <li id="nonbold" onClick={toggleModal}> <NavLink to="/signup" id='signup' >Sign up</NavLink> </li>
+                            {/* <li id="line"> 0</li> */}
+                            <li id="nonbold"> AirbNZ your home</li>
                         </ul>
                         {/* <button className="close-modal" onClick={toggleModal}>
                             Close

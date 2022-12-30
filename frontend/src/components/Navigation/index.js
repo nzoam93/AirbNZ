@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import Modal from '../Modal';
+import SearchModal from '../SearchModal'
+
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -17,23 +19,26 @@ function Navigation() {
   } else {
     sessionLinks = (
       <>
-        <div className='loginLinks'>
+        <div className='login-links'>
             <Modal />
+            {/* To add other elements here inline, just add them below */}
+            {/* <Modal /> */}
         </div>
       </>
     );
   }
 
   // const logo = new Image();
-  // logo.src = "../../../imgs/airbnblogo.png"
+  // logo.src = "../imgs/airbnblogo.png"
 
 
 
 
   return (
     <nav>
-      <div className='links'>
-        <NavLink exact to="/">Home</NavLink>
+      <div className='navbar'>
+        <NavLink exact to="/"><i className="fa-brands fa-airbnb icon" /></NavLink>
+        <SearchModal />
         {sessionLinks}
       </div>
     </nav>
