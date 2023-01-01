@@ -6,8 +6,8 @@
     /* padding: 10px 20px; */
     /* display: block; */
     /* margin: 0px auto 0; */
-    font-size: 15px;
-    cursor: pointer;
+    /* font-size: 15px; */
+    /* cursor: pointer; */
     margin: 5px;
 }
 
@@ -28,7 +28,7 @@
     position: absolute;
     top: 8%;
     right: 2%;
-    font-size: 15px;
+    /* font-size: 15px; */
     /* transform: translate(-50%, -50%); */
     line-height: 2.2; /* makes it so there is space between the lines */
     background: #f1f1f1;

@@ -17,7 +17,7 @@ export default function Modal() {
             onClick={toggleModal}
             className="btn-modal icon"
             >
-                <i className="fa-solid fa-user-circle" />
+                <i className="fa-solid fa-user-circle fa-2x" />
             </button>
             {/* shortcircuit conditional below that returns if true */}
             {modal && (

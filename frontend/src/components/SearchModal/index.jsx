@@ -19,7 +19,7 @@ export default function Modal() {
             onClick={toggleModal}
             className="btn-modal icon"
             >
-                <i className="fa-solid fa-magnifying-glass" />
+                <i className="fa-solid fa-magnifying-glass fa-2x" />
             </button>
             {/* shortcircuit conditional below that returns if true */}
             {modal && (
@@ -43,7 +43,7 @@ export default function Modal() {
                                 onClick={toggleModal}
                                 className="btn-modal search-button-info icon"
                                 >
-                                    <i className="fa-solid fa-magnifying-glass" />
+                                    <i className="fa-solid fa-magnifying-glass fa-2x" />
                             </button>
                         </form>
                         {/* <button className="close-modal" onClick={toggleModal}>
