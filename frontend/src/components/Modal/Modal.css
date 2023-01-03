@@ -56,6 +56,6 @@
     font-weight:500;
 }
 
-#nonbold{
+.nonbold{
     font-weight: 300;
 }

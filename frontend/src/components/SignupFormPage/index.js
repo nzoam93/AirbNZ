@@ -38,8 +38,8 @@ function SignupFormPage() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
+      <ul id="auth-errors">
+        {errors.map(error => <li key={error} id='auth-error'>{error}</li>)}
       </ul>
       <label>
         Email

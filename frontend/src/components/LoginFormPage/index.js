@@ -31,10 +31,12 @@ function LoginFormPage() {
       });
   }
 
+
+
   return (
     <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
+      <ul id='login-errors'>
+        {errors.map(error => <li key={error} id='login-error'>{error}</li>)}
       </ul>
       <label>
         Username or Email

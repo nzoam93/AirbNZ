@@ -1,6 +1,8 @@
-/* ul {
-    color: blue;
+/* #auth-errors{
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 } */
+
+#auth-error{
+    color: lightcoral;
+    font-size: small;
+}

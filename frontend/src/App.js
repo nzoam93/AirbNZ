@@ -1,11 +1,12 @@
 
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
 import Filter from "./components/Filter";
 import ListingIndex from "./components/Listings/ListingIndex";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   return (
@@ -14,12 +15,16 @@ function App() {
       <Filter />
       <Switch>
         <Route exact path="/" component={ListingIndex} />
-        <Route path="/login">
+        <Route exact path="/login">
           <LoginFormPage />
         </Route>
-        <Route path="/signup">
+        <Route exact path="/signup">
           <SignupFormPage />
         </Route>
+        <Route exact path="/error">
+            <PageNotFound />
+        </Route>
+        <Redirect to="/error" />
       </Switch>
     </>
   );
