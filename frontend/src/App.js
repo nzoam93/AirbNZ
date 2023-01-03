@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 import Filter from "./components/Filter";
 import ListingIndex from "./components/Listings/ListingIndex";
 import PageNotFound from "./components/PageNotFound";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         </Route>
         <Redirect to="/error" />
       </Switch>
+      <Footer />
     </>
   );
 }

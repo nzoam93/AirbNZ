@@ -1,0 +1,12 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    color: brown;
+    font-size: small;
+}
+
+h4{
+    position: absolute;
+    bottom: 10px;
+    align-self: flex-end;
+}
