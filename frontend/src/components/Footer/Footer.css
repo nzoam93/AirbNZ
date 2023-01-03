@@ -6,7 +6,7 @@
 }
 
 h4{
-    position: absolute;
-    bottom: 10px;
+    position: relative;
+    top: 25px;
     align-self: flex-end;
 }

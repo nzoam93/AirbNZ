@@ -8,6 +8,7 @@ import Filter from "./components/Filter";
 import ListingIndex from "./components/Listings/ListingIndex";
 import PageNotFound from "./components/PageNotFound";
 import Footer from "./components/Footer";
+import ListingShow from "./components/Listings/ListingShow";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         <Route exact path="/error">
             <PageNotFound />
         </Route>
+
+        <Route exact path="/listings/:listingId" component={ListingShow} />
+
         <Redirect to="/error" />
       </Switch>
       <Footer />
