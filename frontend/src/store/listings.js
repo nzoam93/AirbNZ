@@ -42,6 +42,7 @@ export const getListing = (listingId) => (state) => {
     }
 }
 
+
 //THUNK ACTION CREATORS
 
 //fetch all the listings from backend

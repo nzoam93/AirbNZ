@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_01_210931) do
     t.string "address", null: false
     t.string "city", null: false
     t.string "state", null: false
-    t.string "zip_code", null: false
+    t.integer "zip_code", null: false
     t.float "price", null: false
     t.integer "num_beds", null: false
     t.float "num_baths", null: false

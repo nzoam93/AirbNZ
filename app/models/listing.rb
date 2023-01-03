@@ -9,7 +9,7 @@
 #  address     :string           not null
 #  city        :string           not null
 #  state       :string           not null
-#  zip_code    :string           not null
+#  zip_code    :integer          not null
 #  price       :float            not null
 #  num_beds    :integer          not null
 #  num_baths   :float            not null
