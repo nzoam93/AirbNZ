@@ -1,7 +1,20 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  email           :string           not null
+#  username        :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
 class User < ApplicationRecord
   #the 'has_secure_password' part does the P and I part of SPIRE
   has_secure_password
 
+  #validations
   validates :username,
     uniqueness: true,
     length: { in: 3..30 },
@@ -12,6 +25,12 @@ class User < ApplicationRecord
     format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :session_token, presence: true, uniqueness: true
   validates :password, length: { in: 6..255 }, allow_nil: true
+
+  #has_manys
+  has_many :listings,
+        foreign_key: :owner_id,
+        class_name: :User,
+        dependent: :destroy
 
   #makes sure that the use has a session token before doing the validation that a session token must be present
   before_validation :ensure_session_token
