@@ -7,11 +7,20 @@ const ListingIndexItem = ({listing}) => {
     const dispatch = useDispatch();
 
     return(
-        <li>
-            <Link to={`listings/${listing.id}`}>{listing.title}</Link>
-            {/* <Link to={`listings/${listing.id}`}></Link> */}
+        <div id="listing-index-item">
+            <div id="link">
+                <Link to={`listings/${listing.id}`}>{listing.title}</Link>
+            </div>
+            <ul id="listing-info">
+                <li>{listing.description}</li>
+                <li>{listing.address}, {listing.city}, {listing.state}, {listing.zipCode}</li>
+                <li>price: ${listing.price}</li>
+                <li>beds: {listing.numBeds}</li>
+                <li>baths: {listing.numBaths}</li>
+            </ul>
             <button onClick={() => {dispatch(deleteListing(listing.id))}}>Delete</button>
-        </li>
+            {/* <Link to={`listings/${listing.id}`}></Link> */}
+        </div>
     )
 }
 

@@ -1,0 +1,27 @@
+#all-listings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#listing-index-item{
+    height: 300px;
+    width: 300px;
+    border: 1px solid green;
+    margin: 5px;
+}
+
+#link{
+    font-size: 25px;
+    text-decoration: none;
+}
+
+#link:visited{
+    text-decoration: none;
+}
+
+/*creates spacing between the items in the list */
+#listing-info > li{
+    /* font-size: 20px; */
+    padding-top: 5px;
+}
