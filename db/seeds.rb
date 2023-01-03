@@ -63,5 +63,32 @@ ApplicationRecord.transaction do
       num_baths: 2
     )
 
+    Listing.create!(
+      owner_id: 1,
+      title: '1 Bedroom in Vallejo',
+      description: 'This is the third example',
+      address: '123 Vallejo St',
+      city: 'Vallejo',
+      state: 'CA',
+      zip_code: '94605',
+      price: 300,
+      num_beds: 1,
+      num_baths: 1
+    )
+
+    Listing.create!(
+      owner_id: 1,
+      title: '5 Bedroom in San Rafael',
+      description: 'This is the fourth example',
+      address: '123 San Rafael St',
+      city: 'San Rafael',
+      state: 'CA',
+      zip_code: '94605',
+      price: 800,
+      num_beds: 5,
+      num_baths: 3
+    )
+
+
     puts "Done!"
   end
