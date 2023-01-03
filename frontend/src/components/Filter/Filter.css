@@ -1,7 +1,7 @@
 .filter-icons{
     display: flex;
     justify-content: center;
-    color: violet;
+    color: #717171; /* from the airBNB website */
     cursor: pointer;
     margin: 5px;
 }
@@ -13,9 +13,12 @@
 .filter-icon:hover{
     border: 1px solid;
     border-width: 0px 0px 2px 0px;
-    padding: 3px;
+    padding: 2px;
     /* box-shadow: 0px 2px #888888; */
+}
 
+.filter-icon:focus{
+    color: black;
 }
 
 div.filter-item {

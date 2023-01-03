@@ -44,9 +44,9 @@
     cursor: pointer;
 }
 
-.search-button-info:hover{
+/* .search-button-info:hover{
     background-color: grey;
-}
+} */
 
 .search-button-info:focus{
     background-color: lightblue;

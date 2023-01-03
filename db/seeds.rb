@@ -39,7 +39,7 @@ ApplicationRecord.transaction do
     puts "Creating listings..."
     Listing.create!(
       owner_id: 1,
-      title: 'Example 1',
+      title: '3 Bedroom in Oakland',
       description: 'This is the first example',
       address: '123 AirBNZ St',
       city: 'Oakland',
@@ -47,6 +47,19 @@ ApplicationRecord.transaction do
       zip_code: '94605',
       price: 500,
       num_beds: 3,
+      num_baths: 2
+    )
+
+    Listing.create!(
+      owner_id: 1,
+      title: '4 Bedroom in SF',
+      description: 'This is the second example',
+      address: '123 Post St',
+      city: 'San Francisco',
+      state: 'CA',
+      zip_code: '94605',
+      price: 700,
+      num_beds: 4,
       num_baths: 2
     )
 
