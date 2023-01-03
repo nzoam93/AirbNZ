@@ -12,6 +12,7 @@ const ListingIndex = () => {
         dispatch(fetchListings());
     }, [])
 
+
     return(
         <>
             <div id="all-listings">

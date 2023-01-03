@@ -31,3 +31,9 @@
 /* #login:hover, #signup:hover{
     background-color: red
 } */
+
+.logo{
+    display: flex;
+    align-items: center;
+    color: red;
+}

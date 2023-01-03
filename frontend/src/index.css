@@ -60,6 +60,7 @@ body{
     margin: 15px;
     padding: 5px;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-family: 'Lucida Grande', tahoma, verdana, arial, sans-serif; /*from airbnb website*/
 }
 
 /* makes the icons not appear super large */
