@@ -81,7 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: airbNZ_production
-  username: airbNZ
-  password: <%= ENV["AIRBNZ_DATABASE_PASSWORD"] %>
-  # url: <%= ENV['DATABASE_URL'] %>
+  # database: airbNZ_production
+  # username: airbNZ
+  # password: <%= ENV["AIRBNZ_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
