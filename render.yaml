@@ -1,6 +1,6 @@
 databases:
   - name: airbNZ
-    user: airbNZ
+    user: airbnz
     plan: free
     region: oregon
 
