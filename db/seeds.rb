@@ -7,6 +7,23 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
+
+#aws stuff
+require "open-uri"
+
+#example for aws seeding. Make sure to use the real url AND to not put inside of appilcaitonrecord.transaction
+
+# Attach bench photos
+# Bench.first(3).each_with_index do |bench, index|
+#   bench.photo.attach(
+#     # The string passed to URI.open should be the URL of the image in its bucket.
+#     # This sample assumes the bucket name is `benchbnb-seeds`.
+#     io: URI.open("https://benchbnb-seeds.s3.amazonaws.com/bench_#{index + 1}.jpg"),
+#     filename: "bench_#{index + 1}.jpg"
+#   )
+# end
+
+
 ApplicationRecord.transaction do
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
