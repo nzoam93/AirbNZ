@@ -19,7 +19,7 @@ const ListingIndexItem = ({listing}) => {
                 <ul id="listing-info">
                     <li className="bold">{listing.city}, {listing.state}</li>
                     <li>{listing.description}</li>
-                    <li className="bold">{listing.price} <span id="price-span"> night</span></li>
+                    <li className="bold">${listing.price} <span id="price-span"> night</span></li>
                     {/* <li>{listing.description}</li>
                     <li>{listing.address}, {listing.city}, {listing.state}, {listing.zipCode}</li>
                     <li>price: ${listing.price}</li>

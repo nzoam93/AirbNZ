@@ -14,9 +14,11 @@ function App() {
   return (
     <>
       <Navigation />
-      <Filter />
       <Switch>
-        <Route exact path="/" component={ListingIndex} />
+        <Route exact path="/">
+            <Filter />
+            <ListingIndex/>
+        </Route>
         <Route exact path="/login">
           <LoginFormPage />
         </Route>

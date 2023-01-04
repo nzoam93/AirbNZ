@@ -47,7 +47,8 @@ ApplicationRecord.transaction do
       zip_code: '94605',
       price: 500,
       num_beds: 3,
-      num_baths: 2
+      num_baths: 2,
+      num_guests: 6
     )
 
     Listing.create!(
@@ -60,7 +61,8 @@ ApplicationRecord.transaction do
       zip_code: '94605',
       price: 700,
       num_beds: 4,
-      num_baths: 2
+      num_baths: 2,
+      num_guests: 8
     )
 
     Listing.create!(
@@ -73,7 +75,8 @@ ApplicationRecord.transaction do
       zip_code: '94605',
       price: 300,
       num_beds: 1,
-      num_baths: 1
+      num_baths: 1,
+      num_guests: 2
     )
 
     Listing.create!(
@@ -86,7 +89,8 @@ ApplicationRecord.transaction do
       zip_code: '94605',
       price: 800,
       num_beds: 5,
-      num_baths: 3
+      num_baths: 3,
+      num_guests: 10
     )
 
 

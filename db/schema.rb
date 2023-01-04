@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_01_210931) do
     t.float "price", null: false
     t.integer "num_beds", null: false
     t.float "num_baths", null: false
+    t.integer "num_guests", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city"], name: "index_listings_on_city"

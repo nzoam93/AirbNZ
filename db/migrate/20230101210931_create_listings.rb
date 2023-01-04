@@ -11,6 +11,7 @@ class CreateListings < ActiveRecord::Migration[7.0]
       t.float :price, null: false
       t.integer :num_beds, null: false
       t.float :num_baths, null: false
+      t.integer :num_guests, null: false 
       t.timestamps
     end
   end

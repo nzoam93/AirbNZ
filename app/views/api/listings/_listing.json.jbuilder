@@ -9,4 +9,5 @@ json.extract! listing,
     :zip_code,
     :price,
     :num_beds,
-    :num_baths
+    :num_baths,
+    :num_guests

@@ -6,6 +6,7 @@ class Api::ListingsController < ApplicationController
     end
 
     def show
+        render :show
     end
 
     def create
@@ -48,7 +49,8 @@ class Api::ListingsController < ApplicationController
             :zip_code,
             :price,
             :num_beds,
-            :num_baths
+            :num_baths,
+            :num_guests
         )
     end
 end
