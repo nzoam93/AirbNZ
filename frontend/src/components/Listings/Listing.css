@@ -149,7 +149,7 @@
 #photos-container{
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(4, 210px);
+    grid-template-columns: repeat(4, 22vw);
     grid-template-rows: repeat(2, 220px);
 }
 
@@ -200,6 +200,5 @@
 }
 
 .item3 img, .item5 img{
-    border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
