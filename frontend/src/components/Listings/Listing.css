@@ -1,3 +1,5 @@
+
+/*---------------listings index CSS--------------*/
 #all-listings{
     display: grid;
     grid-template-columns: auto auto;
@@ -34,10 +36,10 @@
 }
 
 
-.bold{
+/* .bold{
     color: black;
     font-weight: bold;
-}
+} */
 
 #price-span{
     color: black;
@@ -50,7 +52,8 @@
     align-items: center;
 }
 
-/* Show Page CSS */
+
+/* ---------Show Page CSS------------ */
 #listing-title{
     margin: inherit;
     font-size: 30px;
@@ -74,14 +77,10 @@
     justify-content: space-evenly;
 }
 
+/*left-hand-side of show*/
 #left-show{
     width: 55vw;
     border: 1px solid red;
-}
-
-#right-show{
-    width: 35vw;
-    border: 1px solid blue;
 }
 
 #preliminary-info-show{
@@ -133,20 +132,59 @@
     padding-bottom: 15px;
 }
 
+/*right-hand-side of show page*/
+#right-show{
+    width: 35vw;
+    border: 1px solid blue;
+}
+
+#right-show > * {
+    margin: 10px 0;
+}
+
 .price-show{
     font-size: 25px;
 }
 
+#preliminary-right-info-show{
+    display: flex;
+    justify-content: space-between;
+}
 
+#checkin-checkout{
+    display: flex;
+    justify-content: space-between;
+}
 
+#reserve-button{
+    background-color: #dc1262;
+    color: white;
+}
 
+#charge-show{
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
 
+.price-info-item-show{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+#total-show{
+    border-top: solid 2px grey;
+    padding-top: 15px;
+}
 
 
 
 
 /*show page grid css*/
 #photos-container{
+    margin: 10px;
+    justify-content: center;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(4, 210px);
@@ -199,6 +237,10 @@
     border-bottom-left-radius: 10px;
 }
 
-.item3 img, .item5 img{
+.item3 img{
+    border-top-right-radius: 10px;
+}
+
+.item5 img{
     border-bottom-right-radius: 10px;
 }

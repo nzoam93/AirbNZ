@@ -27,9 +27,13 @@ const ListingShow = () => {
 
     return(
         <div id="show-page">
-            <h5 id="listing-title">{listing.title}</h5>
-            <div id="second-line-on-show">
-                <li>{listing.city}, {listing.state}, United States</li>
+            <h5 className="bold" id="listing-title">{listing.title}</h5>
+            <div className="bold" id="second-line-on-show">
+                <li>
+                <i className="fa-solid fa-star fa-0.5x bold" />  <span id="price-span">5.0 • 9 Reviews • </span>
+                {listing.city}, {listing.state}, United States
+
+                </li>
                 <li> Share Save</li>
             </div>
             <div id="photos-container">
@@ -76,11 +80,40 @@ const ListingShow = () => {
                     <div id="preliminary-right-info-show">
                         <li className="bold price-show">${listing.price} <span id="price-span"> night</span></li>
                         <div>
-                            <i className="fa-solid fa-star fa-0.5x" /> 5.0 <br />
-                            <p>9 reviews</p>
-
+                            <i className="fa-solid fa-star fa-0.5x bold" />  <span id="price-span">5.0 • 9 Reviews</span>
+                            {/* <p>9 reviews</p> */}
                         </div>
-                        <li></li>
+                    </div>
+                    <div id="checkin-info">
+                        <div id="checkin-checkout">
+                            <li>CHECK-IN</li>
+                            <li>CHECKOUT</li>
+                        </div>
+                        <div id="guests">GUESTS</div>
+                    </div>
+                    <button id="reserve-button">Reserve</button>
+                    <li id="charge-show">You won't be charged yet</li>
+                    <div id="price-info-show">
+                        <div className="price-info-item-show">
+                            <li>$458 x 5 nights</li>
+                            <li>$2,290</li>
+                        </div>
+                        <div className="price-info-item-show">
+                            <li>Long stay discount</li>
+                            <li>-$229</li>
+                        </div>
+                        <div className="price-info-item-show">
+                            <li>Cleaning fee</li>
+                            <li>$350</li>
+                        </div>
+                        <div className="price-info-item-show">
+                            <li>Service fee</li>
+                            <li>$240</li>
+                        </div>
+                        <div className="price-info-item-show bold" id="total-show">
+                            <li>Total before taxes</li>
+                            <li>$2,751</li>
+                        </div>
                     </div>
                 </div>
 
