@@ -42,6 +42,7 @@
 #price-span{
     color: black;
     font-weight: normal;
+    font-size: medium;
 }
 
 .price-info{
@@ -83,7 +84,7 @@
     border: 1px solid blue;
 }
 
-#preliminary-show-info{
+#preliminary-info-show{
     display: flex;
     justify-content: space-between;
     padding: 5px;
@@ -100,99 +101,105 @@
     border-radius: 50%;
 }
 
-#specialties{
+#specialties-show{
+    /* margin: 5px; */
+    /* offset: 10px; */
+    border-bottom: solid 2px grey;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
 
+#description-show{
+    border-bottom: solid 2px grey;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+#offerings-show{
+    border-bottom: solid 2px grey;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+
+#calendar-show{
+    border-bottom: solid 2px grey;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.title-show{
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+.price-show{
+    font-size: 25px;
 }
 
 
 
 
+
+
+
+
+
+/*show page grid css*/
 #photos-container{
-    /* display: grid;
-    grid-template-areas:
-        'photo1 photo1 photo2 photo3'
-        'photo1 photo1 photo4 photo5';
-    gap: 10px;
-    padding: 10px;
-    background-color: #2196F3;
-    height: 500px;
-    width: 800px; */
-    /* justify-content: space-evenly; */
-
     display: grid;
-    grid-template-columns: repeat(8, 100px);
-    grid-template-rows: repeat(8, 50px);
-    gap: 15px;
-    background-color: #2196F3;
-
-    border: 1px solid purple;
-    height: 500px;
-    width: 800px;
+    gap: 10px;
+    grid-template-columns: repeat(4, 210px);
+    grid-template-rows: repeat(2, 220px);
 }
 
-.grid-img{
+/*adds the styling onto the image itself to take up 100% of its alloted grid space*/
+.grid-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.item1 img{
-    /* grid-area: photo1; */
+/*restricts how many rows and columns it takes in the grid*/
+.item1{
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
-    /* height: 300px;
-    width: 300px; */
 }
 
-.item2 img{
-    /* grid-area: photo2; */
-    /* height: 150px;
-    width: 150px; */
+.item2{
     grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.item3{
+    grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 1;
+    grid-row-end: 2;
+}
+.item4{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
     grid-row-end: 3;
 }
-.item3 img{
-    /* grid-area: photo3; */
-    /* height: 150px;
-    width: 150px; */
-    grid-column-start: 5;
-    grid-column-end: 9;
-    grid-row-start: 1;
-    grid-row-end: 6;
-}
-.item4 img{
-    /* grid-area: photo4; */
-    /* height: 150px;
-    width: 150px; */
-    grid-column-start: 1;
+.item5{
+    grid-column-start: 4;
     grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 6;
-}
-.item5 img{
-    /* grid-area: photo5; */
-    /* height: 150px;
-    width: 150px; */
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 6;
-    grid-row-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
-
-/* #big-img img{
-    height: 350px;
-    width: 500px;
+/*rounds the edges of just the imgs on the left and right*/
+.item1 img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
-#small-imgs img{
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-evenly;
-    height: 100px;
-    width: 100px;
-} */
+.item3 img, .item5 img{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

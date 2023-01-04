@@ -47,7 +47,7 @@ export const getListing = (listingId) => (state) => {
 
 //fetch all the listings from backend
 export const fetchListings = () => async (dispatch) => {
-    const response = await fetch ('api/listings');
+    const response = await fetch ('/api/listings');
     if (response.ok){
         const listings = await response.json();
         dispatch(receive_listings(listings));
@@ -56,7 +56,7 @@ export const fetchListings = () => async (dispatch) => {
 
 //fetch the specified listing from backend
 export const fetchListing = (listingId) => async (dispatch) => {
-    const response = await fetch (`api/listings/${listingId}`);
+    const response = await fetch (`/api/listings/${listingId}`);
     if(response.ok){
         const listing = await response.json();
         dispatch(recieve_listing(listing));
@@ -65,7 +65,7 @@ export const fetchListing = (listingId) => async (dispatch) => {
 
 //create a new listing in the backend
 export const createListing = (listing) => async (dispatch) => {
-    const response = await fetch (`api/listings`, {
+    const response = await fetch (`/api/listings`, {
         method: 'POST',
         body: JSON.stringify(listing),
         headers: {
@@ -80,7 +80,7 @@ export const createListing = (listing) => async (dispatch) => {
 
 //update an existing listing in the backend
 export const updateListing = (listing) => async (dispatch) => {
-    const response = await fetch (`api/listings/${listing.id}`, {
+    const response = await fetch (`/api/listings/${listing.id}`, {
         method: `PUT`,
         body: JSON.stringify(listing),
         headers: {
@@ -95,7 +95,7 @@ export const updateListing = (listing) => async (dispatch) => {
 
 //remove a listing in the backend
 export const deleteListing = (listingId) => async (dispatch) => {
-    const response = await fetch (`api/listings/${listingId}`, {
+    const response = await fetch (`/api/listings/${listingId}`, {
         method: 'DELETE'
     })
     if (response.ok){

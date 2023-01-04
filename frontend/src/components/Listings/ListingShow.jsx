@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Calendar } from "react-calendar";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { fetchListing, getListing } from "../../store/listings";
@@ -17,6 +18,13 @@ const ListingShow = () => {
         dispatch(fetchListing(listingId));
     }, [listingId, dispatch])
 
+
+    //wait for listing to be defined before doing the return. Basically, break early so you don't try to return listing.something without it being in state
+    if(!listing) {
+        return null;
+    }
+
+
     return(
         <div id="show-page">
             <h5 id="listing-title">{listing.title}</h5>
@@ -33,24 +41,47 @@ const ListingShow = () => {
             </div>
             <div id="more-info-show">
                 <div id="left-show">
-                    <div id="preliminary-show-info">
+                    <div id="preliminary-info-show">
                         <div>
-                            <p id="owner-info-show">Entire home hosted by ownerid:{listing.ownerId}</p>
+                            <p id="owner-info-show">Entire home hosted by {listing.ownerName}</p>
                             <p>{listing.numGuests} guests • {listing.numBeds} bedrooms • {listing.numBaths} bathrooms</p>
                         </div>
                         <div id="profile-picture-show">{houseImg}</div>
                     </div>
-                    <div id="specialities">
-                       <i className="fa-solid fa-wifi fa-2x" /> Fast Wifi <br />
+                    <div id="specialties-show">
+                        <i className="fa-solid fa-wifi fa-2x" /> Fast Wifi <br />
                         <i className="fa-solid fa-key fa-2x" /> Great check-in experience <br />
                         <i className="fa-solid fa-star fa-2x" /> Experienced host <br />
-
-
+                    </div>
+                    <div id="description-show">
+                        {listing.description}
+                    </div>
+                    <div id="offerings-show">
+                        <h4 className="title-show">What this place offers</h4>
+                        <i className="fa-solid fa-utensils fa-2x" /> Kitchen <br />
+                        <i className="fa-solid fa-mountain fa-2x" /> Mountain Views <br />
+                        <i className="fa-solid fa-person-swimming fa-2x" /> Private Pool <br />
+                    </div>
+                    <div id="calendar-show">
+                        <Calendar />
+                    </div>
+                    <div id="reviews-show">
+                        <h4 className="title-show">Reviews</h4>
+                        <p>I loved my stay</p>
+                        <p>I also loved my stay here</p>
                     </div>
                 </div>
 
                 <div id="right-show">
+                    <div id="preliminary-right-info-show">
+                        <li className="bold price-show">${listing.price} <span id="price-span"> night</span></li>
+                        <div>
+                            <i className="fa-solid fa-star fa-0.5x" /> 5.0 <br />
+                            <p>9 reviews</p>
 
+                        </div>
+                        <li></li>
+                    </div>
                 </div>
 
             </div>
