@@ -120,6 +120,11 @@
     padding-top: 15px;
 }
 
+#all-offerings-show{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 #calendar-show{
     border-bottom: solid 2px grey;
