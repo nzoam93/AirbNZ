@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { fetchListing, getListing } from "../../store/listings";
 import assetImg from "./houseimgs/airbnzphoto.jpg"
+import ListingShowPrice from "./ListingShowPrice";
 
 
 const ListingShow = () => {
@@ -90,48 +91,7 @@ const ListingShow = () => {
                     </div>
                 </div>
 
-                <div id="right-show">
-                    <div id="preliminary-right-info-show">
-                        <li className="bold price-show">${listing.price} <span id="price-span"> night</span></li>
-                        <div>
-                            <i className="fa-solid fa-star fa-0.5x bold" />  <span id="price-span">5.0 • 9 Reviews</span>
-                            {/* <p>9 reviews</p> */}
-                        </div>
-                    </div>
-                    <div id="checkin-info">
-                        <div id="checkin-checkout">
-                            <li>CHECK-IN</li>
-                            <li>CHECKOUT</li>
-                        </div>
-                        <div id="guests">GUESTS</div>
-                    </div>
-                    <div id="reserve-button-container">
-                        <button id="reserve-button">Reserve</button>
-                    </div>
-                    <li id="charge-show">You won't be charged yet</li>
-                    <div id="price-info-show">
-                        <div className="price-info-item-show">
-                            <li>$458 x 5 nights</li>
-                            <li>$2,290</li>
-                        </div>
-                        <div className="price-info-item-show">
-                            <li>Long stay discount</li>
-                            <li>-$229</li>
-                        </div>
-                        <div className="price-info-item-show">
-                            <li>Cleaning fee</li>
-                            <li>$350</li>
-                        </div>
-                        <div className="price-info-item-show">
-                            <li>Service fee</li>
-                            <li>$240</li>
-                        </div>
-                        <div className="price-info-item-show bold" id="total-show">
-                            <li>Total before taxes</li>
-                            <li>$2,751</li>
-                        </div>
-                    </div>
-                </div>
+                <ListingShowPrice />
 
             </div>
         </div>
