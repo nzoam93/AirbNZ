@@ -7,11 +7,11 @@
 }
 
 #listing-index-item{
-    height: 410px;
+    height: 370px;
     width: 300px;
     border: 1px solid green;
     margin: 5px;
-    font-size: 14px;
+    font-size: 16px;
     color: rgb(79, 72, 72);
 }
 
@@ -141,6 +141,7 @@
 #right-show{
     width: 35vw;
     border: 1px solid blue;
+    /* position: relative; used to center things relative to this */
 }
 
 #right-show > * {
@@ -161,9 +162,22 @@
     justify-content: space-between;
 }
 
+#reserve-button-container{
+    display: flex;
+    justify-content: center;
+}
+
 #reserve-button{
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 30px;
     background-color: #dc1262;
     color: white;
+    cursor: pointer;
+    font-size: 22px;
 }
 
 #charge-show{

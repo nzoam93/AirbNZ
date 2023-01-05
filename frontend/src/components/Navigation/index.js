@@ -37,10 +37,10 @@ function Navigation() {
   return (
     <nav>
       <div className='navbar'>
-        <div className='logo'>
-          <NavLink exact to="/"><i className="fa-brands fa-airbnb icon fa-2x" /></NavLink>
+        <NavLink exact to="/" className='logo'>
+          <i className="fa-brands fa-airbnb icon fa-2x" />
           <p>AirbNZ</p>
-        </div>
+        </NavLink>
         <SearchModal />
         {sessionLinks}
       </div>
