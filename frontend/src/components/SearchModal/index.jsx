@@ -14,9 +14,10 @@ export default function Modal() {
     //     return <ReactCalendar />
     // }
     return (
-        <>
+        <div id='search-bar' onClick={toggleModal}>
+            <p id='start-your-search'>Start your search</p>
             <button
-            onClick={toggleModal}
+
             className="btn-modal icon"
             >
                 <i className="fa-solid fa-magnifying-glass fa-2x" />
@@ -53,6 +54,6 @@ export default function Modal() {
                 </div>
             )}
 
-        </>
+        </div>
     );
 }

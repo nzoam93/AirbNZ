@@ -2,6 +2,7 @@ import { Calendar } from "react-calendar";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getListing } from "../../store/listings";
+import AirbnzCalendar from "../AirbnzCalendar";
 
 const ListingShowPrice = () => {
     const {listingId} = useParams();
@@ -24,6 +25,7 @@ const ListingShowPrice = () => {
         <div id="checkin-info">
             <div id="checkin-checkout">
                 <li>CHECK-IN</li>
+                <AirbnzCalendar />
                 <li>CHECKOUT</li>
             </div>
             <div id="guests">GUESTS</div>

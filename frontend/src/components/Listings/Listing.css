@@ -87,7 +87,7 @@
     display: flex;
     justify-content: space-between;
     padding: 5px;
-    border-bottom: solid 2px grey;
+    border-bottom: solid 1px #f0f0f0;
 }
 
 #owner-info-show{
@@ -103,19 +103,19 @@
 #specialties-show{
     /* margin: 5px; */
     /* offset: 10px; */
-    border-bottom: solid 2px grey;
+    border-bottom: solid 1px #f0f0f0;
     padding-bottom: 15px;
     padding-top: 15px;
 }
 
 #description-show{
-    border-bottom: solid 2px grey;
+    border-bottom: solid 1px #f0f0f0;
     padding-bottom: 15px;
     padding-top: 15px;
 }
 
 #offerings-show{
-    border-bottom: solid 2px grey;
+    border-bottom: solid 1px #f0f0f0;
     padding-bottom: 15px;
     padding-top: 15px;
 }
@@ -127,7 +127,7 @@
 
 
 #calendar-show{
-    border-bottom: solid 2px grey;
+    border-bottom: solid 1px #f0f0f0;
     padding-bottom: 15px;
     padding-top: 15px;
 }

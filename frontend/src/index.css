@@ -57,11 +57,7 @@ table {
 /* AirBNB Specific */
 body{
     background-color: #fff;
-	/* color: #717171; From airbnb website */
 	color: #222222;
-    margin: 15px;
-    padding: 5px;
-    /* font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; */
 	font-family: 'Lucida Grande', tahoma, verdana, arial, sans-serif; /*from airbnb website*/
 }
 

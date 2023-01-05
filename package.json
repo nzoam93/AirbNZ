@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/nzoam93/AirbNZ/issues"
   },
-  "homepage": "https://github.com/nzoam93/AirbNZ#readme"
+  "homepage": "https://github.com/nzoam93/AirbNZ#readme",
+  "dependencies": {
+    "moment": "^2.29.4",
+    "react-dates": "^21.8.0"
+  }
 }

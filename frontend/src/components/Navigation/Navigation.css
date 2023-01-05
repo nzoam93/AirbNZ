@@ -6,21 +6,26 @@
 } */
 
 .navbar{
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
-    align-items: top;
+    /* align-items: top; */
     /* vertical-align: top; */
     /* align-items: flex-start; */
     /* align-items: right; */
     /* padding: 5px; */
     /* border-bottom: solid 1px rgb(158, 148, 148); */
-    border-bottom: solid 2px #888888;
+    border-bottom: solid 1px #f0f0f0;
 
 }
+
+
 
 .login-links {
     display: flex;
     align-items: right;
+    margin: 5px;
+
     /* align-items: center; */
     /* justify-content: center; */
     /* margin-right: 5px; */
@@ -35,14 +40,19 @@
     background-color: red
 } */
 
+/* .fa-airbnb{
+    width: 27px;
+    height: 27px
+} */
+
 .logo{
     display: flex;
     align-items: center;
     color: red;
     font-weight: bold;
-
+    margin-left: 10px;
 }
 
 .logo:hover{
-    border-bottom: solid 1px #888888;
+    border-bottom: solid 1px #f0f0f0;
 }

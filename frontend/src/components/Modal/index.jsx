@@ -37,15 +37,12 @@ export default function Modal() {
                     <div className="overlay" onClick={toggleModal}></div> {/* overlay is the rest of the document (of the viewport) */}
                     <div className="modal-content">
                         <ul>
-                            <li id="login" onClick={toggleModal}> <NavLink to="/login" id='login' >Log in</NavLink> </li>
+                            {/* <li id="login" onClick={toggleModal}> <NavLink to="/login" id='login' >Log in</NavLink> </li> */}
+                            {/* <li id="login" onClick={toggleModal}> <NavLink to="/login" id='login' >Log in</NavLink> </li> */}
                             <li className="nonbold" onClick={toggleModal}> <NavLink to="/signup" id='signup' >Sign up</NavLink> </li>
                             <li id="demo-user" className="nonbold" onClick={demoLogin}>Demo Login</li>
-                            {/* <li id="line"> 0</li> */}
                             <li className="nonbold"> AirbNZ your home</li>
                         </ul>
-                        {/* <button className="close-modal" onClick={toggleModal}>
-                            Close
-                        </button> */}
                     </div>
                 </div>
             )}
