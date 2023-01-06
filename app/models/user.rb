@@ -32,6 +32,11 @@ class User < ApplicationRecord
         class_name: :User,
         dependent: :destroy
 
+  has_many :reservations,
+      foreign_key: :reserver_id,
+      class_name: :Reservation,
+      dependent: :destroy
+
   #aws stuff
   has_one_attached :photo
 

@@ -13,6 +13,7 @@
 #  price       :float            not null
 #  num_beds    :integer          not null
 #  num_baths   :float            not null
+#  num_guests  :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
@@ -22,6 +23,11 @@ class Listing < ApplicationRecord
     belongs_to :owner,
         foreign_key: :owner_id,
         class_name: :User
+
+    has_many :reservations,
+        foreign_key: :listing_id,
+        class_name: :Reservation,
+        dependent: :destroy
 
 
     #aws stuff
