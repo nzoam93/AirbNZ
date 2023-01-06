@@ -16,6 +16,13 @@ export default function Modal() {
         setModal(!modal);
     }
 
+    const loginClick = () => {
+        setModal(!modal);
+        return (
+            <LoginFormModal/>
+        )
+    }
+
     const demoLogin = (e) => {
         e.preventDefault();
         return dispatch(login({credential:`demo@user.io`, password:`password`}))
@@ -43,6 +50,7 @@ export default function Modal() {
                             {/* <li id="login" onClick={toggleModal}> <NavLink to="/login" id='login' >Log in</NavLink> </li> */}
                             {/* <li className="nonbold" onClick={toggleModal}> <NavLink to="/signup" id='signup' >Sign up</NavLink> </li> */}
 
+                            {/* <li id="login" onClick={loginClick}> Log In </li> */}
                             <li id="login"> <LoginFormModal/> </li>
                             <li id="login"> <SignupFormModal/> </li>
                             <li id="demo-user" className="nonbold" onClick={demoLogin}>Demo Login</li>

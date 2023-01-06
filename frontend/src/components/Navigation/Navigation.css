@@ -56,3 +56,16 @@
 .logo:hover{
     border-bottom: solid 1px #f0f0f0;
 }
+
+#profile-img img{
+    width: 27px;
+    height: 27px;
+    border-radius: 50px;
+}
+
+#welcome-corner{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: large;
+}
