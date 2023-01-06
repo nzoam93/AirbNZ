@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 import './LoginForm.css'
 
-function LoginFormPage() {
+function LoginForm() {
   const dispatch = useDispatch();
-  const sessionUser = useSelector(state => state.session.user);
+  // const sessionUser = useSelector(state => state.session.user);
   const [credential, setCredential] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
 
-  if (sessionUser) return <Redirect to="/" />;
+  // if (sessionUser) return <Redirect to="/" />;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,34 +35,38 @@ function LoginFormPage() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <ul id='login-errors'>
-        {errors.map(error => <li key={error} id='login-error'>{error}</li>)}
+      <div id='login-signup-on-form'>Log In</div>
+      {/* <div id='welcome-to-airbNZ'>Welcome to AirbNZ</div> */}
+      <ul id='auth-errors'>
+        {errors.map(error => <li key={error} id='auth-error'>{error}</li>)}
       </ul>
-      <label>
-        Username or Email
+      <div className='login-signup-item-container'>
         <input
+          className='login-signup-item'
           type="text"
           value={credential}
           onChange={(e) => setCredential(e.target.value)}
           required
           placeholder="username or email"
         />
-      </label>
+      </div>
       <br />
-      <label>
-        Password
+      <div className='login-signup-item-container'>
         <input
+          className='login-signup-item'
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
           placeholder='password'
         />
-      </label>
+      </div>
       <br />
-      <button type="submit">Log In</button>
+      <div className='login-signup-item-container'>
+        <button type="submit" className='login-signup-item' id='login-signup-submit-button'>Log In</button>
+      </div>
     </form>
   );
 }
 
-export default LoginFormPage;
+export default LoginForm;

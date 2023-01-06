@@ -4,6 +4,8 @@ import { login } from "../../store/session";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import "./Modal.css";
+import LoginFormModal from "../LoginFormModal";
+import SignupFormModal from "../SignupModal";
 
 export default function Modal() {
     const [modal, setModal] = useState(false);
@@ -37,9 +39,12 @@ export default function Modal() {
                     <div className="overlay" onClick={toggleModal}></div> {/* overlay is the rest of the document (of the viewport) */}
                     <div className="modal-content">
                         <ul>
+                            {/* These next two lines are from before I changed it to a modal */}
                             {/* <li id="login" onClick={toggleModal}> <NavLink to="/login" id='login' >Log in</NavLink> </li> */}
-                            {/* <li id="login" onClick={toggleModal}> <NavLink to="/login" id='login' >Log in</NavLink> </li> */}
-                            <li className="nonbold" onClick={toggleModal}> <NavLink to="/signup" id='signup' >Sign up</NavLink> </li>
+                            {/* <li className="nonbold" onClick={toggleModal}> <NavLink to="/signup" id='signup' >Sign up</NavLink> </li> */}
+
+                            <li id="login"> <LoginFormModal/> </li>
+                            <li id="login"> <SignupFormModal/> </li>
                             <li id="demo-user" className="nonbold" onClick={demoLogin}>Demo Login</li>
                             <li className="nonbold"> AirbNZ your home</li>
                         </ul>

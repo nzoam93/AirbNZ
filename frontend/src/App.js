@@ -19,12 +19,12 @@ function App() {
             <Filter />
             <ListingIndex/>
         </Route>
-        <Route exact path="/login">
+        {/* <Route exact path="/login">
           <LoginFormPage />
         </Route>
         <Route exact path="/signup">
           <SignupFormPage />
-        </Route>
+        </Route> */}
         <Route exact path="/error">
             <PageNotFound />
         </Route>

@@ -53,7 +53,8 @@
 } */
 
 #login{
-    font-weight:500;
+    font-weight:bold;
+    /* font-size: 10px; */
 }
 
 .nonbold{

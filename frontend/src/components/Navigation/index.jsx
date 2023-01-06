@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
-import Modal from '../Modal';
+import DropdownModal from '../DropdownModal';
 import SearchModal from '../SearchModal'
 
 
@@ -20,7 +20,7 @@ function Navigation() {
     sessionLinks = (
       <>
         <div className='login-links'>
-            <Modal />
+            <DropdownModal />
             {/* To add other elements here inline, just add them below */}
             {/* <Modal /> */}
         </div>
