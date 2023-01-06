@@ -2,7 +2,7 @@
 /*---------------listings index CSS--------------*/
 #all-listings{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 20vw 20vw 20vw;
     justify-content: space-evenly;
 }
 
@@ -55,11 +55,15 @@
 
 /* ---------Show Page CSS------------ */
 #listing-title{
+    padding-left: 4.5vw;
     margin: inherit;
     font-size: 30px;
 }
 
 #second-line-on-show{
+    padding-left: 4.5vw;
+    padding-right: 4.5vw;
+    padding-bottom: 1vh;
     margin: inherit;
     display: flex;
     align-items: center;
@@ -67,9 +71,9 @@
     list-style-type: none;
 }
 
-#show-page{
+/* #show-page{
     margin: 5px;
-}
+} */
 
 
 #more-info-show{
@@ -79,7 +83,9 @@
 
 /*left-hand-side of show*/
 #left-show{
-    width: 55vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    /* width: 55vw; */
     border: 1px solid red;
 }
 
@@ -139,7 +145,8 @@
 
 /*right-hand-side of show page*/
 #right-show{
-    width: 35vw;
+    margin-right: 4.5vw;
+    width: 40vw;
     border: 1px solid #dddddd;
     box-shadow: 0 0 15px #dddddd;
     border-radius: 10px;
@@ -210,6 +217,7 @@
     gap: 10px;
     grid-template-columns: repeat(4, 22vw);
     grid-template-rows: repeat(2, 220px);
+    padding-bottom: 2vh;
 }
 
 /*adds the styling onto the image itself to take up 100% of its alloted grid space*/

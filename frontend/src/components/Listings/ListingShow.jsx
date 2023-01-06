@@ -75,8 +75,8 @@ const ListingShow = () => {
                                 <i className="fa-solid fa-person-swimming fa-2x" /> Private Pool <br />
                             </div>
                             <div id="right-offerings-show">
-                                <i className="fa-solid fa-piano" /> Piano <br />
-                                <i className="fa-solid fa-heat fa-2x" /> Central heating <br />
+                                <i className="fa-solid fa-dog fa-2x" /> Pet Friendly <br />
+                                <i className="fa-solid fa-wind fa-2x" /> Air Conditioning <br />
                                 <i className="fa-solid fa-car fa-2x" /> Free parking <br />
                             </div>
                         </div>
