@@ -7,7 +7,6 @@ import './Navigation.css';
 import DropdownModal from '../DropdownModal';
 import SearchModal from '../SearchModal'
 
-
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
 

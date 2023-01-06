@@ -262,5 +262,24 @@ require "open-uri"
       num_guests: 2
     )
 
+    puts "Creating reservations..."
+    reservation1 = Reservation.create!(
+      reserver_id: 1,
+      listing_id: 4,
+      check_in_date: "2023-01-15",
+      check_out_date: "2023-01-19",
+      num_guests: 6
+    )
+
+    reservation2 = Reservation.create!(
+      reserver_id: 2,
+      listing_id: 5,
+      check_in_date: "2023-01-14",
+      check_out_date: "2023-01-17",
+      num_guests: 6
+    )
+
+
+
     puts "Done!"
   # end

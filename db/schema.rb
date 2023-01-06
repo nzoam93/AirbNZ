@@ -63,8 +63,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_06_173627) do
   create_table "reservations", force: :cascade do |t|
     t.bigint "reserver_id", null: false
     t.bigint "listing_id", null: false
-    t.datetime "check_in_date", null: false
-    t.datetime "check_out_date", null: false
+    t.date "check_in_date", null: false
+    t.date "check_out_date", null: false
     t.integer "num_guests", null: false
     t.index ["listing_id"], name: "index_reservations_on_listing_id"
     t.index ["reserver_id"], name: "index_reservations_on_reserver_id"
