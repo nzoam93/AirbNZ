@@ -32,6 +32,7 @@ export default function Modal() {
     // const loginClick = () => {
     //     toggleModal();
     // }
+    
     return (
         <>
             <button

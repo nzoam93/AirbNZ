@@ -38,24 +38,30 @@ require "open-uri"
 
     puts "Creating users..."
     # Create one user with an easy to remember username, email, and password:
-    User.create!(
+    user1 = User.create!(
       username: 'Demo-lition',
       email: 'demo@user.io',
       password: 'password'
     )
 
+    user2 = User.create!(
+      username: 'noam',
+      email: 'noam@gmail.com',
+      password: 'password'
+    )
+
     # More users
-    10.times do
-      User.create!({
-        username: Faker::Internet.unique.username(specifier: 3),
-        email: Faker::Internet.unique.email,
-        password: 'password'
-      })
-    end
+    # 10.times do
+    #   User.create!({
+    #     username: Faker::Internet.unique.username(specifier: 3),
+    #     email: Faker::Internet.unique.email,
+    #     password: 'password'
+    #   })
+    # end
 
     puts "Creating listings..."
     listing1 = Listing.create!(
-      owner_id: 1,
+      owner_id: 2,
       title: '3 Bedroom in Oakland',
       description: 'This is the first example',
       address: '123 AirBNZ St',
@@ -75,7 +81,7 @@ require "open-uri"
     listing1.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house1room4.jpg"), filename: "house1room4.jpg")
 
     listing2 = Listing.create!(
-      owner_id: 1,
+      owner_id: 2,
       title: '4 Bedroom in SF',
       description: 'This is the second example',
       address: '123 Post St',
@@ -88,14 +94,14 @@ require "open-uri"
       num_guests: 8
     )
 
-    listing2.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house2.jpg"), filename: "house2.jpg")
-    listing2.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house2room1.jpg"), filename: "house2room1.jpg")
-    listing2.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house2room2.jpg"), filename: "house2room2.jpg")
-    listing2.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house2room3.jpg"), filename: "house2room3.jpg")
-    listing2.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house2room4.jpg"), filename: "house2room4.jpg")
+    # listing2.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house2.jpg"), filename: "house2.jpg")
+    # listing2.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house2room1.jpg"), filename: "house2room1.jpg")
+    # listing2.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house2room2.jpg"), filename: "house2room2.jpg")
+    # listing2.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house2room3.jpg"), filename: "house2room3.jpg")
+    # listing2.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house2room4.jpg"), filename: "house2room4.jpg")
 
     listing3 = Listing.create!(
-      owner_id: 1,
+      owner_id: 2,
       title: '1 Bedroom in Vallejo',
       description: 'This is the third example',
       address: '123 Vallejo St',
@@ -108,11 +114,11 @@ require "open-uri"
       num_guests: 2
     )
 
-    listing3.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house3.jpg"), filename: "house3.jpg")
-    listing3.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house3room1.jpg"), filename: "house3room1.jpg")
-    listing3.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house3room2.jpg"), filename: "house3room2.jpg")
-    listing3.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house3room3.jpg"), filename: "house3room3.jpg")
-    listing3.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house3room4.jpg"), filename: "house3room4.jpg")
+    # listing3.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house3.jpg"), filename: "house3.jpg")
+    # listing3.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house3room1.jpg"), filename: "house3room1.jpg")
+    # listing3.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house3room2.jpg"), filename: "house3room2.jpg")
+    # listing3.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house3room3.jpg"), filename: "house3room3.jpg")
+    # listing3.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house3room4.jpg"), filename: "house3room4.jpg")
 
     listing4 = Listing.create!(
       owner_id: 1,
@@ -128,11 +134,11 @@ require "open-uri"
       num_guests: 10
     )
 
-    listing4.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house4.jpg"), filename: "house4.jpg")
-    listing4.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house4room1.jpg"), filename: "house4room1.jpg")
-    listing4.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house4room2.jpg"), filename: "house4room2.jpg")
-    listing4.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house4room3.jpg"), filename: "house4room3.jpg")
-    listing4.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house4room4.jpg"), filename: "house4room4.jpg")
+    # listing4.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house4.jpg"), filename: "house4.jpg")
+    # listing4.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house4room1.jpg"), filename: "house4room1.jpg")
+    # listing4.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house4room2.jpg"), filename: "house4room2.jpg")
+    # listing4.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house4room3.jpg"), filename: "house4room3.jpg")
+    # listing4.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house4room4.jpg"), filename: "house4room4.jpg")
 
 
     listing5 = Listing.create!(
@@ -149,12 +155,109 @@ require "open-uri"
       num_guests: 6
     )
 
-    listing5.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house5.jpg"), filename: "house5.jpg")
-    listing5.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house5room1.jpg"), filename: "house5room1.jpg")
-    listing5.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house5room2.jpg"), filename: "house5room2.jpg")
-    listing5.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house5room3.jpg"), filename: "house5room3.jpg")
-    listing5.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house5room4.jpg"), filename: "house5room4.jpg")
+    # listing5.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house5.jpg"), filename: "house5.jpg")
+    # listing5.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house5room1.jpg"), filename: "house5room1.jpg")
+    # listing5.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house5room2.jpg"), filename: "house5room2.jpg")
+    # listing5.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house5room3.jpg"), filename: "house5room3.jpg")
+    # listing5.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house5room4.jpg"), filename: "house5room4.jpg")
 
+    listing6 = Listing.create!(
+      owner_id: 1,
+      title: '1 Bedroom in San Mateo',
+      description: 'This is the sixth example',
+      address: '123 San Mateo St',
+      city: 'San Mateo',
+      state: 'CA',
+      zip_code: '94605',
+      price: 150,
+      num_beds: 1,
+      num_baths: 1,
+      num_guests: 2
+    )
+
+    listing7 = Listing.create!(
+      owner_id: 1,
+      title: '3 Bedroom in Palo Alto',
+      description: 'This is the seventh example',
+      address: '123 Palo Alto St',
+      city: 'Palo Alto',
+      state: 'CA',
+      zip_code: '94605',
+      price: 630,
+      num_beds: 3,
+      num_baths: 2,
+      num_guests: 6
+    )
+
+    listing8 = Listing.create!(
+      owner_id: 1,
+      title: '4 Bedroom in Marin',
+      description: 'This is the eighth example',
+      address: '123 Marin St',
+      city: 'Marin',
+      state: 'CA',
+      zip_code: '94605',
+      price: 545,
+      num_beds: 4,
+      num_baths: 2,
+      num_guests: 8
+    )
+
+    listing9 = Listing.create!(
+      owner_id: 1,
+      title: '6 Bedroom in Vallejo',
+      description: 'This is the ninth example',
+      address: '123 Vallejo St',
+      city: 'Vallejo',
+      state: 'CA',
+      zip_code: '94605',
+      price: 430,
+      num_beds: 6,
+      num_baths: 3,
+      num_guests: 12
+    )
+
+    listing10 = Listing.create!(
+      owner_id: 1,
+      title: '2 Bedroom in SF',
+      description: 'This is the tenth example',
+      address: '123 San Francisco St',
+      city: 'San Francisco',
+      state: 'CA',
+      zip_code: '94605',
+      price: 160,
+      num_beds: 2,
+      num_baths: 1,
+      num_guests: 4
+    )
+
+    listing11 = Listing.create!(
+      owner_id: 1,
+      title: '2 Bedroom in Oakland',
+      description: 'This is the eleventh example',
+      address: '123 Oakland St',
+      city: 'Oakland',
+      state: 'CA',
+      zip_code: '94605',
+      price: 140,
+      num_beds: 2,
+      num_baths: 1,
+      num_guests: 4
+    )
+
+    listing12 = Listing.create!(
+      owner_id: 2,
+      title: '1 Bedroom in Marin',
+      description: 'This is the twelvth example',
+      address: '123 Marin St',
+      city: 'Marin',
+      state: 'CA',
+      zip_code: '94605',
+      price: 95,
+      num_beds: 1,
+      num_baths: 1,
+      num_guests: 2
+    )
 
     puts "Done!"
   # end
