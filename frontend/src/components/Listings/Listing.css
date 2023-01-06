@@ -2,7 +2,7 @@
 /*---------------listings index CSS--------------*/
 #all-listings{
     display: grid;
-    grid-template-columns: 20vw 20vw 20vw;
+    grid-template-columns: 22vw 20vw 20vw;
     justify-content: space-evenly;
 }
 
@@ -112,6 +112,10 @@
     border-bottom: solid 1px #f0f0f0;
     padding-bottom: 15px;
     padding-top: 15px;
+}
+
+#specialties-show > *, #left-offerings-show > *, #right-offerings-show > * {
+    padding-bottom: 3vh;
 }
 
 #description-show{
