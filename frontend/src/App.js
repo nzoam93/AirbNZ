@@ -1,8 +1,6 @@
 
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
-import LoginFormPage from "./components/LoginFormPage";
-import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
 import Filter from "./components/Filter";
 import ListingIndex from "./components/Listings/ListingIndex";

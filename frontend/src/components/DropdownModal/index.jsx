@@ -1,55 +1,50 @@
 import React, {useState} from "react";
-import { NavLink } from 'react-router-dom';
 import { login } from "../../store/session";
-import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import LoginForm from "../LoginFormModal/LoginForm";
+import SignupForm from "../SignupModal/SignupForm";
+import { Modal } from "../../context/Modal";
 import "./Modal.css";
-import LoginFormModal from "../LoginFormModal";
-import SignupFormModal from "../SignupModal";
 
-export default function Modal() {
-    const [modal, setModal] = useState(false);
+export default function DropdownModal() {
+    const [showDropdownModal, setShowDropdownModal] = useState(false);
+    const [showLoginModal, setShowLoginModal] = useState(false);
+    const [showSignupModal, setShowSignupModal] = useState(false);
+
     const dispatch = useDispatch();
-    const history = useHistory();
 
-    const toggleModal = () => {
-        setModal(!modal);
+    const toggleDropdownModal = () => {
+        setShowDropdownModal(!showDropdownModal);
     }
 
     const loginClick = () => {
-        setModal(!modal);
-        return (
-            <LoginFormModal/>
-        )
+        setShowDropdownModal(!showDropdownModal);
+        setShowLoginModal(!showLoginModal);
+    }
+
+    const signupClick = () => {
+        setShowDropdownModal(!showDropdownModal);
+        setShowSignupModal(!showSignupModal);
     }
 
     const demoLogin = (e) => {
         e.preventDefault();
         return dispatch(login({credential:`demo@user.io`, password:`password`}))
-        // .then(() => history.pushState(`/`))    (I don't think I need this line)
-      }
+    }
 
     return (
         <>
-            <button
-            onClick={toggleModal}
-            className="btn-modal icon"
-            >
+            <button onClick={toggleDropdownModal} className="btn-modal icon">
                 <i className="fa-solid fa-user-circle fa-2x" />
             </button>
             {/* shortcircuit conditional below that returns if true */}
-            {modal && (
+            {showDropdownModal && (
                 <div className="modal">
-                    <div className="overlay" onClick={toggleModal}></div> {/* overlay is the rest of the document (of the viewport) */}
+                    <div className="overlay" onClick={toggleDropdownModal}></div> {/* overlay is the rest of the document (of the viewport) */}
                     <div className="modal-content">
                         <ul>
-                            {/* These next two lines are from before I changed it to a modal */}
-                            {/* <li id="login" onClick={toggleModal}> <NavLink to="/login" id='login' >Log in</NavLink> </li> */}
-                            {/* <li className="nonbold" onClick={toggleModal}> <NavLink to="/signup" id='signup' >Sign up</NavLink> </li> */}
-
-                            {/* <li id="login" onClick={loginClick}> Log In </li> */}
-                            <li id="login"> <LoginFormModal/> </li>
-                            <li id="login"> <SignupFormModal/> </li>
+                            <li id="login" onClick={loginClick}> Log In </li>
+                            <li id="login" className="nonbold" onClick={signupClick}> Sign Up </li>
                             <li id="demo-user" className="nonbold" onClick={demoLogin}>Demo Login</li>
                             <li className="nonbold"> AirbNZ your home</li>
                         </ul>
@@ -57,6 +52,19 @@ export default function Modal() {
                 </div>
             )}
 
+            {/* Showing login form modal if its state is true */}
+            {showLoginModal && (
+                <Modal onClose={() => setShowLoginModal(false)}>
+                    <LoginForm />
+                </Modal>
+            )}
+
+            {/* Showing signup form modal if its state is true */}
+            {showSignupModal && (
+                <Modal onClose={() => setShowSignupModal(false)}>
+                    <SignupForm />
+                </Modal>
+            )}
         </>
     );
 }

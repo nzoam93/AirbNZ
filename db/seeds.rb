@@ -29,11 +29,14 @@ require "open-uri"
     # Unnecessary if using `rails db:seed:replant`
     User.destroy_all
     Listing.destroy_all
+    Reservation.destroy_all
 
     puts "Resetting primary keys..."
     # For easy testing, so that after seeding, the first `User` has `id` of 1
     ApplicationRecord.connection.reset_pk_sequence!('users')
     ApplicationRecord.connection.reset_pk_sequence!('listings')
+    ApplicationRecord.connection.reset_pk_sequence!('reservations')
+
 
 
     puts "Creating users..."
@@ -45,7 +48,7 @@ require "open-uri"
     )
 
     user2 = User.create!(
-      username: 'noam',
+      username: 'Noam',
       email: 'noam@gmail.com',
       password: 'password'
     )
