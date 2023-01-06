@@ -1,6 +1,22 @@
-/* body.active-modal {
-    overflow-y: hidden;
-} */
+/*search bar CSS*/
+#search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid grey;
+    border-radius: 20px;
+    width: 250px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+#start-your-search{
+    margin-left: 5px;
+}
+
+
+
+/*Modal CSS*/
 
 .btn-modal {
     /* padding: 10px 20px; */

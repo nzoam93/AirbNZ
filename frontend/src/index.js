@@ -7,6 +7,8 @@ import App from './App';
 import configureStore from './store';
 import csrfFetch from './store/csrf'
 import * as sessionActions from './store/session';
+import { ModalProvider } from "./context/Modal";
+
 
 //defines the store from the configureStore function
 const store = configureStore();
@@ -26,11 +28,13 @@ const renderApplication = () => {
   //BrowserRouter from React Router for routing
   function Root() {
     return (
-      <Provider store={store}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </Provider>
+      <ModalProvider>
+        <Provider store={store}>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </Provider>
+      </ModalProvider>
     );
   }
 

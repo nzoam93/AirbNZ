@@ -32,6 +32,9 @@ class User < ApplicationRecord
         class_name: :User,
         dependent: :destroy
 
+  #aws stuff
+  has_one_attached :photo
+
   #makes sure that the use has a session token before doing the validation that a session token must be present
   before_validation :ensure_session_token
 

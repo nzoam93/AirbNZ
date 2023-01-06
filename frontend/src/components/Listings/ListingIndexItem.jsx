@@ -5,30 +5,31 @@ import { Link } from "react-router-dom";
 import assetImg from "./houseimgs/airbnzphoto.jpg"
 
 
+
 const ListingIndexItem = ({listing}) => {
     const dispatch = useDispatch();
-    const houseImg = <img src={assetImg} />
+    const houseImg = <img src={assetImg} alt="house"/>
+
 
     return(
         <>
-            <div id="listing-index-item">
+            <Link to={`listings/${listing.id}`} id="listing-index-item">
+                {/* <div id="house-img"><img src={listing.photoUrls[0]} alt="house" /></div> */}
+
                 <div id="house-img">{houseImg}</div>
-                <div id="link">
+
+
+                {/* <div id="link">
                     <Link to={`listings/${listing.id}`}>{listing.title}</Link>
-                </div>
+                </div> */}
                 <ul id="listing-info">
                     <li className="bold">{listing.city}, {listing.state}</li>
                     <li>{listing.description}</li>
                     <li className="bold">${listing.price} <span id="price-span"> night</span></li>
-                    {/* <li>{listing.description}</li>
-                    <li>{listing.address}, {listing.city}, {listing.state}, {listing.zipCode}</li>
-                    <li>price: ${listing.price}</li>
-                    <li>beds: {listing.numBeds}</li>
-                    <li>baths: {listing.numBaths}</li> */}
                 </ul>
-                <button onClick={() => {dispatch(deleteListing(listing.id))}}>Delete</button>
+                {/* <button onClick={() => {dispatch(deleteListing(listing.id))}}>Delete</button> */}
                 {/* <Link to={`listings/${listing.id}`}></Link> */}
-            </div>
+            </Link>
         </>
     )
 }
