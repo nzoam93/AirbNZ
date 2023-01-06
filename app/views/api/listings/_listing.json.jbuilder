@@ -17,5 +17,5 @@ json.owner_name listing.owner.username
 #adding another key-value pair
 #it will be available in state under listing.photo_urls
 
-
+#COMMENT THIS BACK IN TO USE AWS
 # json.photo_urls listing.photos.map{|photo| photo.url}

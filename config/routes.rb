@@ -15,5 +15,6 @@ Rails.application.routes.draw do
     resources :reservations
   end
 
+  #this is for the deployment to render.com
   get '*path', to: 'static_pages#frontend'
 end
