@@ -29,10 +29,6 @@ export default function Modal() {
         // .then(() => history.pushState(`/`))    (I don't think I need this line)
       }
 
-    // const loginClick = () => {
-    //     toggleModal();
-    // }
-    
     return (
         <>
             <button

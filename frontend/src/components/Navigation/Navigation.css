@@ -70,3 +70,23 @@
    align-items: center;
    font-size: large;
 }
+
+
+/*transition for the icon to have grey bar below (per Abbey help)*/
+.icon:after {
+    content: "";
+    display: block;
+    transform: scale(0);
+    margin-bottom: -2px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #b5b5b5;
+    transition: 0.2s ease-in-out;
+}
+
+.icon:hover:after {
+    content: "";
+    color: #171722;
+    display: block;
+    transform: scale(1);
+    transition: 0.2s ease-in;
+}
