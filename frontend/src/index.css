@@ -104,3 +104,34 @@ li{
 /* .grey{
 	color: grey;
 } */
+
+
+/* spin stuff */
+
+/* div{
+    animation: spin 20s linear infinite !important
+}
+*/
+
+/* body{
+    transform: translateY(-2px);
+    z-index: 500;
+    animation: spin 20s linear infinite
+} */
+
+.spin-content{
+	transform: translateY(-2px);
+    z-index: 500;
+    animation: spin 35s linear infinite
+}
+
+.fa-solid:hover{
+    transform: translateY(1px);
+    z-index: 500;
+    animation: spin 3s linear infinite
+}
+
+@keyframes spin {
+  0% {transform: rotate(0);}
+  100%{transform: rotate(360deg);}
+}

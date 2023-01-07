@@ -1,12 +1,38 @@
 .footer{
     display: flex;
     justify-content: center;
-    color: brown;
-    font-size: small;
+    align-items: center;
+    color: #dc1262;
+    height: 5vh;
+    margin: 2vh;
 }
 
-h4{
+.footer > * {
+    margin: 0px 2vw;
+}
+
+#github-img img{
+    height: 4.5vh;
+    width: 4.5vh;
+}
+
+#linkedin-img img{
+    height: 6vh;
+    width: 6vh;
+}
+
+#spinner-button{
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: #dc1262;
+    color: white;
+    cursor: pointer;
+}
+
+/* h4{
     position: relative;
     bottom: 2px;
-    /* align-self: flex-end; */
-}
+} */
