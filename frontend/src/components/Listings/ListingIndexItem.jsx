@@ -1,13 +1,10 @@
 import React from "react"; //do I need to still include this line?
-import { useDispatch } from "react-redux";
-import { deleteListing } from "../../store/listings";
 import { Link } from "react-router-dom";
 import assetImg from "./houseimgs/airbnzphoto.jpg"
 
 
 
 const ListingIndexItem = ({listing}) => {
-    const dispatch = useDispatch();
     const houseImg = <img src={assetImg} alt="house"/>
 
 
@@ -27,8 +24,6 @@ const ListingIndexItem = ({listing}) => {
                     <li>{listing.description}</li>
                     <li className="bold">${listing.price} <span id="price-span"> night</span></li>
                 </ul>
-                {/* <button onClick={() => {dispatch(deleteListing(listing.id))}}>Delete</button> */}
-                {/* <Link to={`listings/${listing.id}`}></Link> */}
             </Link>
         </>
     )

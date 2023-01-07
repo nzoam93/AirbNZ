@@ -2,7 +2,7 @@
 /*---------------listings index CSS--------------*/
 #all-listings{
     display: grid;
-    grid-template-columns: 22vw 20vw 20vw;
+    grid-template-columns: 20vw 20vw 20vw;
     justify-content: space-evenly;
 }
 
@@ -14,6 +14,10 @@
     font-size: 16px;
     color: rgb(79, 72, 72);
 }
+
+/* #listing-index-item:hover{
+    height: 500px;
+} */
 
 #link{
     font-size: 25px;
@@ -146,85 +150,6 @@
     font-size: 25px;
     padding-bottom: 15px;
 }
-
-/*right-hand-side of show page*/
-#right-show{
-    margin-right: 4.5vw;
-    width: 40vw;
-    border: 1px solid #dddddd;
-    box-shadow: 0 0 15px #dddddd;
-    border-radius: 10px;
-    /* position: relative; used to center things relative to this */
-}
-
-#right-show > * {
-    margin: 1.5vw;
-}
-
-.price-show{
-    font-size: 25px;
-}
-
-#preliminary-right-info-show{
-    display: flex;
-    justify-content: space-between;
-}
-
-/* #checkin-checkout > *{
-    display: flex;
-    justify-content: space-between;
-} */
-
-#check-in-labels{
-    display: flex;
-    justify-content: center;
-}
-
-#check-in-labels > * {
-    padding: 5px 15px;
-}
-
-#guests-on-form input{
-    width: 312px;
-}
-
-#reserve-button-container{
-    display: flex;
-    justify-content: center;
-}
-
-#reserve-button{
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    height: 30px;
-    background-color: #dc1262;
-    color: white;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-#charge-show{
-    display: flex;
-    justify-content: center;
-    font-size: small;
-}
-
-.price-info-item-show{
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0;
-}
-
-#total-show{
-    border-top: solid 2px grey;
-    padding-top: 15px;
-}
-
-
-
 
 /*show page grid css*/
 #photos-container{

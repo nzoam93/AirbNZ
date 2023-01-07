@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getListing } from "../../store/listings";
 import AirbnzCalendar from "../AirbnzCalendar"
+import "./Reservation.css"
 
 const ReservationForm = () => {
     const {listingId} = useParams();
@@ -52,6 +53,7 @@ const ReservationForm = () => {
                     />
                 </div>
                 <div id="guests-on-form" className="center-content">
+                    {/* number of guests plus-minus */}
                     <div className="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
                     <input type="number" id="number" value="0" />
                     <div className="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
