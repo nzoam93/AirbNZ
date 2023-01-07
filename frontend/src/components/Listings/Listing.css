@@ -158,7 +158,7 @@
 }
 
 #right-show > * {
-    margin: 10px 0;
+    margin: 1.5vw;
 }
 
 .price-show{
@@ -170,9 +170,22 @@
     justify-content: space-between;
 }
 
-#checkin-checkout{
+/* #checkin-checkout > *{
     display: flex;
     justify-content: space-between;
+} */
+
+#check-in-labels{
+    display: flex;
+    justify-content: center;
+}
+
+#check-in-labels > * {
+    padding: 5px 15px;
+}
+
+#guests-on-form input{
+    width: 312px;
 }
 
 #reserve-button-container{

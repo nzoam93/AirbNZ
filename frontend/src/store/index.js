@@ -1,12 +1,14 @@
 import {createStore, combineReducers, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk'
 import listingsReducer from './listings';
+import reservationsReducer from './reservations';
 import sessionReducer from './session';
 
 //root reducer is a combined reducer of every other reducer
 const rootReducer = combineReducers({
     session: sessionReducer,
-    listings: listingsReducer
+    listings: listingsReducer,
+    reservations: reservationsReducer
 })
 
 //defines what will be applied as the middleware

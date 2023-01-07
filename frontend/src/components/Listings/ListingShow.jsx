@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { fetchListing, getListing } from "../../store/listings";
 import assetImg from "./houseimgs/airbnzphoto.jpg"
-import ListingShowPrice from "./ListingShowPrice";
+import ListingShowPrice from "../Reservations/ReservationForm";
 
 
 const ListingShow = () => {

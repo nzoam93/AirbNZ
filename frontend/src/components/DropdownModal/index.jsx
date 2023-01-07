@@ -43,10 +43,10 @@ export default function DropdownModal() {
                     <div className="overlay" onClick={toggleDropdownModal}></div> {/* overlay is the rest of the document (of the viewport) */}
                     <div className="modal-content">
                         <ul>
-                            <li id="login" onClick={loginClick}> Log In </li>
-                            <li id="login" className="nonbold" onClick={signupClick}> Sign Up </li>
-                            <li id="demo-user" className="nonbold" onClick={demoLogin}>Demo Login</li>
-                            <li className="nonbold"> AirbNZ your home</li>
+                            <li className="bold dropdown-modal-content-item" onClick={loginClick}> Log In </li>
+                            <li className="dropdown-modal-content-item" onClick={signupClick}> Sign Up </li>
+                            <li className="dropdown-modal-content-item" id="demo-user" onClick={demoLogin}>Demo Login</li>
+                            <li> AirbNZ your home</li>
                         </ul>
                     </div>
                 </div>

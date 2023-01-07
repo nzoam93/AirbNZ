@@ -1,17 +1,32 @@
-import { Calendar } from "react-calendar";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getListing } from "../../store/listings";
-import AirbnzCalendar from "../AirbnzCalendar";
+import AirbnzCalendar from "../AirbnzCalendar"
 
-const ListingShowPrice = () => {
+const ReservationForm = () => {
     const {listingId} = useParams();
+    const [checkinDate, setCheckinDate] = useState();
+    const [checkoutDate, setCheckoutDate] = useState();
+    const [focusedInput, setFocusedInput] = useState();
+
+
     const listing = useSelector(getListing(listingId));
     const visitCost = Math.round(listing.price * 5);
     const discount = Math.round(listing.price * 0.1);
     const cleaningFee = Math.round(listing.price * 0.08);
     const serviceFee = Math.round(listing.price * 0.05);
     const totalPrice = visitCost + discount + cleaningFee + serviceFee;
+
+
+    const handleSubmit = () => {
+        console.log(listingId);
+        console.log(checkinDate);
+        console.log(checkoutDate);
+        console.log(new Date(checkinDate._d).getDate())
+        console.log(new Date(checkinDate._d).getMonth())
+        console.log(new Date(checkinDate._d).getFullYear())
+    }
 
     return(
         <div id="right-show">
@@ -24,14 +39,28 @@ const ListingShowPrice = () => {
         </div>
         <div id="checkin-info">
             <div id="checkin-checkout">
-                <li>CHECK-IN</li>
-                <AirbnzCalendar />
-                <li>CHECKOUT</li>
+                <div id="check-in-labels">
+                    <p id="check-in-on-form">CHECK-IN</p>
+                    <p>CHECK-OUT</p>
+                </div>
+                <div className="center-content">
+                    <AirbnzCalendar
+                        checkinDate = {checkinDate}
+                        checkoutDate = {checkoutDate}
+                        setCheckinDate = {setCheckinDate}
+                        setCheckoutDate = {setCheckoutDate}
+                    />
+                </div>
+                <div id="guests-on-form" className="center-content">
+                    <div className="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                    <input type="number" id="number" value="0" />
+                    <div className="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                    <input type="text" placeholder="How Many Guests" />
+                </div>
             </div>
-            <div id="guests">GUESTS</div>
         </div>
         <div id="reserve-button-container">
-            <button id="reserve-button">Reserve</button>
+            <button id="reserve-button" onClick={handleSubmit}>Reserve</button>
         </div>
         <li id="charge-show">You won't be charged yet</li>
         <div id="price-info-show">
@@ -61,4 +90,4 @@ const ListingShowPrice = () => {
 
 }
 
-export default ListingShowPrice;
+export default ReservationForm;
