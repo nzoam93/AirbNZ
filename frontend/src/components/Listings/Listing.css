@@ -39,6 +39,11 @@
     border-radius: 20px;
 }
 
+#house-img img:hover{
+    height: 28vw;
+    width: 28vw;
+}
+
 #price-span{
     color: black;
     font-weight: normal;
@@ -62,6 +67,10 @@
         height: 41vw;
         width: 41vw;
     }
+    #house-img img:hover{
+        height: 42vw;
+        width: 42vw;
+    }
 }
 
 @media (max-width: 750px){
@@ -75,6 +84,10 @@
     #house-img img{
         height: 64vw;
         width: 64vw;
+    }
+    #house-img img:hover{
+        height: 65vw;
+        width: 65vw;
     }
     /* #root > *{
         display: flex;
