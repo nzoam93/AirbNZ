@@ -46,7 +46,7 @@ export default function DropdownModal() {
                             <li className="bold dropdown-modal-content-item" onClick={loginClick}> Log In </li>
                             <li className="dropdown-modal-content-item" onClick={signupClick}> Sign Up </li>
                             <li className="dropdown-modal-content-item" id="demo-user" onClick={demoLogin}>Demo Login</li>
-                            <li> AirbNZ your home</li>
+                            <li> Feature Scavenger Hunt </li>
                         </ul>
                     </div>
                 </div>

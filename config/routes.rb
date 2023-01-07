@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resource :session, only: [:show, :create, :destroy]
     resources :listings
     resources :reservations
+    resources :reviews
   end
 
   #this is for the deployment to render.com

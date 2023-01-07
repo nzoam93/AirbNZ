@@ -5,8 +5,8 @@
 #  id             :bigint           not null, primary key
 #  reserver_id    :bigint           not null
 #  listing_id     :bigint           not null
-#  check_in_date  :datetime         not null
-#  check_out_date :datetime         not null
+#  check_in_date  :date             not null
+#  check_out_date :date             not null
 #  num_guests     :integer          not null
 #
 class Reservation < ApplicationRecord

@@ -29,6 +29,10 @@ class Listing < ApplicationRecord
         class_name: :Reservation,
         dependent: :destroy
 
+    has_many :reviews,
+        foreign_key: :listing_id,
+        class_name: :Review,
+        dependent: :destroy
 
     #aws stuff
     has_many_attached :photos
