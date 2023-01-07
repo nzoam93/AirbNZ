@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #dc1262;
+    color: var(--red);
     height: 5vh;
     margin: 2vh;
 }
@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
     height: 30px;
-    background-color: #dc1262;
+    background-color: var(--red);
     color: white;
     cursor: pointer;
 }

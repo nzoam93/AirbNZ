@@ -54,7 +54,14 @@ table {
 
 
 
-/* AirBNB Specific */
+/* AirbNZ SiteWide Styling */
+
+:root{
+	--red: #ff395c;
+	--grey: #f0f0f0;
+}
+
+
 body{
     background-color: #fff;
 	color: #222222;
@@ -72,7 +79,7 @@ body{
 /* makes the icons not appear super large */
 .icon{
 	max-height: 35px;
-	color: #ff385c; /* exact color from AirBNB website */
+	color: var(--red); /* exact color from AirBNB website */
 	background-color: transparent;
 	border: none;
 	cursor: pointer;

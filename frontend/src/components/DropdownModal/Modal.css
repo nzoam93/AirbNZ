@@ -43,10 +43,10 @@
 }
 
 .dropdown-modal-content-item{
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--grey);
 }
 
 .modal-content > * > *:hover{
-    background-color: #f0f0f0;
+    background-color: var(--grey);
     border-radius: 10px;
 }

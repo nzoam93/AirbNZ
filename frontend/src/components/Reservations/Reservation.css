@@ -51,7 +51,7 @@
     align-items: center;
     width: 40%;
     height: 30px;
-    background-color: #dc1262;
+    background-color: var(--red);
     color: white;
     cursor: pointer;
     font-size: 20px;
@@ -70,7 +70,7 @@
 }
 
 #total-show{
-    border-top: solid 2px grey;
+    border-top: solid 2px var(--grey);
     padding-top: 15px;
 }
 
