@@ -27,7 +27,7 @@
 .modal-content {
     position: absolute;
     top: 8%;
-    right: 3%;
+    right: 5%;
     /* font-size: 15px; */
     /* transform: translate(-50%, -50%); */
     line-height: 2.2; /* makes it so there is space between the lines */
