@@ -60,7 +60,7 @@ const ListingShow = () => {
                     </div>
                     <div id="specialties-show">
                         <i className="fa-solid fa-wifi fa-2x" /> Fast Wifi <br />
-                        <i className="fa-solid fa-key fa-2x" /> Great check-in experience <br />
+                        <i className="fa-solid fa-key fa-2x spin" /> Great check-in experience <br />
                         <i className="fa-solid fa-star fa-2x" /> Experienced host <br />
                     </div>
                     <div id="description-show">

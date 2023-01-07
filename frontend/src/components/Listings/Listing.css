@@ -215,3 +215,27 @@
 .item5 img{
     border-bottom-right-radius: 10px;
 }
+
+/* spin stuff */
+
+/* div{
+    animation: spin 20s linear infinite !important
+
+}
+
+body{
+    transform: translateY(-2px);
+    z-index: 500;
+    animation: spin 20s linear infinite
+} */
+
+.fa-solid:hover{
+    transform: translateY(1px);
+    z-index: 500;
+    animation: spin 3s linear infinite
+}
+
+@keyframes spin {
+  0% {transform: rotate(0);}
+  100%{transform: rotate(360deg);}
+}
