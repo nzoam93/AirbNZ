@@ -27,12 +27,12 @@ const Footer = () => {
 
     return (
         <div className="footer">
-
-
-            <h4>Noam Zimet's AirBnB Clone</h4>
-            <a id="github-img" href="https://github.com/nzoam93" target="_blank" rel="noopener noreferrer">{githubImg}</a>
-            <a id="linkedin-img" href="https://www.linkedin.com/in/noam-zimet-4114a594" target="_blank" rel="noopener noreferrer">{linkedInImg}</a>
-            <button id="spinner-button" onClick={addSpinClass}>DO NOT CLICK! </button>
+            <div id="footer-buttons">
+                <a id="github-img" href="https://github.com/nzoam93" target="_blank" rel="noopener noreferrer">{githubImg}</a>
+                <a id="linkedin-img" href="https://www.linkedin.com/in/noam-zimet-4114a594" target="_blank" rel="noopener noreferrer">{linkedInImg}</a>
+                <button id="spinner-button" onClick={addSpinClass}>Do Not Click! </button>`
+            </div>
+            <h4 id="footer-tag">Noam Zimet's AirBnB Clone</h4>
         </div>
     )
 }

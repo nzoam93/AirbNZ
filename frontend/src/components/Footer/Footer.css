@@ -1,14 +1,26 @@
 .footer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: var(--red);
-    height: 5vh;
-    margin: 2vh;
+    height: 50px;
+    margin: 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--grey);
 }
 
-.footer > * {
-    margin: 0px 2vw;
+
+#footer-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-tag{
+    padding-top: 1vh;
+    /* margin-bottom: 20px; */
+    padding-bottom: 2vh;
 }
 
 #github-img img{
