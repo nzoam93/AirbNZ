@@ -75,6 +75,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_07_204937) do
     t.bigint "listing_id", null: false
     t.string "title", null: false
     t.string "body", null: false
+    t.integer "star_rating", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["listing_id"], name: "index_reviews_on_listing_id"

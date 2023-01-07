@@ -27,6 +27,7 @@ require "open-uri"
 # ApplicationRecord.transaction do
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
+    Review.destroy_all
     Reservation.destroy_all
     Listing.destroy_all
     User.destroy_all
@@ -36,8 +37,7 @@ require "open-uri"
     ApplicationRecord.connection.reset_pk_sequence!('users')
     ApplicationRecord.connection.reset_pk_sequence!('listings')
     ApplicationRecord.connection.reset_pk_sequence!('reservations')
-
-
+    ApplicationRecord.connection.reset_pk_sequence!('reviews')
 
     puts "Creating users..."
     # Create one user with an easy to remember username, email, and password:
@@ -279,6 +279,23 @@ require "open-uri"
       num_guests: 6
     )
 
+    puts "Creating Reviews..."
+    # Create one user with an easy to remember username, email, and password:
+    review1 = Review.create!(
+      reviewer_id: 1,
+      listing_id: 5,
+      title: 'loved my stay at this place!',
+      body: 'This was worthy of 4 stars because of this and that.',
+      star_rating: 4
+    )
+
+    review2 = Review.create!(
+      reviewer_id: 2,
+      listing_id: 7,
+      title: '5 stars accomodation!',
+      body: 'This was truly 5-star accomodation!',
+      star_rating: 5
+    )
 
 
     puts "Done!"

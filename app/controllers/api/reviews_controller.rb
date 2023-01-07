@@ -43,7 +43,8 @@ class Api::ReviewsController < ApplicationController
             :reviewer_id,
             :listing_id,
             :title,
-            :body
+            :body,
+            :star_rating
         )
     end
 end

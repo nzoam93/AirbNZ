@@ -3,4 +3,5 @@ json.extract! listing,
     :reviewer_id,
     :listing_id,
     :title,
-    :body
+    :body,
+    :star_rating
