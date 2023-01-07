@@ -5,7 +5,7 @@ import assetImg from "./houseimgs/airbnzphoto.jpg"
 
 
 
-const ReservationIndexItem = ({reservation}) => {
+const ReviewIndexItem = ({review}) => {
     const dispatch = useDispatch();
     const houseImg = <img src={assetImg} alt="house"/>
 
@@ -15,4 +15,4 @@ const ReservationIndexItem = ({reservation}) => {
     )
 }
 
-export default ReservationIndexItem;
+export default ReviewIndexItem;
