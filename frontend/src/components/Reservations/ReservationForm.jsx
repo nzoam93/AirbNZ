@@ -9,7 +9,8 @@ const ReservationForm = () => {
     const {listingId} = useParams();
     const [checkinDate, setCheckinDate] = useState();
     const [checkoutDate, setCheckoutDate] = useState();
-    const [focusedInput, setFocusedInput] = useState();
+    // const [focusedInput, setFocusedInput] = useState();
+    const [numGuests, setNumGuests] = useState(0);
 
 
     const listing = useSelector(getListing(listingId));
@@ -28,6 +29,33 @@ const ReservationForm = () => {
         console.log(new Date(checkinDate._d).getMonth())
         console.log(new Date(checkinDate._d).getFullYear())
     }
+
+    // For plus-minus button from https://codepen.io/mtbroomell/pen/yNwwdv
+    const increaseValue = () => {
+        setNumGuests(numGuests + 1);
+        console.log(numGuests)
+    }
+
+    const decreaseValue = () => {
+        setNumGuests(numGuests - 1);
+    }
+
+    // function increaseValue() {
+    //     var value = parseInt(document.getElementById('number').value, 10);
+    //     value = isNaN(value) ? 0 : value;
+    //     value++;
+    //     document.getElementById('number').value = value;
+    //   }
+
+    // function decreaseValue() {
+    //     var value = parseInt(document.getElementById('number').value, 10);
+    //     value = isNaN(value) ? 0 : value;
+    //     value < 1 ? value = 1 : '';
+    //     value--;
+    //     document.getElementById('number').value = value;
+    // }
+
+
 
     return(
         <div id="right-show">
@@ -54,9 +82,14 @@ const ReservationForm = () => {
                 </div>
                 <div id="guests-on-form" className="center-content">
                     {/* number of guests plus-minus */}
-                    <div className="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-                    <input type="number" id="number" value="0" />
-                    <div className="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                    <div className="value-button" id="decrease" onClick={decreaseValue}>-</div>
+                    <input
+                            type='text'
+                            value={undefined}
+                            onChange={e => this.setState({ message: e.target.value })}
+                            placeholder='Enter Your Message'
+                    />
+                    <div className="value-button" id="increase" onClick={increaseValue}>+</div>
                     <input type="text" placeholder="How Many Guests" />
                 </div>
             </div>
