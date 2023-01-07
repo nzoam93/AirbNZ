@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import { fetchListing, getListing } from "../../store/listings";
 import assetImg from "./houseimgs/airbnzphoto.jpg"
 import ListingShowPrice from "../Reservations/ReservationForm";
+import "./ListingShow.css"
 
 
 const ListingShow = () => {
