@@ -5,7 +5,7 @@
     justify-content: space-between;
     border: 1px solid grey;
     border-radius: 20px;
-    width: 250px;
+    min-width: 28vw;
     margin-bottom: 2px;
     cursor: pointer;
 }

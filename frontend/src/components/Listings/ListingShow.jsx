@@ -57,12 +57,13 @@ const ListingShow = () => {
                             <p id="owner-info-show">Entire home hosted by {listing.ownerName}</p>
                             <p>{listing.numGuests} guests • {listing.numBeds} bedrooms • {listing.numBaths} bathrooms</p>
                         </div>
+                        <div id="profile-picture-show">{houseImg}</div>
                         {/* <div id="profile-picture-show"><img src={listing.photoUrls[0]} alt="photo1" /></div> */}
                     </div>
                     <div id="specialties-show">
-                        <i className="fa-solid fa-wifi fa-2x" /> Fast Wifi <br />
-                        <i className="fa-solid fa-key fa-2x spin" /> Great check-in experience <br />
-                        <i className="fa-solid fa-star fa-2x" /> Experienced host <br />
+                        <i className="fa-solid fa-wifi show-page-icon" /> Fast Wifi <br />
+                        <i className="fa-solid fa-key show-page-icon" /> Great check-in experience <br />
+                        <i className="fa-solid fa-star show-page-icon" /> Experienced host <br />
                     </div>
                     <div id="description-show">
                         {listing.description}
@@ -71,14 +72,14 @@ const ListingShow = () => {
                         <h4 className="title-show">What this place offers</h4>
                         <div id="all-offerings-show">
                             <div id="left-offerings-show">
-                                <i className="fa-solid fa-utensils fa-2x" /> Kitchen <br />
-                                <i className="fa-solid fa-mountain fa-2x" /> Mountain Views <br />
-                                <i className="fa-solid fa-person-swimming fa-2x" /> Private Pool <br />
+                                <i className="fa-solid fa-utensils show-page-icon" /> Kitchen <br />
+                                <i className="fa-solid fa-mountain show-page-icon" /> Mountain Views <br />
+                                <i className="fa-solid fa-person-swimming show-page-icon" /> Private Pool <br />
                             </div>
                             <div id="right-offerings-show">
-                                <i className="fa-solid fa-dog fa-2x" /> Pet Friendly <br />
-                                <i className="fa-solid fa-wind fa-2x" /> Air Conditioning <br />
-                                <i className="fa-solid fa-car fa-2x" /> Free parking <br />
+                                <i className="fa-solid fa-dog show-page-icon" /> Pet Friendly <br />
+                                <i className="fa-solid fa-wind show-page-icon" /> Air Conditioning <br />
+                                <i className="fa-solid fa-car show-page-icon" /> Free parking <br />
                             </div>
                         </div>
                     </div>

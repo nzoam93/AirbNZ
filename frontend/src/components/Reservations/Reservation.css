@@ -1,7 +1,7 @@
 /*right-hand-side of show page*/
 #right-show{
-    margin-right: 4.5vw;
-    width: 40vw;
+    /* margin-right: 4.5vw; */
+    width: 33vw;
     border: 1px solid #dddddd;
     box-shadow: 0 0 15px #dddddd;
     border-radius: 10px;
@@ -128,7 +128,3 @@
       -webkit-appearance: none;
       margin: 0;
   }
-
-
-
-

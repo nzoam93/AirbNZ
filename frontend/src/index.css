@@ -95,6 +95,11 @@ body{
     border-bottom: solid 2px #888888;
 } */
 
+.show-page-icon{
+	font-size: 21px;
+	margin-right: 0.5vw;
+}
+
 a{
 	text-decoration: none;
 }
