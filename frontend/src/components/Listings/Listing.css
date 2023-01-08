@@ -2,14 +2,14 @@
 /*---------------listings index CSS--------------*/
 #all-listings{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     justify-content: space-evenly;
 }
 
 #listing-index-item{
-    height: 34vw;
-    width: 27vw;
-    border: 1px solid green;
+    height: 30vw;
+    width: 20vw;
+    /* border: 1px solid green; */
     margin: 5px;
     font-size: 18px;
     color: rgb(79, 72, 72);
@@ -34,14 +34,14 @@
 }
 
 #house-img img{
-    height: 27vw;
-    width: 27vw;
+    height: 20vw;
+    width: 20vw;
     border-radius: 20px;
 }
 
 #house-img img:hover{
-    height: 28vw;
-    width: 28vw;
+    height: 21vw;
+    width: 21vw;
 }
 
 #price-span{
@@ -53,6 +53,24 @@
 .price-info{
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 1250px){
+    #all-listings{
+        grid-template-columns: auto auto auto;
+    }
+    #listing-index-item{
+        height: 37vw;
+        width: 27vw;
+    }
+    #house-img img{
+        height: 27vw;
+        width: 27vw;
+    }
+    #house-img img:hover{
+        height: 28vw;
+        width: 28vw;
+    }
 }
 
 @media (max-width: 1000px){

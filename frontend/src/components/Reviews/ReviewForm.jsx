@@ -33,6 +33,8 @@ const ReviewForm = () => {
         dispatch(createReview(data));
     }
 
+
+
     return(
         <div id="review-container">
             <div id="review-instructions">
@@ -40,14 +42,14 @@ const ReviewForm = () => {
             </div>
             <div id="review-form">
                 <form onSubmit={handleSubmit}>
-                    <p>Location</p>
+                    {/* <p>Location</p>
                     <input
                         type="range"
                         min="1" max="5"
                         value="3"
                     />
                     <p>Value: </p>
-                    <br />
+                    <br /> */}
                     <input
                         type="text"
                         placeholder="Review title"
@@ -71,6 +73,7 @@ const ReviewForm = () => {
                     <br />
                     <button>Submit Review</button>
                 </form>
+
             </div>
         </div>
     )

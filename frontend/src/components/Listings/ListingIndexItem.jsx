@@ -15,10 +15,6 @@ const ListingIndexItem = ({listing}) => {
 
                 <div id="house-img">{houseImg}</div>
 
-
-                {/* <div id="link">
-                    <Link to={`listings/${listing.id}`}>{listing.title}</Link>
-                </div> */}
                 <ul id="listing-info">
                     <li className="bold">{listing.city}, {listing.state}</li>
                     <li>{listing.description}</li>

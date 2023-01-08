@@ -42,7 +42,7 @@ require "open-uri"
     puts "Creating users..."
     # Create one user with an easy to remember username, email, and password:
     user1 = User.create!(
-      username: 'Demo-lition',
+      username: 'Demo Dan',
       email: 'demo@user.io',
       password: 'password'
     )
@@ -77,11 +77,11 @@ require "open-uri"
       num_guests: 6
     )
 
-    listing1.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house1.jpg"), filename: "house1.jpg")
-    listing1.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house1room1.jpg"), filename: "house1room1.jpg")
-    listing1.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house1room2.jpg"), filename: "house1room2.jpg")
-    listing1.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house1room3.jpg"), filename: "house1room3.jpg")
-    listing1.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house1room4.jpg"), filename: "house1room4.jpg")
+    # listing1.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house1.jpg"), filename: "house1.jpg")
+    # listing1.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house1room1.jpg"), filename: "house1room1.jpg")
+    # listing1.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house1room2.jpg"), filename: "house1room2.jpg")
+    # listing1.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house1room3.jpg"), filename: "house1room3.jpg")
+    # listing1.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house1room4.jpg"), filename: "house1room4.jpg")
 
     listing2 = Listing.create!(
       owner_id: 2,
