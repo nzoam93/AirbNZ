@@ -49,17 +49,18 @@ function ProfileButton({ user }) {
         <i className="fa-solid fa-user-circle fa-2x" />
       </button>} */}
       {!showMenu && (
-        <>
+        <div className="center-content">
           <div id="profile-img">{profileImg}</div>
           <ul id="profile-dropdown">
             <li>{user.username}</li>
-            <NavLink exact to={linkPath} >
-              <button id="logout-button">My Page</button>
-            </NavLink>
-            {/* <button id="user-show-page-button" onClick={showPageLink}>My Show Page</button> */}
-            <button id="logout-button" onClick={logout}>Log Out</button>
+            <div className="center-content">
+              <NavLink exact to={linkPath} >
+                <button className="user-link-button">My Page</button>
+              </NavLink>
+              <button className="user-link-button" onClick={logout}>Log Out</button>
+            </div>
           </ul>
-        </>
+        </div>
 
       )}
     </div>
