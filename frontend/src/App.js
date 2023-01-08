@@ -7,6 +7,7 @@ import ListingIndex from "./components/Listings/ListingIndex";
 import PageNotFound from "./components/PageNotFound";
 import Footer from "./components/Footer";
 import ListingShow from "./components/Listings/ListingShow";
+import UserShow from "./components/UserShow";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
             <Filter />
             <ListingIndex/>
         </Route>
+        <Route exact path="/users/:userId">
+            <UserShow/>
+        </Route>
+
         {/* <Route exact path="/login">
           <LoginFormPage />
         </Route>

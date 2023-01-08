@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   #namespace api makes it such that the rails routes are api/users, etc
   namespace :api, defaults: { format: :json } do
-    resources :users, only: :create
+    resources :users, only: [:create, :show]
     resource :session, only: [:show, :create, :destroy]
     resources :listings do
       resources :reviews, only: [:index]

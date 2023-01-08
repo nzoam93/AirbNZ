@@ -1,9 +1,11 @@
 
 import React, { useState, useEffect } from "react";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import * as sessionActions from '../../store/session';
 import './Navigation.css';
 import assetImg from "../Listings/houseimgs/airbnzphoto.jpg"
+import { NavLink } from 'react-router-dom';
+
 
 
 
@@ -11,6 +13,9 @@ function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
   const profileImg = <img src={assetImg} alt="house"/>
+
+  const sessionUser = useSelector(state => state.session.user);
+  const linkPath = `users/${sessionUser.id}`
 
 
   const openMenu = () => {
@@ -48,6 +53,10 @@ function ProfileButton({ user }) {
           <div id="profile-img">{profileImg}</div>
           <ul id="profile-dropdown">
             <li>{user.username}</li>
+            <NavLink exact to={linkPath} >
+              <button id="logout-button">My Page</button>
+            </NavLink>
+            {/* <button id="user-show-page-button" onClick={showPageLink}>My Show Page</button> */}
             <button id="logout-button" onClick={logout}>Log Out</button>
           </ul>
         </>
