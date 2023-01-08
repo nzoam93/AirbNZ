@@ -1,3 +1,6 @@
+import csrfFetch from "./csrf";
+
+
 //ACTION CONSTANTS
 export const RECEIVE_RESERVATIONS = 'reservations/RECEIVE_RESERVATIONS';
 export const RECEIVE_RESERVATION = 'reservations/RECEIVE_RESERVATION';

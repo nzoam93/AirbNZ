@@ -10,10 +10,12 @@ class Api::ListingsController < ApplicationController
     end
 
     def create
+        @listing = Listing.new(review_params)
+
         if @listing.save
             render :show
         else
-            render json :@listing.errors.full_messages, status: 422
+            render json: @listing.errors.full_messages, status: 422
         end
     end
 

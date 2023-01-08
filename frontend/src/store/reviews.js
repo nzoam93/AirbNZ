@@ -1,20 +1,23 @@
+import csrfFetch from "./csrf";
+
+
 //ACTION CONSTANTS
 export const RECEIVE_REVIEWS = 'reviews/RECEIVE_REVIEWS';
 export const RECEIVE_REVIEW = 'reviews/RECEIVE_REVIEW';
 export const REMOVE_REVIEW = 'reviews/REMOVE_REVIEW';
 
 //ACTION CREATORS
-const receive_reviews = (reviews) => ({
+const receiveReviews = (reviews) => ({
     type: RECEIVE_REVIEWS,
     reviews
 })
 
-const recieve_review = (review) => ({
+const receiveReview = (review) => ({
     type: RECEIVE_REVIEW,
     review
 })
 
-const remove_review = (reviewId) => ({
+const removeReview = (reviewId) => ({
     type: REMOVE_REVIEW,
     reviewId
 })
@@ -46,41 +49,42 @@ export const getReview = (reviewId) => (state) => {
 //THUNK ACTION CREATORS
 
 //fetch all the reviews from backend
-export const fetchReviews = () => async (dispatch) => {
-    const response = await fetch ('/api/reviews');
+export const fetchReviews = (listingId) => async (dispatch) => {
+    const response = await csrfFetch(`/api/listings/${listingId}/reviews`);
     if (response.ok){
         const reviews = await response.json();
-        dispatch(receive_reviews(reviews));
+        dispatch(receiveReviews(reviews));
     }
 }
 
 //fetch the specified review from backend
 export const fetchReview = (reviewId) => async (dispatch) => {
-    const response = await fetch (`/api/reviews/${reviewId}`);
+    const response = await csrfFetch(`/api/reviews/${reviewId}`);
     if(response.ok){
         const review = await response.json();
-        dispatch(recieve_review(review));
+        dispatch(receiveReview(review));
     }
 }
 
 //create a new review in the backend
 export const createReview = (review) => async (dispatch) => {
-    const response = await fetch (`/api/reviews`, {
+    const response = await csrfFetch(`/api/reviews`, {
         method: 'POST',
         body: JSON.stringify(review),
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         }
     })
     if (response.ok){
-        const review = await response.json();
-        dispatch(recieve_review(review));
+        const newReview = await response.json();
+        dispatch(receiveReview(newReview));
     }
 }
 
 //update an existing review in the backend
 export const updateReview = (review) => async (dispatch) => {
-    const response = await fetch (`/api/reviews/${review.id}`, {
+    const response = await csrfFetch(`/api/reviews/${review.id}`, {
         method: `PUT`,
         body: JSON.stringify(review),
         headers: {
@@ -89,17 +93,17 @@ export const updateReview = (review) => async (dispatch) => {
     })
     if (response.ok){
         const review = await response.json();
-        dispatch(recieve_review(review));
+        dispatch(receiveReview(review));
     }
 }
 
 //remove a review in the backend
 export const deleteReview = (reviewId) => async (dispatch) => {
-    const response = await fetch (`/api/reviews/${reviewId}`, {
+    const response = await csrfFetch(`/api/reviews/${reviewId}`, {
         method: 'DELETE'
     })
     if (response.ok){
-        dispatch(remove_review(reviewId));
+        dispatch(removeReview(reviewId));
     }
 }
 
@@ -108,7 +112,9 @@ export const deleteReview = (reviewId) => async (dispatch) => {
 const reviewsReducer = (state = {}, action) => {
     switch(action.type){
         case RECEIVE_REVIEWS:
-            return {...state, ...action.reviews}
+            // the commented out line would make the reviews persist rather than go away on each new page
+            // return {...state, ...action.reviews}
+            return {...action.reviews}
         case RECEIVE_REVIEW:
             return {...state, [action.review.id]: action.review}
         case REMOVE_REVIEW:

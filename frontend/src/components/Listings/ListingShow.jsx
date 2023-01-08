@@ -6,6 +6,9 @@ import { fetchListing, getListing } from "../../store/listings";
 import assetImg from "./houseimgs/airbnzphoto.jpg"
 import ListingShowPrice from "../Reservations/ReservationForm";
 import "./ListingShow.css"
+import ReviewForm from "../Reviews/ReviewForm";
+import ReviewIndex from "../Reviews/ReviewIndex";
+
 
 
 const ListingShow = () => {
@@ -89,13 +92,17 @@ const ListingShow = () => {
                             </div>
                         </div>
                     </div>
-                    <div id="calendar-show">
+                    {/* <div id="calendar-show">
                         <Calendar />
-                    </div>
+                    </div> */}
                     <div id="reviews-show">
-                        <h4 className="title-show">Reviews</h4>
+                        <div id="all-reviews-text">All Reviews</div>
+                        <ReviewIndex />
+
+                        {/* <h4 className="title-show">Reviews</h4>
                         <p>I loved my stay</p>
-                        <p>I also loved my stay here</p>
+                        <p>I also loved my stay here</p> */}
+                        <ReviewForm />
                     </div>
                 </div>
 

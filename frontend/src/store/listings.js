@@ -1,3 +1,6 @@
+import csrfFetch from "./csrf";
+
+
 //ACTION CONSTANTS
 export const RECEIVE_LISTINGS = 'listings/RECEIVE_LISTINGS';
 export const RECEIVE_LISTING = 'listings/RECEIVE_LISTING';

@@ -10,10 +10,12 @@ class Api::ReservationsController < ApplicationController
     end
 
     def create
+        @reservation = Reservation.new(review_params)
+
         if @reservation.save
             render :show
         else
-            render json :@reservation.errors.full_messages, status: 422
+            render json: @reservation.errors.full_messages, status: 422
         end
     end
 

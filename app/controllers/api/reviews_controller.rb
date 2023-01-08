@@ -2,18 +2,26 @@ class Api::ReviewsController < ApplicationController
     before_action :set_review, only: [:show, :update, :destroy]
 
     def index
-        @reviews = Review.all
+        incoming_listing_id = params[:listing_id]
+        @reviews = Review.where(listing_id: incoming_listing_id)
+        render :index
+        # Active Record query in order to get more than one result (find_by would just give one)
+        # @reviews = Review.where(listing_id: params[:listing_id])
     end
 
     def show
-        render :show
+
+        # render :show
     end
 
     def create
-        if @review.save
+        @review = Review.new(review_params)
+        @review.reviewer_id = current_user.id
+        @review.listing_id = params[:listing_id]
+        if @review && @review.save
             render :show
         else
-            render json :@review.errors.full_messages, status: 422
+            render json: @review.errors.full_messages, status: 422
         end
     end
 

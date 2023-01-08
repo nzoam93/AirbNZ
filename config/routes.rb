@@ -11,9 +11,11 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, only: :create
     resource :session, only: [:show, :create, :destroy]
-    resources :listings
+    resources :listings do
+      resources :reviews, only: [:index]
+    end
     resources :reservations
-    resources :reviews
+    resources :reviews, only: [:create, :update, :destroy]
   end
 
   #this is for the deployment to render.com
