@@ -10,6 +10,7 @@ export default function DropdownModal() {
     const [showDropdownModal, setShowDropdownModal] = useState(false);
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [showSignupModal, setShowSignupModal] = useState(false);
+    const [showScavengerHuntModal, setShowScavengerHuntModal] = useState(false)
 
     const dispatch = useDispatch();
 
@@ -32,6 +33,11 @@ export default function DropdownModal() {
         return dispatch(login({credential:`demo@user.io`, password:`password`}))
     }
 
+    const scavengerHuntClick = () => {
+        setShowDropdownModal(!showDropdownModal);
+        setShowScavengerHuntModal(!showScavengerHuntModal);
+    }
+
     return (
         <>
             <button onClick={toggleDropdownModal} className="btn-modal icon">
@@ -46,7 +52,9 @@ export default function DropdownModal() {
                             <li className="bold dropdown-modal-content-item" onClick={loginClick}> Log In </li>
                             <li className="dropdown-modal-content-item" onClick={signupClick}> Sign Up </li>
                             <li className="dropdown-modal-content-item" id="demo-user" onClick={demoLogin}>Demo Login</li>
-                            <li> Feature Scavenger Hunt </li>
+                            {/* <li> Feature Scavenger Hunt  </li> */}
+                            <li className="dropdown-modal-content-item" id="demo-user" onClick={scavengerHuntClick}>Feature Scavenger Hunt</li>
+
                         </ul>
                     </div>
                 </div>
