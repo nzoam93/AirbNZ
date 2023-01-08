@@ -1,0 +1,30 @@
+#review-container{
+    border-bottom: 1px solid var(--grey);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+#user-review-info{
+    display: flex;
+    align-items: center;
+}
+
+#review-username{
+    padding-bottom: 6px;
+    font-weight: bold;
+}
+
+#review-time{
+    color: gray;
+}
+
+#review-body{
+    margin: 15px 0
+}
+
+
+
+/* #username-and-time > :nth-child(1){
+    padding-bottom: 8px;
+    font-weight: bold;
+} */

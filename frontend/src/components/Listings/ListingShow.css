@@ -23,6 +23,7 @@
 
 /*left-hand-side of show*/
 #left-show{
+    width: 47vw;
     margin-right: 4vw;
     border: 1px solid red;
 }
@@ -30,16 +31,11 @@
 #preliminary-info-show{
     display: flex;
     justify-content: space-between;
-    padding: 0.7vh 0;
     border-bottom: solid 1px #f0f0f0;
 }
 
 #preliminary-info-show > * > *{
-    padding-bottom: 0.7vh;
-}
-
-#owner-info-show{
-    font-size: 20px;
+    padding-bottom: 10px;
 }
 
 #profile-picture-show img{
@@ -66,8 +62,8 @@
 
 #offerings-show{
     border-bottom: solid 1px var(--grey);
-    padding-bottom: 15px;
-    padding-top: 15px;
+    /* padding-bottom: 15px;
+    padding-top: 15px; */
 }
 
 #all-offerings-show{
@@ -83,8 +79,8 @@
 }
 
 .title-show{
-    font-size: 25px;
-    padding-bottom: 15px;
+    font-size: 20px;
+    padding: 15px 0px;
 }
 
 /*show page grid css*/
@@ -175,4 +171,9 @@
     .item2, .item3, .item4, .item5{
         display: none;
     }
+}
+
+/*----Reviews----*/
+#reviews-show{
+
 }

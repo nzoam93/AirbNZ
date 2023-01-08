@@ -76,6 +76,10 @@ body{
 	font-weight: normal;
 }
 
+.underline{
+	text-decoration: underline;
+}
+
 /* makes the icons not appear super large */
 .icon{
 	max-height: 35px;
@@ -102,6 +106,7 @@ body{
 
 a{
 	text-decoration: none;
+	color: inherit;
 }
 
 li{

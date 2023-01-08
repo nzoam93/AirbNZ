@@ -40,6 +40,14 @@ const ReviewForm = () => {
             </div>
             <div id="review-form">
                 <form onSubmit={handleSubmit}>
+                    <p>Location</p>
+                    <input
+                        type="range"
+                        min="1" max="5"
+                        value="3"
+                    />
+                    <p>Value: </p>
+                    <br />
                     <input
                         type="text"
                         placeholder="Review title"

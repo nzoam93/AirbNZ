@@ -62,7 +62,7 @@ const ReservationForm = () => {
         <div id="preliminary-right-info-show">
             <li className="bold price-show">${listing.price} <span id="price-span"> night</span></li>
             <div>
-                <i className="fa-solid fa-star fa-0.5x bold" />  <span id="price-span">5.0 • 9 Reviews</span>
+                <i className="fa-solid fa-star fa-0.5x bold" />  <span id="price-span">5.0 • <a className="underline" href="#reviews-show">9 Reviews</a> </span>
                 {/* <p>9 reviews</p> */}
             </div>
         </div>
@@ -100,19 +100,19 @@ const ReservationForm = () => {
         <li id="charge-show">You won't be charged yet</li>
         <div id="price-info-show">
             <div className="price-info-item-show">
-                <li>${listing.price} x 5 nights</li>
+                <li className="underline">${listing.price} x 5 nights</li>
                 <li>${visitCost}</li>
             </div>
             <div className="price-info-item-show">
-                <li>Long stay discount</li>
+                <li className="underline">Long stay discount</li>
                 <li>-${discount}</li>
             </div>
             <div className="price-info-item-show">
-                <li>Cleaning fee</li>
+                <li className="underline">Cleaning fee</li>
                 <li>${cleaningFee}</li>
             </div>
             <div className="price-info-item-show">
-                    <li>Service fee</li>
+                    <li className="underline">Service fee</li>
                     <li>${serviceFee}</li>
                 </div>
                 <div className="price-info-item-show bold" id="total-show">

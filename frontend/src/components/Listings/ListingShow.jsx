@@ -40,7 +40,7 @@ const ListingShow = () => {
             <h5 className="bold" id="listing-title">{listing.title}</h5>
             <div className="bold" id="second-line-on-show">
                 <li>
-                <i className="fa-solid fa-star fa-0.5x bold" />  <span id="price-span">5.0 • 9 Reviews • </span>
+                <i className="fa-solid fa-star fa-0.5x bold" />  <span id="price-span">5.0 • <a className="underline" href="#reviews-show">9 Reviews</a>  • </span>
                 {listing.city}, {listing.state}, United States
 
                 </li>
@@ -62,7 +62,7 @@ const ListingShow = () => {
                 <div id="left-show">
                     <div id="preliminary-info-show">
                         <div>
-                            <p id="owner-info-show">Entire home hosted by {listing.ownerName}</p>
+                            <p className="title-show">Entire home hosted by {listing.ownerName}</p>
                             <p>{listing.numGuests} guests • {listing.numBeds} bedrooms • {listing.numBaths} bathrooms</p>
                         </div>
                         <div id="profile-picture-show">{houseImg}</div>
@@ -78,7 +78,7 @@ const ListingShow = () => {
                         {listing.description}
                     </div>
                     <div id="offerings-show">
-                        <h4 className="title-show">What this place offers</h4>
+                        <h4 className="title-show">What this airbNZ offers</h4>
                         <div id="all-offerings-show">
                             <div id="left-offerings-show">
                                 <i className="fa-solid fa-utensils show-page-icon" /> Kitchen <br />
@@ -96,7 +96,6 @@ const ListingShow = () => {
                         <Calendar />
                     </div> */}
                     <div id="reviews-show">
-                        <div id="all-reviews-text">All Reviews</div>
                         <ReviewIndex />
 
                         {/* <h4 className="title-show">Reviews</h4>

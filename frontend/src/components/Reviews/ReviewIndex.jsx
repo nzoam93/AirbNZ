@@ -10,11 +10,12 @@ const ReviewIndex = () => {
     const reviews = useSelector(getReviews);
     const {listingId} = useParams();
 
+    const numReviews = useSelector(state => state.reviews.length)
+
+
     useEffect(() => {
         dispatch(fetchReviews(listingId));
     }, [listingId, dispatch])
-
-    console.log(reviews)
 
     if(!reviews){
         return null;
@@ -22,6 +23,10 @@ const ReviewIndex = () => {
 
     return(
         <>
+            <div className="title-show">
+                <i className="fa-solid fa-star show-page-icon" />
+                4.7 • {numReviews} Review
+            </div>
             <div id="all-reviews">
                 {reviews.map((review) => <ReviewIndexItem review={review} key={review.id}/> )}
             </div>

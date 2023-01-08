@@ -3,13 +3,11 @@ import { Calendar } from "react-calendar";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { fetchReview, getReview } from "../../store/reviews";
-import assetImg from "./houseimgs/airbnzphoto.jpg"
 
 const ReviewShow = () => {
     const dispatch = useDispatch();
     const {reviewId} = useParams();
     const review = useSelector(getReview(reviewId));
-    const houseImg = <img src={assetImg} alt="house"/>
 
     useEffect(() => {
         dispatch(fetchReview(reviewId));

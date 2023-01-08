@@ -26,7 +26,7 @@ const Footer = () => {
         document.getElementById("scavenger-linkedin-task").style.color = "green";
         // document.getElementById("scavenger-linkedin-task").innerHTML = "green";
         document.getElementById("footer-tag").style.color = "green";
-        console.log("HI")
+        // console.log("HI")
     }
 
     /*Scavenger Hunt*/
