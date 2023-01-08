@@ -26,6 +26,11 @@ const ListingShow = () => {
         return null;
     }
 
+    // const scavengerHuntKey = () => {
+    //     document.getElementById("scavenger-key-task").style.color = "green";
+    //     console.log("hi");
+    // }
+
 
     return(
         <div id="show-page">
@@ -63,6 +68,7 @@ const ListingShow = () => {
                     <div id="specialties-show">
                         <i className="fa-solid fa-wifi show-page-icon" /> Fast Wifi <br />
                         <i className="fa-solid fa-key show-page-icon" /> Great check-in experience <br />
+                        {/* <i onMouseOver={scavengerHuntKey} className="fa-solid fa-key show-page-icon" /> Great check-in experience <br /> */}
                         <i className="fa-solid fa-star show-page-icon" /> Experienced host <br />
                     </div>
                     <div id="description-show">

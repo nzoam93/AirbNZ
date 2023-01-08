@@ -5,6 +5,7 @@ import LoginForm from "../LoginFormModal/LoginForm";
 import SignupForm from "../SignupModal/SignupForm";
 import { Modal } from "../../context/Modal";
 import "./Modal.css";
+import ScavengerHunt from "../ScavengerHunt";
 
 export default function DropdownModal() {
     const [showDropdownModal, setShowDropdownModal] = useState(false);
@@ -53,7 +54,7 @@ export default function DropdownModal() {
                             <li className="dropdown-modal-content-item" onClick={signupClick}> Sign Up </li>
                             <li className="dropdown-modal-content-item" id="demo-user" onClick={demoLogin}>Demo Login</li>
                             {/* <li> Feature Scavenger Hunt  </li> */}
-                            <li className="dropdown-modal-content-item" id="demo-user" onClick={scavengerHuntClick}>Feature Scavenger Hunt</li>
+                            <li onClick={scavengerHuntClick}>Feature Scavenger Hunt</li>
 
                         </ul>
                     </div>
@@ -71,6 +72,13 @@ export default function DropdownModal() {
             {showSignupModal && (
                 <Modal onClose={() => setShowSignupModal(false)}>
                     <SignupForm />
+                </Modal>
+            )}
+
+            {/* Showing scavenger hunt modal if its state is true */}
+            {showScavengerHuntModal && (
+                <Modal onClose={() => setShowScavengerHuntModal(false)}>
+                    <ScavengerHunt />
                 </Modal>
             )}
         </>
