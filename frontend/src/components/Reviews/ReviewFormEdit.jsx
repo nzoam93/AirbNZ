@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { createReview, updateReview } from '../../store/reviews.js';
+import { updateReview } from '../../store/reviews.js';
 import "./Review.css"
 
-const ReviewForm = ({setShowReviewForm}) => {
+const ReviewFormEdit = ({review, setShowReviewFormEdit}) => {
     const dispatch = useDispatch();
     const {listingId} = useParams();
     const [title, setTitle] = useState("");
@@ -14,18 +14,25 @@ const ReviewForm = ({setShowReviewForm}) => {
     //this allows the backend to know who made the review
     const sessionUser = useSelector(state => state.session.user);
 
+    // useEffect to prepopulate the form
+
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const data = {
+            id: review.id,
             title: title,
             body: body,
             star_rating: rating,
             reviewer_id: sessionUser.id,
             listing_id: listingId
         }
-        dispatch(createReview(data));
-        setShowReviewForm(false); //close the form
+        dispatch(updateReview(data));
+        setShowReviewFormEdit(false);
     }
+
+
 
     return(
         <div id="review-container">
@@ -34,6 +41,14 @@ const ReviewForm = ({setShowReviewForm}) => {
             </div>
             <div id="review-form">
                 <form onSubmit={handleSubmit}>
+                    {/* <p>Location</p>
+                    <input
+                        type="range"
+                        min="1" max="5"
+                        value="3"
+                    />
+                    <p>Value: </p>
+                    <br /> */}
                     <input
                         type="text"
                         placeholder="Review title"
@@ -55,11 +70,12 @@ const ReviewForm = ({setShowReviewForm}) => {
                         onChange={(e) => setRating(e.target.value)}
                     />
                     <br />
-                    <button >Submit Review</button>
+                    <button>Submit Review</button>
                 </form>
+
             </div>
         </div>
     )
 }
 
-export default ReviewForm;
+export default ReviewFormEdit;

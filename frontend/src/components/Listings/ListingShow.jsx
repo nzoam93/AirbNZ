@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect} from "react";
 import { Calendar } from "react-calendar";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
@@ -17,7 +17,11 @@ const ListingShow = () => {
     const listing = useSelector(getListing(listingId));
     const houseImg = <img src={assetImg} alt="house"/>
 
-
+    //review stuff
+    const [showReviewForm, setShowReviewForm] = useState(false)
+    const toggleReviewForm = () => {
+        setShowReviewForm(!showReviewForm);
+    }
 
     useEffect(() => {
         dispatch(fetchListing(listingId));
@@ -33,7 +37,6 @@ const ListingShow = () => {
     //     document.getElementById("scavenger-key-task").style.color = "green";
     //     console.log("hi");
     // }
-
 
     return(
         <div id="show-page">
@@ -96,12 +99,14 @@ const ListingShow = () => {
                         <Calendar />
                     </div> */}
                     <div id="reviews-show">
+                        <button onClick={toggleReviewForm}>Write a review</button>
+                        {/* only appear if user clicks the button above */}
+                        {showReviewForm ? < ReviewForm setShowReviewForm = {setShowReviewForm}/> : ""}
+                        {/* {showReviewForm ? < ReviewFormEdit setShowReviewForm = {setShowReviewForm}/> : ""} */}
+
                         <ReviewIndex />
 
-                        {/* <h4 className="title-show">Reviews</h4>
-                        <p>I loved my stay</p>
-                        <p>I also loved my stay here</p> */}
-                        <ReviewForm />
+
                     </div>
                 </div>
 
