@@ -2,10 +2,12 @@
 /* ---------Show Page CSS------------ */
 #listing-title{
     font-size: 30px;
+    padding: 0 1vw;
 }
 
 #second-line-on-show{
-    padding: 1.5vh 0;
+    margin-top: 8px;
+    padding: 1.5vh 1vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,7 +25,7 @@
 
 /*left-hand-side of show*/
 #left-show{
-    width: 47vw;
+    width: 53vw;
     margin-right: 4vw;
     /* border: 1px solid red; */
 }
@@ -174,7 +176,3 @@
     }
 }
 
-/*----Reviews----*/
-#reviews-show{
-
-}

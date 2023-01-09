@@ -1,7 +1,7 @@
 /*right-hand-side of show page*/
 #right-show{
     /* margin-right: 4.5vw; */
-    width: 33vw;
+    width: 365px;
     border: 1px solid #dddddd;
     box-shadow: 0 0 15px #dddddd;
     border-radius: 10px;
@@ -21,22 +21,56 @@
     justify-content: space-between;
 }
 
-/* #checkin-checkout > *{
-    display: flex;
-    justify-content: space-between;
-} */
+#checkin-info{
+    width: 300px;
+    height: 130px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 32px;
+}
+
+#checkin-container{
+    width: inherit;
+    height: 60px;
+}
 
 #check-in-labels{
     display: flex;
-    justify-content: center;
 }
 
-#check-in-labels > * {
-    padding: 5px 15px;
+#check-in-label{
+    padding-top: 18px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 90px;
+    font-size: 12px;
 }
+
+#check-out-label{
+    padding-top: 18px;
+    padding-bottom: 7px;
+    font-size: 12px;
+}
+
+#guests-container{
+    width: 300px;
+    height: 60px;
+    padding: 15px 0;
+}
+
+/* #guests-on-form{
+    display: flex;
+    justify-content: center;
+} */
 
 #guests-on-form input{
-    width: 312px;
+    width: 293px;
+    height: 50px;
+    border: none;
+}
+
+#reservation-calendar{
+    width: 300px;
 }
 
 #reserve-button-container{
@@ -75,7 +109,6 @@
 }
 
 /* Number-of-guests plus-minus stuff from https://codepen.io/mtbroomell/pen/yNwwdv */
-
 .value-button {
     display: inline-block;
     border: 1px solid #ddd;

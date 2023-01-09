@@ -4,6 +4,12 @@
     border: 1px solid red;
 } */
 
+.DateInput{
+    width: 126px;
+    padding: 0;
+    border: none;
+}
+
 .DateInput > *{
-    border: 2px solid grey;
-};
+    border: 1px solid grey;
+}

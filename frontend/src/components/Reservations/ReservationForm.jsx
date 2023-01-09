@@ -67,12 +67,12 @@ const ReservationForm = () => {
             </div>
         </div>
         <div id="checkin-info">
-            <div id="checkin-checkout">
+            <div id="checkin-container">
                 <div id="check-in-labels">
-                    <p id="check-in-on-form">CHECK-IN</p>
-                    <p>CHECK-OUT</p>
+                    <p id="check-in-label">CHECK-IN</p>
+                    <p id="check-out-label">CHECK-OUT</p>
                 </div>
-                <div className="center-content">
+                <div id="reservation-calendar">
                     <AirbnzCalendar
                         checkinDate = {checkinDate}
                         checkoutDate = {checkoutDate}
@@ -80,7 +80,9 @@ const ReservationForm = () => {
                         setCheckoutDate = {setCheckoutDate}
                     />
                 </div>
-                <div id="guests-on-form" className="center-content">
+            </div>
+            <div id="guests-container">
+                <div id="guests-on-form">
                     {/* number of guests plus-minus
                     <div className="value-button" id="decrease" onClick={decreaseValue}>-</div>
                     <input
@@ -90,7 +92,7 @@ const ReservationForm = () => {
                             placeholder='Enter Your Message'
                     />
                     <div className="value-button" id="increase" onClick={increaseValue}>+</div> */}
-                    <input type="text" placeholder="How Many Guests" />
+                    <input type="number" placeholder="How Many Guests" />
                 </div>
             </div>
         </div>
