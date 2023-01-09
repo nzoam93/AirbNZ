@@ -21,6 +21,7 @@ const ReviewFormEdit = ({review, setShowReviewFormEdit}) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const data = {
+            id: review.id,
             body,
             cleanliness,
             communication,
