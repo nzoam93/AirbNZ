@@ -75,7 +75,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_07_204937) do
     t.bigint "listing_id", null: false
     t.string "body", null: false
     t.integer "cleanliness", null: false
-    t.integer "communcation", null: false
+    t.integer "communication", null: false
     t.integer "check_in", null: false
     t.integer "accuracy", null: false
     t.integer "location", null: false

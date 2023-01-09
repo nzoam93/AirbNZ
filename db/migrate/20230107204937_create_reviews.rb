@@ -5,7 +5,7 @@ class CreateReviews < ActiveRecord::Migration[7.0]
       t.references :listing, foreign_key: true, null: false
       t.string :body, null: false
       t.integer :cleanliness, null: false
-      t.integer :communcation, null: false
+      t.integer :communication, null: false
       t.integer :check_in, null: false
       t.integer :accuracy, null: false
       t.integer :location, null: false

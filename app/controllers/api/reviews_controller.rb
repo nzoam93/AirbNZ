@@ -16,9 +16,10 @@ class Api::ReviewsController < ApplicationController
 
     def create
         @review = Review.new(review_params)
-        @review.reviewer_id = current_user.id
-        @review.listing_id = params[:listing_id]
-        if @review && @review.save
+        # @review.reviewer_id = current_user.id
+        # @review.listing_id = params[:listing_id]
+        # if @review && @review.save
+        if @review.save
             render :show
         else
             render json: @review.errors.full_messages, status: 422

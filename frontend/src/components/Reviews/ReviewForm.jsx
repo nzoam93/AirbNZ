@@ -24,7 +24,7 @@ const ReviewForm = ({setShowReviewForm}) => {
             body,
             cleanliness,
             communication,
-            checkIn,
+            check_in: checkIn,
             accuracy,
             location,
             value,
