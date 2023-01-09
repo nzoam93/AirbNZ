@@ -1,0 +1,16 @@
+#progress-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 15%;
+    row-gap: 15px;
+}
+
+.progress-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+#progress-rating{
+    display: flex;
+    align-items: center;
+}
