@@ -9,7 +9,7 @@ const ReviewForm = ({setShowReviewForm}) => {
     const {listingId} = useParams();
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
-    const [rating, setRating] = useState("");
+    const [rating, setRating] = useState(3);
 
     //this allows the backend to know who made the review
     const sessionUser = useSelector(state => state.session.user);
@@ -28,36 +28,39 @@ const ReviewForm = ({setShowReviewForm}) => {
     }
 
     return(
-        <div id="review-container">
-            <div id="review-instructions">
-                <p>Please leave a review of your stay</p>
-            </div>
-            <div id="review-form">
-                <form onSubmit={handleSubmit}>
+        <div id="review-form-container">
+            <form id="review-form" onSubmit={handleSubmit}>
+                <input
+                    id="review-title-form"
+                    type="text"
+                    placeholder="Review title"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                />
+                <br />
+                <textarea
+                    id="review-body-form"
+                    placeholder="Write your review here"
+                    value={body}
+                    cols="30" rows="10"
+                    onChange={(e) => setBody(e.target.value)}
+                />
+                <br />
+                <div id="star-rating-container">
+                    <p>Overall Satisfaction</p>
                     <input
-                        type="text"
-                        placeholder="Review title"
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
-                    />
-                    <br />
-                    <textarea
-                        placeholder="Write your review here"
-                        value={body}
-                        cols="30" rows="10"
-                        onChange={(e) => setBody(e.target.value)}
-                    />
-                    <br />
-                    <input
-                        type="number"
-                        placeholder="Rating"
+                        type="range"
+                        min="1"
+                        max="5"
                         value={rating}
                         onChange={(e) => setRating(e.target.value)}
                     />
+                    <p id="review-star">{rating}</p>
+                    <i className="fa-solid fa-star fa-0.5x" />
                     <br />
-                    <button >Submit Review</button>
-                </form>
-            </div>
+                </div>
+                <button className="review-button">Submit Review</button>
+            </form>
         </div>
     )
 }

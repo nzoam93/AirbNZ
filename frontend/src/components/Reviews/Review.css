@@ -1,7 +1,26 @@
 #review-container{
     border-bottom: 1px solid var(--grey);
     padding-bottom: 15px;
-    margin-bottom: 15px;
+    margin: 15px 0;
+}
+
+#review-form-container{
+    padding: 15px 0;
+}
+
+#review-title-form, #review-body-form{
+    padding: 10px 16px;
+    margin: 5px 0;
+    caret-color: #dc1262;
+    border-radius: 4px;
+    width: 65%;
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#review-title-form:hover, #review-body-form:hover{
+    border-color: #dc1262;
 }
 
 #user-review-info{
@@ -45,6 +64,12 @@
 #write-a-review-button{
     cursor: pointer;
     text-decoration: underline;
+}
+
+#star-rating-container{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
 }
 
 
