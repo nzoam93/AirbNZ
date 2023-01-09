@@ -1,14 +1,15 @@
-#review-container{
+#review-container {
     border-bottom: 1px solid var(--grey);
     padding-bottom: 15px;
     margin: 15px 0;
 }
 
-#review-form-container{
+#review-form-container {
     padding: 15px 0;
 }
 
-#review-title-form, #review-body-form{
+#review-title-form,
+#review-body-form {
     padding: 10px 16px;
     margin: 5px 0;
     caret-color: #dc1262;
@@ -19,33 +20,35 @@
     font-size: 16px;
 }
 
-#review-title-form:hover, #review-body-form:hover{
+#review-title-form:hover,
+#review-body-form:hover {
     border-color: #dc1262;
 }
 
-#user-review-info{
+#user-review-info {
     display: flex;
     align-items: center;
 }
 
-#review-username{
+#review-username {
     padding-bottom: 6px;
     font-weight: bold;
 }
 
-#review-time{
+#review-time {
     color: gray;
 }
 
-#review-body, #review-title{
+#review-body,
+#review-title {
     margin: 15px 0
 }
 
-#review-stars{
+#review-stars {
     margin-bottom: 15px;
 }
 
-.review-button{
+.review-button {
     border-radius: 7px;
     display: flex;
     justify-content: center;
@@ -57,11 +60,11 @@
     margin-right: 0.5vw;
 }
 
-#review-button-container{
+#review-button-container {
     display: flex;
 }
 
-#write-a-review-button{
+#write-a-review-button {
     padding-top: 25px;
     padding-bottom: 20px;
     cursor: pointer;
@@ -69,7 +72,7 @@
     width: fit-content;
 }
 
-#star-rating-container{
+.star-rating-container {
     display: flex;
     align-items: center;
     padding-bottom: 15px;

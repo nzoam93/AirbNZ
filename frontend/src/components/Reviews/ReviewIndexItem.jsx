@@ -32,10 +32,9 @@ const ReviewIndexItem = ({review}) => {
                         <div id="review-time">{review.createDate}</div>
                     </div>
                 </div>
-                <div id="review-title" className="bold">{review.title}</div>
                 <div id="review-body">{review.body}</div>
 
-                <div id="review-stars">{review.starRating} stars</div>
+                {/* <div id="review-stars">{review.starRating} stars</div> */}
                 <div id="review-button-container">
                     <button className="review-button" onClick={toggleReviewForm}>Edit Review</button>
                     <button className="review-button" onClick={handleDelete}>Delete Review</button>

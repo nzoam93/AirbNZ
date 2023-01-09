@@ -282,19 +282,27 @@ require "open-uri"
     puts "Creating Reviews..."
     # Create one user with an easy to remember username, email, and password:
     review1 = Review.create!(
-      reviewer_id: 1,
-      listing_id: 5,
-      title: 'loved my stay at this place!',
-      body: 'This was worthy of 4 stars because of this and that.',
-      star_rating: 4
+      reviewer_id: 2,
+      listing_id: 1,
+      body: 'This was a great stay. I thought it could have been slightly better though which is why I am giving it four stars.',
+      cleanliness: 4,
+      communcation: 4,
+      check_in: 4,
+      accuracy: 4,
+      location: 4,
+      value: 5
     )
 
     review2 = Review.create!(
       reviewer_id: 2,
       listing_id: 7,
-      title: '5 stars accomodation!',
       body: 'This was truly 5-star accomodation!',
-      star_rating: 5
+      cleanliness: 4,
+      communcation: 4,
+      check_in: 4,
+      accuracy: 4,
+      location: 4,
+      value: 5
     )
 
 

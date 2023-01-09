@@ -50,9 +50,13 @@ class Api::ReviewsController < ApplicationController
         params.require(:review).permit(
             :reviewer_id,
             :listing_id,
-            :title,
             :body,
-            :star_rating
+            :cleanliness,
+            :communication,
+            :check_in,
+            :accuracy,
+            :location,
+            :value
         )
     end
 end
