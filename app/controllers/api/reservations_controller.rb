@@ -2,7 +2,9 @@ class Api::ReservationsController < ApplicationController
     before_action :set_reservation, only: [:show, :update, :destroy]
 
     def index
-        @reservations = Reservation.all
+        # @reservations = Reservation.all
+        # only show the reservations where the current user matches the reserver
+        @reservations = Reservation.where(reserver_id: current_user.id)
     end
 
     def show

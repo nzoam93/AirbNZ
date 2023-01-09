@@ -11,15 +11,33 @@ const ReservationForm = () => {
     const [checkinDate, setCheckinDate] = useState();
     const [checkoutDate, setCheckoutDate] = useState();
     // const [focusedInput, setFocusedInput] = useState();
-    const [numGuests, setNumGuests] = useState(0);
+
+    let checkInTime;
+    let checkoutTime;
+    let daysElapsed = 0;
+    if(checkinDate){
+        checkInTime = new Date(checkinDate._d).getTime();
+    }
+    if(checkoutDate){
+        checkoutTime = new Date(checkoutDate._d).getTime();
+    }
+    if(checkinDate && checkoutDate){
+        daysElapsed = Math.round((checkoutTime - checkInTime) / 1000 / 60 / 60 / 24)
+    }
 
 
     const listing = useSelector(getListing(listingId));
-    const visitCost = Math.round(listing.price * 5);
-    const discount = Math.round(listing.price * 0.1);
+    const visitCost = Math.round(listing.price * daysElapsed);
+    let discount;
+    if(daysElapsed && daysElapsed > 5){
+        discount = Math.round(listing.price * 0.1 * daysElapsed);
+    }
+    else{
+        discount = 0
+    }
     const cleaningFee = Math.round(listing.price * 0.08);
     const serviceFee = Math.round(listing.price * 0.05);
-    const totalPrice = visitCost + discount + cleaningFee + serviceFee;
+    const totalPrice = visitCost - discount + cleaningFee + serviceFee;
 
 
     const handleSubmit = () => {
@@ -29,33 +47,13 @@ const ReservationForm = () => {
         console.log(new Date(checkinDate._d).getDate())
         console.log(new Date(checkinDate._d).getMonth())
         console.log(new Date(checkinDate._d).getFullYear())
+        checkInTime = new Date(checkinDate._d).getTime();
+        console.log(checkInTime);
+        checkoutTime = new Date(checkoutDate._d).getTime();
+        console.log(checkoutTime);
+        daysElapsed = Math.round((checkoutTime - checkInTime) / 1000 / 60 / 60 / 24)
+        console.log(daysElapsed)
     }
-
-    // For plus-minus button from https://codepen.io/mtbroomell/pen/yNwwdv
-    const increaseValue = () => {
-        setNumGuests(numGuests + 1);
-        console.log(numGuests)
-    }
-
-    const decreaseValue = () => {
-        setNumGuests(numGuests - 1);
-    }
-
-    // function increaseValue() {
-    //     var value = parseInt(document.getElementById('number').value, 10);
-    //     value = isNaN(value) ? 0 : value;
-    //     value++;
-    //     document.getElementById('number').value = value;
-    //   }
-
-    // function decreaseValue() {
-    //     var value = parseInt(document.getElementById('number').value, 10);
-    //     value = isNaN(value) ? 0 : value;
-    //     value < 1 ? value = 1 : '';
-    //     value--;
-    //     document.getElementById('number').value = value;
-    // }
-
 
 
     return(
@@ -83,15 +81,6 @@ const ReservationForm = () => {
             </div>
             <div id="guests-container">
                 <div id="guests-on-form">
-                    {/* number of guests plus-minus
-                    <div className="value-button" id="decrease" onClick={decreaseValue}>-</div>
-                    <input
-                            type='text'
-                            value={undefined}
-                            onChange={e => this.setState({ message: e.target.value })}
-                            placeholder='Enter Your Message'
-                    />
-                    <div className="value-button" id="increase" onClick={increaseValue}>+</div> */}
                     <input type="number" placeholder="How Many Guests" />
                 </div>
             </div>
@@ -102,7 +91,7 @@ const ReservationForm = () => {
         <li id="charge-show">You won't be charged yet</li>
         <div id="price-info-show">
             <div className="price-info-item-show">
-                <li className="underline">${listing.price} x 5 nights</li>
+                <li className="underline">${listing.price} x {daysElapsed} nights</li>
                 <li>${visitCost}</li>
             </div>
             <div className="price-info-item-show">

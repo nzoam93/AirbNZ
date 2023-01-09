@@ -1,6 +1,8 @@
+import { useSelector } from "react-redux";
 import "./UserShow.css"
 
 const UserShow = () => {
+    const reservations = useSelector(state => state.session.reservations)
     return(
         <div id="user-show-page">
             <div id="user-reservations-container">

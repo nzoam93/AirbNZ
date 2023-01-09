@@ -57,42 +57,42 @@ const ReviewProgressBar = () => {
 
             <div id="progress-container">
                 <div className="progress-item">
-                    <label for="cleanliness">Cleanliness</label>
+                    <label hmtlFor="cleanliness">Cleanliness</label>
                     <div id="progress-rating">
                         <progress id="cleanliness" value={avgCleanlinessRating} max="5"></progress>
                         <p>{avgCleanlinessRating}</p>
                     </div>
                 </div>
                 <div className="progress-item">
-                    <label for="accuracy">Accuracy</label>
+                    <label hmtlFor="accuracy">Accuracy</label>
                     <div id="progress-rating">
                         <progress id="accuracy" value={avgAccuracyRating} max="5"></progress>
                         <p>{avgAccuracyRating}</p>
                     </div>
                 </div>
                 <div className="progress-item">
-                    <label for="communication">Communication</label>
+                    <label hmtlFor="communication">Communication</label>
                     <div id="progress-rating">
                         <progress id="communication" value={avgCommunicationRating} max="5"></progress>
                         <p>{avgCommunicationRating}</p>
                     </div>
                 </div>
                 <div className="progress-item">
-                    <label for="location">Location</label>
+                    <label hmtlFor="location">Location</label>
                     <div id="progress-rating">
                         <progress id="location" value={avgLocationRating} max="5"></progress>
                         <p>{avgLocationRating}</p>
                     </div>
                 </div>
                 <div className="progress-item">
-                    <label for="checkIn">Check-in</label>
+                    <label hmtlFor="checkIn">Check-in</label>
                     <div id="progress-rating">
                         <progress id="checkIn" value={avgCheckinRating} max="5"></progress>
                         <p>{avgCheckinRating}</p>
                     </div>
                 </div>
                 <div className="progress-item">
-                    <label for="value-rating">Value</label>
+                    <label hmtlFor="value-rating">Value</label>
                     <div id="progress-rating">
                         <progress id="value-rating" value={avgValueRating} max="5"></progress>
                         <p>{avgValueRating}</p>
