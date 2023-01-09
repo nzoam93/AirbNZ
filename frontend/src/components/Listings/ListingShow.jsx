@@ -99,10 +99,7 @@ const ListingShow = () => {
                         <Calendar />
                     </div> */}
                     <div id="reviews-show">
-                        <button onClick={toggleReviewForm}>Write a review</button>
-                        {/* only appear if user clicks the button above */}
-                        {showReviewForm ? < ReviewForm setShowReviewForm = {setShowReviewForm}/> : ""}
-                        {/* {showReviewForm ? < ReviewFormEdit setShowReviewForm = {setShowReviewForm}/> : ""} */}
+                        
 
                         <ReviewIndex />
 

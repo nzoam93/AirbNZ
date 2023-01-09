@@ -18,10 +18,34 @@
     color: gray;
 }
 
-#review-body{
+#review-body, #review-title{
     margin: 15px 0
 }
 
+#review-stars{
+    margin-bottom: 15px;
+}
+
+.review-button{
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 26px;
+    background-color: var(--red);
+    color: white;
+    cursor: pointer;
+    margin-right: 0.5vw;
+}
+
+#review-button-container{
+    display: flex;
+}
+
+#write-a-review-button{
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 
 /* #username-and-time > :nth-child(1){

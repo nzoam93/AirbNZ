@@ -29,13 +29,17 @@ const ReviewIndexItem = ({review}) => {
                     <div id="profile-img">{profileImg}</div>
                     <div id="username-and-time">
                         <div id="review-username">{review.username}</div>
-                        <div id="review-time">January 2023</div>
+                        <div id="review-time">{review.createDate}</div>
                     </div>
                 </div>
-                {/* <div>{review.title}</div> */}
+                <div id="review-title" className="bold">{review.title}</div>
                 <div id="review-body">{review.body}</div>
-                <button onClick={toggleReviewForm}>Edit Review</button>
-                <button onClick={handleDelete}>Delete Review</button>
+
+                <div id="review-stars">{review.starRating} stars</div>
+                <div id="review-button-container">
+                    <button className="review-button" onClick={toggleReviewForm}>Edit Review</button>
+                    <button className="review-button" onClick={handleDelete}>Delete Review</button>
+                </div>
             </div>
             {showReviewFormEdit ? <ReviewFormEdit review = {review} setShowReviewFormEdit = {setShowReviewFormEdit}/> : ""}
         </>

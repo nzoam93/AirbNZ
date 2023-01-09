@@ -10,5 +10,8 @@
 
         #another key-value pair for extracting the username
         json.username review.reviewer.username
+
+        json.create_date review.created_at.strftime("%b %e, %Y")
+        json.update_date review.updated_at.strftime("%b %e, %Y")
     end
 end
