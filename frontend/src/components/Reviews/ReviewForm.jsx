@@ -48,74 +48,86 @@ const ReviewForm = ({setShowReviewForm}) => {
                 <br />
                 <div className="star-rating-container">
                     <p>Cleanliness</p>
-                    <input
-                        type="range" min="1" max="5"
-                        value={cleanliness}
-                        onChange={(e) => setCleanliness(e.target.value)}
-                    />
-                    <p>{cleanliness}</p>
-                    <i className="fa-solid fa-star fa-0.5x" />
-                    <br />
+                    <div className="star-rating">
+                        <input
+                            type="range" min="1" max="5"
+                            value={cleanliness}
+                            onChange={(e) => setCleanliness(e.target.value)}
+                        />
+                        <p>{cleanliness}</p>
+                        <i className="fa-solid fa-star fa-0.5x" />
+                        <br />
+                    </div>
                 </div>
 
                 <div className="star-rating-container">
                     <p>Communication</p>
-                    <input
-                        type="range" min="1" max="5"
-                        value={communication}
-                        onChange={(e) => setCommunication(e.target.value)}
-                    />
-                    <p>{communication}</p>
-                    <i className="fa-solid fa-star fa-0.5x" />
-                    <br />
+                    <div className="star-rating">
+                        <input
+                            type="range" min="1" max="5"
+                            value={communication}
+                            onChange={(e) => setCommunication(e.target.value)}
+                        />
+                        <p>{communication}</p>
+                        <i className="fa-solid fa-star fa-0.5x" />
+                        <br />
+                    </div>
                 </div>
 
                 <div className="star-rating-container">
                     <p>Check-in</p>
-                    <input
-                        type="range" min="1" max="5"
-                        value={checkIn}
-                        onChange={(e) => setCheckIn(e.target.value)}
-                    />
-                    <p>{checkIn}</p>
-                    <i className="fa-solid fa-star fa-0.5x" />
-                    <br />
+                    <div className="star-rating">
+                        <input
+                            type="range" min="1" max="5"
+                            value={checkIn}
+                            onChange={(e) => setCheckIn(e.target.value)}
+                        />
+                        <p>{checkIn}</p>
+                        <i className="fa-solid fa-star fa-0.5x" />
+                        <br />
+                    </div>
                 </div>
 
                 <div className="star-rating-container">
                     <p>Accuracy</p>
-                    <input
-                        type="range" min="1" max="5"
-                        value={accuracy}
-                        onChange={(e) => setAccuracy(e.target.value)}
-                    />
-                    <p>{accuracy}</p>
-                    <i className="fa-solid fa-star fa-0.5x" />
-                    <br />
+                    <div className="star-rating">
+                        <input
+                            type="range" min="1" max="5"
+                            value={accuracy}
+                            onChange={(e) => setAccuracy(e.target.value)}
+                        />
+                        <p>{accuracy}</p>
+                        <i className="fa-solid fa-star fa-0.5x" />
+                        <br />
+                    </div>
                 </div>
 
                 <div className="star-rating-container">
                     <p>Location</p>
-                    <input
-                        type="range" min="1" max="5"
-                        value={location}
-                        onChange={(e) => setLocation(e.target.value)}
-                    />
-                    <p>{location}</p>
-                    <i className="fa-solid fa-star fa-0.5x" />
-                    <br />
+                    <div className="star-rating">
+                        <input
+                            type="range" min="1" max="5"
+                            value={location}
+                            onChange={(e) => setLocation(e.target.value)}
+                        />
+                        <p>{location}</p>
+                        <i className="fa-solid fa-star fa-0.5x" />
+                        <br />
+                    </div>
                 </div>
 
                 <div className="star-rating-container">
                     <p>Value</p>
-                    <input
-                        type="range" min="1" max="5"
-                        value={value}
-                        onChange={(e) => setValue(e.target.value)}
-                    />
-                    <p>{value}</p>
-                    <i className="fa-solid fa-star fa-0.5x" />
-                    <br />
+                    <div className="star-rating">
+                        <input
+                            type="range" min="1" max="5"
+                            value={value}
+                            onChange={(e) => setValue(e.target.value)}
+                        />
+                        <p>{value}</p>
+                        <i className="fa-solid fa-star fa-0.5x" />
+                        <br />
+                    </div>
                 </div>
 
                 <button id="submit-review-button">Submit Review</button>

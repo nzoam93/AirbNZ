@@ -14,7 +14,7 @@
     margin: 5px 0;
     caret-color: #dc1262;
     border-radius: 4px;
-    width: 65%;
+    width: 50%;
     line-height: 24px;
     font-weight: 400;
     font-size: 16px;
@@ -79,9 +79,15 @@
 }
 
 .star-rating-container {
+    width: 55%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 15px;
+}
+
+.star-rating{
+    display: flex;
 }
 
 

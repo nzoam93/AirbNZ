@@ -13,6 +13,8 @@ const ReviewIndex = () => {
     const reviews = useSelector(getReviews);
     const {listingId} = useParams();
 
+    const sessionUser = useSelector(state => state.session.user)
+
     const numReviews = reviews.length;
     let totalRating = 0;
     reviews.forEach((review) => {
@@ -41,9 +43,12 @@ const ReviewIndex = () => {
 
             <ReviewProgressBar/>
 
-
+            {/* the button only appears if the user is signed in  */}
+            {sessionUser ?
             <div className="review-button" onClick={toggleReviewForm}>Write a review</div>
-
+            :
+            <div className="review-button">Log in to write review</div>
+            }
             {/* only appear if user clicks the toggleReviewForm button above */}
             {showReviewForm ? < ReviewForm setShowReviewForm = {setShowReviewForm}/> : ""}
 
