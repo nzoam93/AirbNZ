@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getListing } from "../../store/listings";
 import AirbnzCalendar from "../AirbnzCalendar"
+import ReviewInfo from "../Reviews/ReviewInfo";
 import "./Reservation.css"
 
 const ReservationForm = () => {
@@ -62,8 +63,7 @@ const ReservationForm = () => {
         <div id="preliminary-right-info-show">
             <li className="bold price-show">${listing.price} <span id="price-span"> night</span></li>
             <div>
-                <i className="fa-solid fa-star fa-0.5x bold" />  <span id="price-span">5.0 • <a className="underline" href="#reviews-show">9 Reviews</a> </span>
-                {/* <p>9 reviews</p> */}
+                <ReviewInfo />
             </div>
         </div>
         <div id="checkin-info">
@@ -81,7 +81,7 @@ const ReservationForm = () => {
                     />
                 </div>
                 <div id="guests-on-form" className="center-content">
-                    {/* number of guests plus-minus */}
+                    {/* number of guests plus-minus
                     <div className="value-button" id="decrease" onClick={decreaseValue}>-</div>
                     <input
                             type='text'
@@ -89,7 +89,7 @@ const ReservationForm = () => {
                             onChange={e => this.setState({ message: e.target.value })}
                             placeholder='Enter Your Message'
                     />
-                    <div className="value-button" id="increase" onClick={increaseValue}>+</div>
+                    <div className="value-button" id="increase" onClick={increaseValue}>+</div> */}
                     <input type="text" placeholder="How Many Guests" />
                 </div>
             </div>

@@ -1,13 +1,14 @@
 import { useState, useEffect} from "react";
 import { Calendar } from "react-calendar";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { fetchListing, getListing } from "../../store/listings";
 import assetImg from "./houseimgs/airbnzphoto.jpg"
 import ListingShowPrice from "../Reservations/ReservationForm";
 import "./ListingShow.css"
-import ReviewForm from "../Reviews/ReviewForm";
 import ReviewIndex from "../Reviews/ReviewIndex";
+import { getReviews } from "../../store/reviews";
+import ReviewInfo from "../Reviews/ReviewInfo";
 
 
 
@@ -16,12 +17,6 @@ const ListingShow = () => {
     const {listingId} = useParams();
     const listing = useSelector(getListing(listingId));
     const houseImg = <img src={assetImg} alt="house"/>
-
-    //review stuff
-    const [showReviewForm, setShowReviewForm] = useState(false)
-    const toggleReviewForm = () => {
-        setShowReviewForm(!showReviewForm);
-    }
 
     useEffect(() => {
         dispatch(fetchListing(listingId));
@@ -43,8 +38,9 @@ const ListingShow = () => {
             <h5 className="bold" id="listing-title">{listing.title}</h5>
             <div className="bold" id="second-line-on-show">
                 <li>
-                <i className="fa-solid fa-star fa-0.5x bold" />  <span id="price-span">5.0 • <a className="underline" href="#reviews-show">9 Reviews</a>  • </span>
-                {listing.city}, {listing.state}, United States
+                <ReviewInfo />
+
+                {"•" } {listing.city}, {listing.state}, United States
 
                 </li>
                 <li> Share Save</li>
@@ -99,7 +95,7 @@ const ListingShow = () => {
                         <Calendar />
                     </div> */}
                     <div id="reviews-show">
-                        
+
 
                         <ReviewIndex />
 

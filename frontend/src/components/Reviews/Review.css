@@ -64,6 +64,7 @@
 #write-a-review-button{
     cursor: pointer;
     text-decoration: underline;
+    width: fit-content;
 }
 
 #star-rating-container{

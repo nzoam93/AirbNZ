@@ -7,15 +7,19 @@ import "./Review.css"
 const ReviewFormEdit = ({review, setShowReviewFormEdit}) => {
     const dispatch = useDispatch();
     const {listingId} = useParams();
-    const [title, setTitle] = useState("");
-    const [body, setBody] = useState("");
-    const [rating, setRating] = useState(3);
+    const [title, setTitle] = useState(review.title);
+    const [body, setBody] = useState(review.body);
+    const [rating, setRating] = useState(review.starRating);
 
     //this allows the backend to know who made the review
     const sessionUser = useSelector(state => state.session.user);
 
     // useEffect to prepopulate the form
-
+    // useEffect(() => {
+    //     setTitle(review.title);
+    //     setBody(review.body);
+    //     setRating(review.rating);
+    // }, [])
 
 
     const handleSubmit = async (e) => {
