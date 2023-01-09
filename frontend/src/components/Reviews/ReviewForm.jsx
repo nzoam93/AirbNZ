@@ -118,7 +118,7 @@ const ReviewForm = ({setShowReviewForm}) => {
                     <br />
                 </div>
 
-                <button className="review-button">Submit Review</button>
+                <button id="submit-review-button">Submit Review</button>
             </form>
         </div>
     )

@@ -48,28 +48,34 @@
     margin-bottom: 15px;
 }
 
-.review-button {
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 26px;
-    background-color: var(--red);
-    color: white;
-    cursor: pointer;
-    margin-right: 0.5vw;
-}
+
 
 #review-button-container {
     display: flex;
 }
 
-#write-a-review-button {
+.review-button {
     padding-top: 25px;
     padding-bottom: 20px;
     cursor: pointer;
     text-decoration: underline;
     width: fit-content;
+}
+
+#edit-review-button{
+    margin-right: 75px;
+}
+
+#submit-review-button {
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 26px;
+    background-color: #0275ff;
+    color: white;
+    cursor: pointer;
+    margin-right: 0.5vw;
 }
 
 .star-rating-container {

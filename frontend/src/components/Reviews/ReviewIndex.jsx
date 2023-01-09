@@ -37,12 +37,12 @@ const ReviewIndex = () => {
 
     return(
         <>
-            
+
 
             <ReviewProgressBar/>
 
 
-            <div id="write-a-review-button" onClick={toggleReviewForm}>Write a review</div>
+            <div className="review-button" onClick={toggleReviewForm}>Write a review</div>
 
             {/* only appear if user clicks the toggleReviewForm button above */}
             {showReviewForm ? < ReviewForm setShowReviewForm = {setShowReviewForm}/> : ""}

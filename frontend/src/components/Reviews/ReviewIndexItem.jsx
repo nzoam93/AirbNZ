@@ -10,12 +10,14 @@ import ReviewFormEdit from "./ReviewFormEdit";
 const ReviewIndexItem = ({review}) => {
     const dispatch = useDispatch();
 
+    const sessionUser = useSelector(state => state.session.user);
+    let activeUser;
+
     const[showReviewFormEdit, setShowReviewFormEdit] = useState(false);
     const toggleReviewForm = () => {
         setShowReviewFormEdit(!showReviewFormEdit);
     }
 
-    // const sessionUser = useSelector(state => state.session.user);
     const profileImg = <img src={assetImg} alt="house"/>
 
     const handleDelete = () => {
@@ -35,10 +37,15 @@ const ReviewIndexItem = ({review}) => {
                 <div id="review-body">{review.body}</div>
 
                 {/* <div id="review-stars">{review.starRating} stars</div> */}
+
+                {/* only show if the current user is the one that made the review */}
+                {sessionUser ? activeUser = sessionUser.username : null}
+                {activeUser === review.username ?
                 <div id="review-button-container">
-                    <button className="review-button" onClick={toggleReviewForm}>Edit Review</button>
-                    <button className="review-button" onClick={handleDelete}>Delete Review</button>
-                </div>
+                    <div className="review-button" id="edit-review-button" onClick={toggleReviewForm}>Edit Review</div>
+                    <div className="review-button" onClick={handleDelete}>Delete Review</div>
+                </div> : ""
+                }
             </div>
             {showReviewFormEdit ? <ReviewFormEdit review = {review} setShowReviewFormEdit = {setShowReviewFormEdit}/> : ""}
         </>
