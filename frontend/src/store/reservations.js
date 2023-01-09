@@ -50,7 +50,7 @@ export const getReservation = (reservationId) => (state) => {
 
 //fetch all the reservations from backend
 export const fetchReservations = () => async (dispatch) => {
-    const response = await fetch ('/api/reservations');
+    const response = await fetch('/api/reservations');
     if (response.ok){
         const reservations = await response.json();
         dispatch(receive_reservations(reservations));
@@ -59,7 +59,7 @@ export const fetchReservations = () => async (dispatch) => {
 
 //fetch the specified reservation from backend
 export const fetchReservation = (reservationId) => async (dispatch) => {
-    const response = await fetch (`/api/reservations/${reservationId}`);
+    const response = await fetch(`/api/reservations/${reservationId}`);
     if(response.ok){
         const reservation = await response.json();
         dispatch(recieve_reservation(reservation));
@@ -68,7 +68,7 @@ export const fetchReservation = (reservationId) => async (dispatch) => {
 
 //create a new reservation in the backend
 export const createReservation = (reservation) => async (dispatch) => {
-    const response = await fetch (`/api/reservations`, {
+    const response = await csrfFetch(`/api/reservations`, {
         method: 'POST',
         body: JSON.stringify(reservation),
         headers: {
@@ -83,7 +83,7 @@ export const createReservation = (reservation) => async (dispatch) => {
 
 //update an existing reservation in the backend
 export const updateReservation = (reservation) => async (dispatch) => {
-    const response = await fetch (`/api/reservations/${reservation.id}`, {
+    const response = await csrfFetch(`/api/reservations/${reservation.id}`, {
         method: `PUT`,
         body: JSON.stringify(reservation),
         headers: {
@@ -98,7 +98,7 @@ export const updateReservation = (reservation) => async (dispatch) => {
 
 //remove a reservation in the backend
 export const deleteReservation = (reservationId) => async (dispatch) => {
-    const response = await fetch (`/api/reservations/${reservationId}`, {
+    const response = await csrfFetch(`/api/reservations/${reservationId}`, {
         method: 'DELETE'
     })
     if (response.ok){

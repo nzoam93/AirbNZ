@@ -1,17 +1,21 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getListing } from "../../store/listings";
+import { createReservation } from "../../store/reservations";
 import AirbnzCalendar from "../AirbnzCalendar"
 import ReviewInfo from "../Reviews/ReviewInfo";
 import "./Reservation.css"
 
 const ReservationForm = () => {
+    const dispatch = useDispatch();
     const {listingId} = useParams();
     const [checkinDate, setCheckinDate] = useState();
     const [checkoutDate, setCheckoutDate] = useState();
+    const [numGuests, setNumGuests] = useState(0);
     // const [focusedInput, setFocusedInput] = useState();
 
+    //using time function from calendar and JS Date object
     let checkInTime;
     let checkoutTime;
     let daysElapsed = 0;
@@ -25,7 +29,7 @@ const ReservationForm = () => {
         daysElapsed = Math.round((checkoutTime - checkInTime) / 1000 / 60 / 60 / 24)
     }
 
-
+    //prices for listing
     const listing = useSelector(getListing(listingId));
     const visitCost = Math.round(listing.price * daysElapsed);
     let discount;
@@ -39,23 +43,23 @@ const ReservationForm = () => {
     const serviceFee = Math.round(listing.price * 0.05);
     const totalPrice = visitCost - discount + cleaningFee + serviceFee;
 
+    //allows the backend to know who made the reservation
+    const sessionUser = useSelector(state => state.session.user);
 
-    const handleSubmit = () => {
-        console.log(listingId);
-        console.log(checkinDate);
-        console.log(checkoutDate);
-        console.log(new Date(checkinDate._d).getDate())
-        console.log(new Date(checkinDate._d).getMonth())
-        console.log(new Date(checkinDate._d).getFullYear())
-        checkInTime = new Date(checkinDate._d).getTime();
-        console.log(checkInTime);
-        checkoutTime = new Date(checkoutDate._d).getTime();
-        console.log(checkoutTime);
-        daysElapsed = Math.round((checkoutTime - checkInTime) / 1000 / 60 / 60 / 24)
-        console.log(daysElapsed)
+    //upon submission of the form
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const data = {
+            check_in_date: checkinDate,
+            check_out_date: checkoutDate,
+            num_guests: numGuests,
+            reserver_id: sessionUser.id,
+            listing_id: listingId
+        }
+        dispatch(createReservation(data));
     }
 
-
+    //rendering on the page
     return(
         <div id="right-show">
         <div id="preliminary-right-info-show">
@@ -81,7 +85,11 @@ const ReservationForm = () => {
             </div>
             <div id="guests-container">
                 <div id="guests-on-form">
-                    <input type="number" placeholder="How Many Guests" />
+                    <input type="number"
+                    value={numGuests}
+                    placeholder="How Many Guests"
+                    onChange={(e) => setNumGuests(e.target.value)}
+                    />
                 </div>
             </div>
         </div>
@@ -113,7 +121,6 @@ const ReservationForm = () => {
             </div>
         </div>
     )
-
 }
 
 export default ReservationForm;

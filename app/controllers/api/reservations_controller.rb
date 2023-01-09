@@ -12,7 +12,7 @@ class Api::ReservationsController < ApplicationController
     end
 
     def create
-        @reservation = Reservation.new(review_params)
+        @reservation = Reservation.new(reservation_params)
 
         if @reservation.save
             render :show
