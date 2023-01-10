@@ -55,7 +55,7 @@
 }
 
 .review-button {
-    padding-top: 15px;
+    padding-top: 27px;
     padding-bottom: 20px;
     cursor: pointer;
     text-decoration: underline;
@@ -93,6 +93,11 @@
 
 .star-rating{
     display: flex;
+}
+
+#all-reviews{
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 
