@@ -92,9 +92,13 @@ const ReservationForm = () => {
             </div>
         </div>
         <div id="reserve-button-container">
-            <Link to={`/users/${sessionUser.id}`}>
+            {sessionUser ?
+                <Link to={`/users/${sessionUser.id}`}>
+                    <button id="reserve-button" onClick={handleSubmit}>Reserve</button>
+                </Link>
+                :
                 <button id="reserve-button" onClick={handleSubmit}>Reserve</button>
-            </Link>
+            }
         </div>
         <li id="charge-show">You won't be charged yet</li>
         <div id="price-info-show">
