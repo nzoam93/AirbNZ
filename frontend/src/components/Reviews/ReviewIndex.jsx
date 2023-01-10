@@ -22,7 +22,6 @@ const ReviewIndex = () => {
     })
     const avgRating = totalRating / numReviews;
 
-    //review stuff
     const [showReviewForm, setShowReviewForm] = useState(false)
     const toggleReviewForm = () => {
         setShowReviewForm(!showReviewForm);
@@ -47,7 +46,7 @@ const ReviewIndex = () => {
             {sessionUser ?
             <div className="review-button" onClick={toggleReviewForm}>Write a review</div>
             :
-            <div id="log-in-to-review">Log in to write a review yourself!</div>
+            <div id="log-in-to-review">Please log in to leave a review</div>
             }
             {/* only appear if user clicks the toggleReviewForm button above */}
             {showReviewForm ? < ReviewForm setShowReviewForm = {setShowReviewForm}/> : ""}

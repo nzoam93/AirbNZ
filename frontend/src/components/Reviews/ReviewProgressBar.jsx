@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import { getReviews } from "../../store/reviews";
 import "./ReviewProgressBar.css"
+// import ReviewRatingCalculator from "./ReviewRatingCalculator";
+
 
 const ReviewProgressBar = () => {
     const reviews = useSelector(getReviews);
@@ -10,7 +12,7 @@ const ReviewProgressBar = () => {
     reviews.forEach((review) => {
         totalCleanlinessRating += review.cleanliness;
     })
-    const avgCleanlinessRating = Math.round((totalCleanlinessRating / numReviews) * 10) / 10;
+    const avgCleanlinessRating = (Math.round((totalCleanlinessRating / numReviews) * 10) / 10) || "5.0";
 
     let totalCommunicationRating = 0;
     reviews.forEach((review) => {

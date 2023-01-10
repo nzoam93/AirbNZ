@@ -37,6 +37,7 @@ const ReviewForm = ({setShowReviewForm}) => {
 
     return(
         <div id="review-form-container">
+            {/* {console.log("rerender")} */}
             <form id="review-form" onSubmit={handleSubmit}>
                 <textarea
                     id="review-body-form"
