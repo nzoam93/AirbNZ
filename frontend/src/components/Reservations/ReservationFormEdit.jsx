@@ -18,7 +18,7 @@ const ReservationFormEdit = ({reservation, setShowReservationFormEdit}) => {
     //using time function from calendar and JS Date object
     let checkInTime;
     let checkoutTime;
-    let daysElapsed = 0;
+    let daysElapsed = 1;
     if(checkinDate){
         checkInTime = new Date(checkinDate._d).getTime();
     }
@@ -72,8 +72,11 @@ const ReservationFormEdit = ({reservation, setShowReservationFormEdit}) => {
         <div id="right-show">
         <div id="preliminary-right-info-show">
             <li className="bold price-show">${listing.price} <span id="price-span"> night</span></li>
+            <div>
+                <ReviewInfo />
+            </div>
         </div>
-        <div id="checkin-info">
+        <div id="checkin-info" className="bold">
             <div id="checkin-container">
                 <div id="check-in-labels">
                     <p id="check-in-label">CHECK-IN</p>
@@ -97,7 +100,9 @@ const ReservationFormEdit = ({reservation, setShowReservationFormEdit}) => {
             </div>
         </div>
         <div id="reserve-button-container">
-            <button id="reserve-button" onClick={handleSubmit}>Reserve</button>
+            {/* <Link to={`/users/${sessionUser.id}`}> */}
+                <button id="reserve-button" onClick={handleSubmit}>Reserve</button>
+            {/* </Link> */}
         </div>
         <li id="charge-show">You won't be charged yet</li>
         <div id="price-info-show">
@@ -107,7 +112,10 @@ const ReservationFormEdit = ({reservation, setShowReservationFormEdit}) => {
             </div>
             <div className="price-info-item-show">
                 <li className="underline">Long stay discount</li>
-                <li>-${discount}</li>
+                {daysElapsed <= 5 ?
+                <li>N/A</li>
+                : <li>-${discount}</li>
+                }
             </div>
             <div className="price-info-item-show">
                 <li className="underline">Cleaning fee</li>

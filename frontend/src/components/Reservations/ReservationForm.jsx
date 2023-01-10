@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getListing } from "../../store/listings";
 import { createReservation } from "../../store/reservations";
 import AirbnzCalendar from "../AirbnzCalendar"
@@ -18,7 +18,7 @@ const ReservationForm = () => {
     //using time function from calendar and JS Date object
     let checkInTime;
     let checkoutTime;
-    let daysElapsed = 0;
+    let daysElapsed = 1;
     if(checkinDate){
         checkInTime = new Date(checkinDate._d).getTime();
     }
@@ -48,7 +48,7 @@ const ReservationForm = () => {
 
     //upon submission of the form
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         const data = {
             check_in_date: checkinDate,
             check_out_date: checkoutDate,
@@ -92,7 +92,9 @@ const ReservationForm = () => {
             </div>
         </div>
         <div id="reserve-button-container">
-            <button id="reserve-button" onClick={handleSubmit}>Reserve</button>
+            <Link to={`/users/${sessionUser.id}`}>
+                <button id="reserve-button" onClick={handleSubmit}>Reserve</button>
+            </Link>
         </div>
         <li id="charge-show">You won't be charged yet</li>
         <div id="price-info-show">
@@ -102,7 +104,10 @@ const ReservationForm = () => {
             </div>
             <div className="price-info-item-show">
                 <li className="underline">Long stay discount</li>
-                <li>-${discount}</li>
+                {daysElapsed <= 5 ?
+                <li>N/A</li>
+                : <li>-${discount}</li>
+                }
             </div>
             <div className="price-info-item-show">
                 <li className="underline">Cleaning fee</li>
