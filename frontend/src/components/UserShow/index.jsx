@@ -15,12 +15,12 @@ const UserShow = () => {
             </div>
             : "It appears you don't have any reservations"} */}
              <div id="user-reservations-container">
-                <div>My reservations are:</div>
+                <div className="title-show">My reservations are:</div>
                 <ReservationIndex/>
             </div>
-            <div id="user-likes-container">
+            {/* <div id="user-likes-container">
                 <div>My liked airbNZs are:</div>
-            </div>
+            </div> */}
         </div>
     )
 }
