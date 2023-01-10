@@ -12,37 +12,43 @@ const ReviewProgressBar = () => {
     reviews.forEach((review) => {
         totalCleanlinessRating += review.cleanliness;
     })
-    const avgCleanlinessRating = (Math.round((totalCleanlinessRating / numReviews) * 10) / 10) || "5.0";
+    const avgCleanlinessRatingString = totalCleanlinessRating ? (totalCleanlinessRating / numReviews).toFixed(1) : "5";
+    const avgCleanlinessRating = parseFloat(avgCleanlinessRatingString)
 
     let totalCommunicationRating = 0;
     reviews.forEach((review) => {
         totalCommunicationRating += review.communication;
     })
-    const avgCommunicationRating = Math.round((totalCommunicationRating / numReviews) * 10) / 10;
+    const avgCommunicationRatingString = totalCommunicationRating ? (totalCommunicationRating / numReviews).toFixed(1) : "5";
+    const avgCommunicationRating = parseFloat(avgCommunicationRatingString);
 
     let totalCheckinRating = 0;
     reviews.forEach((review) => {
         totalCheckinRating += review.checkIn;
     })
-    const avgCheckinRating = Math.round((totalCheckinRating / numReviews) * 10) / 10;
+    const avgCheckinRatingString = totalCheckinRating ? (totalCheckinRating / numReviews).toFixed(1) : "5";
+    const avgCheckinRating = parseFloat(avgCheckinRatingString);
 
     let totalAccuracyRating = 0;
     reviews.forEach((review) => {
         totalAccuracyRating += review.accuracy;
     })
-    const avgAccuracyRating = Math.round((totalAccuracyRating / numReviews) * 10) / 10;
+    const avgAccuracyRatingString = totalAccuracyRating ? (totalAccuracyRating / numReviews).toFixed(1) : "5";
+    const avgAccuracyRating = parseFloat(avgAccuracyRatingString);
 
     let totalLocationRating = 0;
     reviews.forEach((review) => {
         totalLocationRating += review.location;
     })
-    const avgLocationRating = Math.round((totalLocationRating / numReviews) * 10) / 10;
+    const avgLocationRatingString = totalLocationRating ? (totalLocationRating / numReviews).toFixed(1) : "5";
+    const avgLocationRating = parseFloat(avgLocationRatingString);
 
     let totalValueRating = 0;
     reviews.forEach((review) => {
         totalValueRating += review.value;
     })
-    const avgValueRating = Math.round((totalValueRating / numReviews) * 10) / 10;
+    const avgValueRatingString = totalValueRating ? (totalValueRating / numReviews).toFixed(1) : "5";
+    const avgValueRating = parseFloat(avgValueRatingString);
 
     let avgOverallRating = Math.round((avgCleanlinessRating + avgCommunicationRating + avgCheckinRating
         + avgAccuracyRating + avgLocationRating + avgValueRating) / 6 * 10) / 10;
@@ -62,42 +68,42 @@ const ReviewProgressBar = () => {
                     <label hmtlFor="cleanliness">Cleanliness</label>
                     <div id="progress-rating">
                         <progress id="cleanliness" value={avgCleanlinessRating} max="5"></progress>
-                        <p>{avgCleanlinessRating}</p>
+                        <p>{avgCleanlinessRatingString}</p>
                     </div>
                 </div>
                 <div className="progress-item">
                     <label hmtlFor="accuracy">Accuracy</label>
                     <div id="progress-rating">
                         <progress id="accuracy" value={avgAccuracyRating} max="5"></progress>
-                        <p>{avgAccuracyRating}</p>
+                        <p>{avgAccuracyRatingString}</p>
                     </div>
                 </div>
                 <div className="progress-item">
                     <label hmtlFor="communication">Communication</label>
                     <div id="progress-rating">
                         <progress id="communication" value={avgCommunicationRating} max="5"></progress>
-                        <p>{avgCommunicationRating}</p>
+                        <p>{avgCommunicationRatingString}</p>
                     </div>
                 </div>
                 <div className="progress-item">
                     <label hmtlFor="location">Location</label>
                     <div id="progress-rating">
                         <progress id="location" value={avgLocationRating} max="5"></progress>
-                        <p>{avgLocationRating}</p>
+                        <p>{avgLocationRatingString}</p>
                     </div>
                 </div>
                 <div className="progress-item">
                     <label hmtlFor="checkIn">Check-in</label>
                     <div id="progress-rating">
                         <progress id="checkIn" value={avgCheckinRating} max="5"></progress>
-                        <p>{avgCheckinRating}</p>
+                        <p>{avgCheckinRatingString}</p>
                     </div>
                 </div>
                 <div className="progress-item">
                     <label hmtlFor="value-rating">Value</label>
                     <div id="progress-rating">
                         <progress id="value-rating" value={avgValueRating} max="5"></progress>
-                        <p>{avgValueRating}</p>
+                        <p>{avgValueRatingString}</p>
                     </div>
                 </div>
             </div>
