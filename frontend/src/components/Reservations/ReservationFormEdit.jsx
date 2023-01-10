@@ -89,13 +89,11 @@ const ReservationFormEdit = ({reservation, setShowReservationFormEdit}) => {
                 </div>
             </div>
             <div id="guests-container">
-                <div id="guests-on-form">
-                    <input type="number"
-                    value={numGuests}
-                    placeholder="How Many Guests"
-                    onChange={(e) => setNumGuests(e.target.value)}
-                    />
-                </div>
+                <input type="number"
+                value={numGuests}
+                placeholder="How Many Guests"
+                onChange={(e) => setNumGuests(e.target.value)}
+                />
             </div>
         </div>
         <div id="reserve-button-container">

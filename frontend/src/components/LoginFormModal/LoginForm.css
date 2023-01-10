@@ -44,9 +44,9 @@
     outline: none;
     box-shadow: none;
     color: rgb(42, 42, 51);
-    -webkit-font-smoothing: antialiased;
+    /* -webkit-font-smoothing: antialiased; */
     text-transform: none;
-    font-family: "Open Sans", "Adjusted Arial", Tahoma, Geneva, sans-serif;
+    /* font-family: "Open Sans", "Adjusted Arial", Tahoma, Geneva, sans-serif; */
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;

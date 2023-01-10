@@ -22,11 +22,11 @@
 }
 
 #checkin-info{
-    width: 300px;
-    height: 130px;
+    width: 315px;
+    height: 140px;
     border: 1px solid black;
     border-radius: 10px;
-    margin-left: 32px;
+    margin-left: 24px;
 }
 
 #checkin-container{
@@ -40,33 +40,25 @@
 
 #check-in-label{
     padding-top: 18px;
-    padding-bottom: 7px;
-    padding-left: 15px;
-    padding-right: 90px;
+    padding-bottom: -10px;
+    padding-left: 18px;
+    padding-right: 93px;
     font-size: 12px;
 }
 
 #check-out-label{
     padding-top: 18px;
-    padding-bottom: 7px;
+    padding-bottom: -10px;
     font-size: 12px;
 }
 
-#guests-container{
-    width: 300px;
+#guests-container input{
+    width: 311px;
     height: 60px;
-    padding: 15px 0;
-}
-
-/* #guests-on-form{
-    display: flex;
-    justify-content: center;
-} */
-
-#guests-on-form input{
-    width: 293px;
-    height: 50px;
+    margin-top: 16px;
     border: none;
+    border-top: 1px solid black;
+    background-color: transparent;
 }
 
 #reservation-calendar{

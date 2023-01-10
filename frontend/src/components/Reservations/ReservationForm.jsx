@@ -68,7 +68,7 @@ const ReservationForm = () => {
                 <ReviewInfo />
             </div>
         </div>
-        <div id="checkin-info">
+        <div id="checkin-info" className="bold">
             <div id="checkin-container">
                 <div id="check-in-labels">
                     <p id="check-in-label">CHECK-IN</p>
@@ -84,13 +84,11 @@ const ReservationForm = () => {
                 </div>
             </div>
             <div id="guests-container">
-                <div id="guests-on-form">
-                    <input type="number"
-                    value={numGuests}
-                    placeholder="How Many Guests"
-                    onChange={(e) => setNumGuests(e.target.value)}
-                    />
-                </div>
+                <input type="number"
+                value={numGuests}
+                placeholder="How Many Guests"
+                onChange={(e) => setNumGuests(e.target.value)}
+                />
             </div>
         </div>
         <div id="reserve-button-container">
