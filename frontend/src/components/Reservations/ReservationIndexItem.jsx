@@ -38,7 +38,11 @@ const ReservationIndexItem = ({reservation}) => {
                     <p onClick={handleDelete} className="show-page-button"> Cancel</p>
                 </div>
             </div>
-            {showReservationFormEdit ? <ReservationFormEdit reservation = {reservation} setShowReservationFormEdit = {setShowReservationFormEdit}/> : ""}
+            {showReservationFormEdit ?
+                <div id="reservation-form-modal">
+                    <ReservationFormEdit reservation = {reservation} setShowReservationFormEdit = {setShowReservationFormEdit}/>
+                </div>
+            : ""}
         </div>
     )
 }
