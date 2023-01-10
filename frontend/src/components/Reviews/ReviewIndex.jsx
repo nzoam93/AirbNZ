@@ -47,7 +47,7 @@ const ReviewIndex = () => {
             {sessionUser ?
             <div className="review-button" onClick={toggleReviewForm}>Write a review</div>
             :
-            <div className="review-button">Log in to write review</div>
+            <div id="log-in-to-review">Log in to write a review yourself!</div>
             }
             {/* only appear if user clicks the toggleReviewForm button above */}
             {showReviewForm ? < ReviewForm setShowReviewForm = {setShowReviewForm}/> : ""}

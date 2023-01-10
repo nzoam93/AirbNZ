@@ -12,6 +12,12 @@ const ReviewIndexItem = ({review}) => {
 
     const sessionUser = useSelector(state => state.session.user);
     let activeUser;
+    if (sessionUser) {
+        activeUser = sessionUser.username;
+    } else {
+        activeUser = null;
+    }
+
 
     const[showReviewFormEdit, setShowReviewFormEdit] = useState(false);
     const toggleReviewForm = () => {
@@ -39,7 +45,6 @@ const ReviewIndexItem = ({review}) => {
                 {/* <div id="review-stars">{review.starRating} stars</div> */}
 
                 {/* only show if the current user is the one that made the review */}
-                {sessionUser ? activeUser = sessionUser.username : null}
                 {activeUser === review.username ?
                 <div id="review-button-container">
                     <div className="review-button" id="edit-review-button" onClick={toggleReviewForm}>Edit Review</div>

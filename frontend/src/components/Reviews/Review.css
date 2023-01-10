@@ -55,11 +55,16 @@
 }
 
 .review-button {
-    padding-top: 25px;
+    padding-top: 15px;
     padding-bottom: 20px;
     cursor: pointer;
     text-decoration: underline;
     width: fit-content;
+}
+
+#log-in-to-review{
+    padding: 25px 0 15px 0;
+    font-style: italic;
 }
 
 #edit-review-button{

@@ -1,16 +1,19 @@
 import React from "react"; //do I need to still include this line?
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import assetImg from "./houseimgs/airbnzphoto.jpg"
+import "./ReservationIndexItem.css"
 
 
 
 const ReservationIndexItem = ({reservation}) => {
     const dispatch = useDispatch();
-    const houseImg = <img src={assetImg} alt="house"/>
 
     return(
         <>
+            <div id="reservation-container">
+                <p>{reservation.checkInDate}</p>
+                <p>{reservation.numGuests}</p>
+            </div>
         </>
     )
 }
