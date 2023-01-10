@@ -10,7 +10,7 @@ const ListingIndexItem = ({listing}) => {
 
     return(
         <>
-            <Link to={`listings/${listing.id}`} id="listing-index-item">
+            <Link to={`/listings/${listing.id}`} id="listing-index-item">
                 {/* <div id="house-img"><img src={listing.photoUrls[0]} alt="house" /></div> */}
 
                 <div id="house-img">{houseImg}</div>

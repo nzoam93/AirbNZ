@@ -15,7 +15,7 @@ function ProfileButton({ user }) {
   const profileImg = <img src={assetImg} alt="house"/>
 
   const sessionUser = useSelector(state => state.session.user);
-  const linkPath = `users/${sessionUser.id}`
+  const linkPath = `/users/${sessionUser.id}`
 
 
   const openMenu = () => {

@@ -4,8 +4,17 @@
 }
 
 #reservation-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
     margin-right: 30px;
     width: 20vw;
     height: 20vw;
     border: 1px solid red;
+}
+
+#reservation-dates{
+    padding-top: 10px;
+    font-size: 15px
 }
