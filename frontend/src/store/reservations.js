@@ -111,7 +111,8 @@ export const deleteReservation = (reservationId) => async (dispatch) => {
 const reservationsReducer = (state = {}, action) => {
     switch(action.type){
         case RECEIVE_RESERVATIONS:
-            return {...state, ...action.reservations}
+            // return {...state, ...action.reservations}
+            return {...action.reservations}
         case RECEIVE_RESERVATION:
             return {...state, [action.reservation.id]: action.reservation}
         case REMOVE_RESERVATION:

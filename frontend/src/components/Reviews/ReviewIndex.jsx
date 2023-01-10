@@ -15,18 +15,10 @@ const ReviewIndex = () => {
 
     const sessionUser = useSelector(state => state.session.user)
 
-    const numReviews = reviews.length;
-    let totalRating = 0;
-    reviews.forEach((review) => {
-        totalRating += review.starRating
-    })
-    const avgRating = totalRating / numReviews;
-
     const [showReviewForm, setShowReviewForm] = useState(false)
     const toggleReviewForm = () => {
         setShowReviewForm(!showReviewForm);
     }
-
 
     useEffect(() => {
         dispatch(fetchReviews(listingId));

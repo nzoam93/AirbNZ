@@ -15,8 +15,6 @@ function ProfileButton({ user }) {
   const profileImg = <img src={assetImg} alt="house"/>
 
   const sessionUser = useSelector(state => state.session.user);
-  const linkPath = `/users/${sessionUser.id}`
-
 
   const openMenu = () => {
     if (showMenu) return;
@@ -38,7 +36,7 @@ function ProfileButton({ user }) {
 
 
   const logout = (e) => {
-    e.preventDefault();
+    // e.preventDefault(); I Need the default for the link to work...
     dispatch(sessionActions.logout());
   };
 
@@ -54,10 +52,12 @@ function ProfileButton({ user }) {
           <ul id="profile-dropdown">
             <li>{user.username}</li>
             <div className="center-content">
-              <NavLink exact to={linkPath} >
+              <NavLink exact to={`/users/${sessionUser.id}`} >
                 <button className="user-link-button">My Page</button>
               </NavLink>
-              <button className="user-link-button" onClick={logout}>Log Out</button>
+              <NavLink exact to={'/'}>
+                <button className="user-link-button" onClick={logout}>Log Out</button>
+              </NavLink>
             </div>
           </ul>
         </div>

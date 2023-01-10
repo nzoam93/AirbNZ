@@ -12,7 +12,7 @@ const ReservationForm = () => {
     const {listingId} = useParams();
     const [checkinDate, setCheckinDate] = useState();
     const [checkoutDate, setCheckoutDate] = useState();
-    const [numGuests, setNumGuests] = useState(0);
+    const [numGuests, setNumGuests] = useState(1);
     // const [focusedInput, setFocusedInput] = useState();
 
     //using time function from calendar and JS Date object
