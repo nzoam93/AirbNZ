@@ -104,7 +104,6 @@ const ReservationForm = () => {
                         <p id="num-of-guests"> {numGuests} </p>
                         <i onClick={handleAdd} className="fa-solid fa-plus num-guests-button" />
                     </div>
-
                 </div>
             </div>
             <div id="reserve-button-container">

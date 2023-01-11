@@ -15,6 +15,21 @@ const ReservationFormEdit = ({reservation, setShowReservationFormEdit}) => {
     const [checkoutDate, setCheckoutDate] = useState();
     const [numGuests, setNumGuests] = useState(reservation.numGuests);
 
+    //increment and decrement buttons
+    const handleSubtract = (e) => {
+        e.preventDefault();
+        if(numGuests > 1){
+            setNumGuests(numGuests - 1)
+        }
+    }
+
+    const handleAdd = (e) => {
+        e.preventDefault();
+        if(numGuests < reservation.numGuests){
+            setNumGuests(numGuests + 1)
+        }
+    }
+
     //using time function from calendar and JS Date object
     let checkInTime;
     let checkoutTime;
@@ -28,6 +43,8 @@ const ReservationFormEdit = ({reservation, setShowReservationFormEdit}) => {
     if(checkinDate && checkoutDate){
         daysElapsed = Math.round((checkoutTime - checkInTime) / 1000 / 60 / 60 / 24)
     }
+
+
 
     //prices for listing
     // const listing = useSelector(getListing(listingId));
@@ -92,11 +109,12 @@ const ReservationFormEdit = ({reservation, setShowReservationFormEdit}) => {
                 </div>
             </div>
             <div id="guests-container">
-                <input type="number"
-                value={numGuests}
-                placeholder="How Many Guests"
-                onChange={(e) => setNumGuests(e.target.value)}
-                />
+                <p id="guests-word-container">Guests</p>
+                <div id="guests-incrementer">
+                    <i onClick={handleSubtract} className="fa-solid fa-minus num-guests-button" />
+                    <p id="num-of-guests"> {numGuests} </p>
+                    <i onClick={handleAdd} className="fa-solid fa-plus num-guests-button" />
+                </div>
             </div>
         </div>
         <div id="reserve-button-container">
