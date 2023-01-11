@@ -16,7 +16,7 @@ export default function AllPins() {
 function Map() {
     const listings = useSelector(getListings);
 
-    const center = useMemo(() => ({lat: 37.8, lng: -122}), [])
+    const center = useMemo(() => ({lat: 37.8, lng: -122.4}), [])
     // const center = useMemo(() => ({lat: listing.latitude, lng: listing.longitude}), [])
 
     if(!listings){
@@ -26,9 +26,9 @@ function Map() {
     return(
         <>
         <GoogleMap
-            zoom = {9}
+            zoom = {11}
             center ={center}
-            mapContainerClassName="map-container"
+            mapContainerClassName="all-pins-map-container"
         >
         {listings.map((listing) =>
             <MarkerF position={{lat: listing.latitude, lng: listing.longitude}} key={listing.id} />

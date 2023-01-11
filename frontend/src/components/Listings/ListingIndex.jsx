@@ -22,6 +22,11 @@ const ListingIndex = () => {
 
     return(
         <>
+            {showGoogleMap && (
+                <div id="all-pins-holder">
+                    <AllPins />
+                </div>
+            )}
             <div id="all-listings">
                 {/* <div>Hello from listings</div> */}
                 {listings.map((listing) => <ListingIndexItem listing={listing} key={listing.id}/> )}
@@ -33,11 +38,6 @@ const ListingIndex = () => {
                 </div>
             </div>
             {/* <AllPins/> */}
-            {showGoogleMap && (
-                <div id="all-pins-holder">
-                    <AllPins />
-                </div>
-            )}
         </>
     )
 }
