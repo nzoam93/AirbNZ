@@ -52,7 +52,9 @@ class Api::ListingsController < ApplicationController
             :price,
             :num_beds,
             :num_baths,
-            :num_guests
+            :num_guests,
+            :latitude,
+            :longitude
         )
     end
 end

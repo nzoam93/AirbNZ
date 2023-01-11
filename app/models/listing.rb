@@ -16,6 +16,8 @@
 #  num_guests  :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  latitude    :float
+#  longitude   :float
 #
 class Listing < ApplicationRecord
     validates :owner_id, :title, :description, :address, :city, :state, :zip_code, :price, :num_beds, :num_baths, presence: true

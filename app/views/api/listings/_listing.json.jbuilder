@@ -10,7 +10,9 @@ json.extract! listing,
     :price,
     :num_beds,
     :num_baths,
-    :num_guests
+    :num_guests,
+    :latitude,
+    :longitude
 #We added another key-value pairing to allow us to grab the owner username
 json.owner_name listing.owner.username
 

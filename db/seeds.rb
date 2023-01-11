@@ -65,16 +65,18 @@ require "open-uri"
     puts "Creating listings..."
     listing1 = Listing.create!(
       owner_id: 2,
-      title: '3 Bedroom in Oakland',
+      title: '3 Bedroom in Oakland near Lake Merritt',
       description: 'This is the first example',
-      address: '123 AirBNZ St',
+      address: '2098 Harrison St',
       city: 'Oakland',
       state: 'CA',
       zip_code: '94605',
       price: 500,
       num_beds: 3,
       num_baths: 2,
-      num_guests: 6
+      num_guests: 6,
+      latitude: 37.80933,
+      longitude: -122.26287
     )
 
     # listing1.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house1.jpg"), filename: "house1.jpg")
@@ -87,14 +89,16 @@ require "open-uri"
       owner_id: 2,
       title: '4 Bedroom in SF',
       description: 'This is the second example',
-      address: '123 Post St',
+      address: '253 Berkeley Way',
       city: 'San Francisco',
       state: 'CA',
-      zip_code: '94605',
+      zip_code: '94131',
       price: 700,
       num_beds: 4,
       num_baths: 2,
-      num_guests: 8
+      num_guests: 8,
+      latitude: 37.73972,
+      longitude: -122.43924
     )
 
     # listing2.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house2.jpg"), filename: "house2.jpg")
@@ -107,14 +111,16 @@ require "open-uri"
       owner_id: 2,
       title: '1 Bedroom in Vallejo',
       description: 'This is the third example',
-      address: '123 Vallejo St',
+      address: '279 Carolina St',
       city: 'Vallejo',
       state: 'CA',
-      zip_code: '94605',
+      zip_code: '94590',
       price: 300,
       num_beds: 1,
       num_baths: 1,
-      num_guests: 2
+      num_guests: 2,
+      latitude: 38.10411,
+      longitude: -122.25643
     )
 
     # listing3.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house3.jpg"), filename: "house3.jpg")
@@ -134,7 +140,9 @@ require "open-uri"
       price: 800,
       num_beds: 5,
       num_baths: 3,
-      num_guests: 10
+      num_guests: 10,
+      latitude: 38.10411,
+      longitude: -122.25643
     )
 
     # listing4.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house4.jpg"), filename: "house4.jpg")
@@ -155,7 +163,9 @@ require "open-uri"
       price: 250,
       num_beds: 3,
       num_baths: 1,
-      num_guests: 6
+      num_guests: 6,
+      latitude: 38.10411,
+      longitude: -122.25643
     )
 
     # listing5.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house5.jpg"), filename: "house5.jpg")
@@ -175,7 +185,9 @@ require "open-uri"
       price: 150,
       num_beds: 1,
       num_baths: 1,
-      num_guests: 2
+      num_guests: 2,
+      latitude: 38.10411,
+      longitude: -122.25643
     )
 
     listing7 = Listing.create!(
@@ -203,7 +215,9 @@ require "open-uri"
       price: 545,
       num_beds: 4,
       num_baths: 2,
-      num_guests: 8
+      num_guests: 8,
+      latitude: 38.10411,
+      longitude: -122.25643
     )
 
     listing9 = Listing.create!(
@@ -217,7 +231,9 @@ require "open-uri"
       price: 430,
       num_beds: 6,
       num_baths: 3,
-      num_guests: 12
+      num_guests: 12,
+      latitude: 38.10411,
+      longitude: -122.25643
     )
 
     listing10 = Listing.create!(
@@ -231,7 +247,9 @@ require "open-uri"
       price: 160,
       num_beds: 2,
       num_baths: 1,
-      num_guests: 4
+      num_guests: 4,
+      latitude: 38.10411,
+      longitude: -122.25643
     )
 
     listing11 = Listing.create!(
@@ -245,7 +263,9 @@ require "open-uri"
       price: 140,
       num_beds: 2,
       num_baths: 1,
-      num_guests: 4
+      num_guests: 4,
+      latitude: 38.10411,
+      longitude: -122.25643
     )
 
     listing12 = Listing.create!(
@@ -259,7 +279,9 @@ require "open-uri"
       price: 95,
       num_beds: 1,
       num_baths: 1,
-      num_guests: 2
+      num_guests: 2,
+      latitude: 38.10411,
+      longitude: -122.25643
     )
 
     puts "Creating reservations..."
