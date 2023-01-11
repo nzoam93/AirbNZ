@@ -33,6 +33,10 @@
     padding-top: 5px;
 }
 
+#airbnz-info-second-line{
+    color: #717171;
+}
+
 #house-img img{
     height: 21vw;
     width: 21vw;
