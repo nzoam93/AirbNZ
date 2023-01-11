@@ -76,66 +76,66 @@ const ReservationForm = () => {
     //rendering on the page
     return(
         <div id="right-show">
-        <div id="preliminary-right-info-show">
-            <li className="bold price-show">${listing.price} <span id="price-span"> night</span></li>
-            <div>
-                <ReviewInfo />
-            </div>
-        </div>
-        <div id="checkin-info" className="bold">
-            <div id="checkin-container">
-                <div id="check-in-labels">
-                    <p id="check-in-label">CHECK-IN</p>
-                    <p id="check-out-label">CHECK-OUT</p>
-                </div>
-                <div id="reservation-calendar">
-                    <AirbnzCalendar
-                        checkinDate = {checkinDate}
-                        checkoutDate = {checkoutDate}
-                        setCheckinDate = {setCheckinDate}
-                        setCheckoutDate = {setCheckoutDate}
-                    />
+            <div id="preliminary-right-info-show">
+                <li className="bold price-show">${listing.price} <span id="price-span"> night</span></li>
+                <div>
+                    <ReviewInfo />
                 </div>
             </div>
-            <div id="guests-container">
-                <p id="guests-word-container">Guests</p>
-                <div id="guests-incrementer">
-                    <i onClick={handleSubtract} className="fa-solid fa-minus num-guests-button" />
-                    <p id="num-of-guests"> {numGuests} </p>
-                    <i onClick={handleAdd} className="fa-solid fa-plus num-guests-button" />
+            <div id="checkin-info" className="bold">
+                <div id="checkin-container">
+                    <div id="check-in-labels">
+                        <p id="check-in-label">CHECK-IN</p>
+                        <p id="check-out-label">CHECK-OUT</p>
+                    </div>
+                    <div id="reservation-calendar">
+                        <AirbnzCalendar
+                            checkinDate = {checkinDate}
+                            checkoutDate = {checkoutDate}
+                            setCheckinDate = {setCheckinDate}
+                            setCheckoutDate = {setCheckoutDate}
+                        />
+                    </div>
                 </div>
+                <div id="guests-container">
+                    <p id="guests-word-container">Guests</p>
+                    <div id="guests-incrementer">
+                        <i onClick={handleSubtract} className="fa-solid fa-minus num-guests-button" />
+                        <p id="num-of-guests"> {numGuests} </p>
+                        <i onClick={handleAdd} className="fa-solid fa-plus num-guests-button" />
+                    </div>
 
+                </div>
             </div>
-        </div>
-        <div id="reserve-button-container">
-            {sessionUser ?
-                <Link to={`/users/${sessionUser.id}`}>
-                    <button id="reserve-button" className="airbnz-button" onClick={handleSubmit}>Reserve</button>
-                </Link>
-                :
-                <button id="reserve-button" className="airbnz-button">Log in to Reserve</button>
-            }
-        </div>
-        <li id="charge-show">You won't be charged yet</li>
-        <div id="price-info-show">
-            <div className="price-info-item-show">
-                <li className="underline">${listing.price} x {daysElapsed} nights</li>
-                <li>${visitCost}</li>
-            </div>
-            <div className="price-info-item-show">
-                <li className="underline">Long stay discount</li>
-                {daysElapsed <= 5 ?
-                <li>N/A</li>
-                : <li>-${discount}</li>
+            <div id="reserve-button-container">
+                {sessionUser ?
+                    <Link to={`/users/${sessionUser.id}`}>
+                        <button id="reserve-button" className="airbnz-button" onClick={handleSubmit}>Reserve</button>
+                    </Link>
+                    :
+                    <button id="reserve-button" className="airbnz-button">Log in to Reserve</button>
                 }
             </div>
-            <div className="price-info-item-show">
-                <li className="underline">Cleaning fee</li>
-                <li>${cleaningFee}</li>
-            </div>
-            <div className="price-info-item-show">
-                    <li className="underline">Service fee</li>
-                    <li>${serviceFee}</li>
+            <li id="charge-show">You won't be charged yet</li>
+            <div id="price-info-show">
+                <div className="price-info-item-show">
+                    <li className="underline">${listing.price} x {daysElapsed} nights</li>
+                    <li>${visitCost}</li>
+                </div>
+                <div className="price-info-item-show">
+                    <li className="underline">Long stay discount</li>
+                    {daysElapsed <= 5 ?
+                    <li>N/A</li>
+                    : <li>-${discount}</li>
+                    }
+                </div>
+                <div className="price-info-item-show">
+                    <li className="underline">Cleaning fee</li>
+                    <li>${cleaningFee}</li>
+                </div>
+                <div className="price-info-item-show">
+                        <li className="underline">Service fee</li>
+                        <li>${serviceFee}</li>
                 </div>
                 <div className="price-info-item-show bold" id="total-show">
                     <li>Total before taxes</li>

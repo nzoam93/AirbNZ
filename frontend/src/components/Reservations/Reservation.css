@@ -1,13 +1,13 @@
 /*right-hand-side of show page*/
 #right-show{
     /* margin-right: 4.5vw; */
-    /* position: fixed; */
+    position: sticky;
+    top: 35px;
     width: 365px;
-    height: 610px;
+    height: 663px;
     border: 1px solid #dddddd;
     box-shadow: 0 0 15px #dddddd;
     border-radius: 10px;
-    /* position: relative; used to center things relative to this */
 }
 
 #right-show > * {
