@@ -1,5 +1,4 @@
 import { useState, useEffect} from "react";
-import { Calendar } from "react-calendar";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchListing, getListing } from "../../store/listings";
@@ -9,6 +8,8 @@ import "./ListingShow.css"
 import ReviewIndex from "../Reviews/ReviewIndex";
 import { getReviews } from "../../store/reviews";
 import ReviewInfo from "../Reviews/ReviewInfo";
+import GoogleMapsAPI from "../GoogleMapsAPI";
+
 
 
 
@@ -106,6 +107,9 @@ const ListingShow = () => {
 
                 <ListingShowPrice />
 
+            </div>
+            <div id="listing-map">
+                <GoogleMapsAPI />
             </div>
         </div>
     )
