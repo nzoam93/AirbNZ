@@ -1,12 +1,11 @@
-import { useState, useEffect} from "react";
+import { useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchListing, getListing } from "../../store/listings";
 import assetImg from "./houseimgs/airbnzphoto.jpg"
-import ListingShowPrice from "../Reservations/ReservationForm";
+import ReservationForm from "../Reservations/ReservationForm";
 import "./ListingShow.css"
 import ReviewIndex from "../Reviews/ReviewIndex";
-import { getReviews } from "../../store/reviews";
 import ReviewInfo from "../Reviews/ReviewInfo";
 import GoogleMapsAPI from "../GoogleMapsAPI";
 
@@ -40,10 +39,8 @@ const ListingShow = () => {
             <h5 className="bold" id="listing-title">{listing.title}</h5>
             <div className="bold" id="second-line-on-show">
                 <li>
-                <ReviewInfo />
-
-                {"•" } {listing.city}, {listing.state}, United States
-
+                    <ReviewInfo />
+                    {"•" } {listing.city}, {listing.state}, United States
                 </li>
                 <li> Share Save</li>
             </div>
@@ -93,23 +90,19 @@ const ListingShow = () => {
                             </div>
                         </div>
                     </div>
-                    {/* <div id="calendar-show">
-                        <Calendar />
-                    </div> */}
                     <div id="reviews-show">
-
-
                         <ReviewIndex />
-
-
                     </div>
                 </div>
 
-                <ListingShowPrice />
-
+                <ReservationForm />
             </div>
-            <div id="listing-map">
-                <GoogleMapsAPI />
+
+            <div id="map-container-on-show">
+                <p className="title-show bold">Where you'll be</p>
+                <div id="listing-map">
+                    <GoogleMapsAPI />
+                </div>
             </div>
         </div>
     )
