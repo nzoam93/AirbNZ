@@ -118,12 +118,24 @@ li{
 	align-items: center;
 }
 
+.airbnz-button{
+	border: none;
+	box-shadow: 0 0 2px grey;
+    transition: 0.5s;
+    background-image: linear-gradient(to right, var(--red)0%, #fda085 51%, var(--red) 100%);
+    background-size: 200% auto;
+}
+
+.airbnz-button:hover{
+	background-position: right center;
+}
+
 /* .grey{
 	color: grey;
 } */
 
 
-/* spin stuff */
+/* spin stuff a la Daphne */
 
 /* div{
     animation: spin 20s linear infinite !important
@@ -142,8 +154,9 @@ li{
     animation: spin 35s linear infinite
 }
 
-.fa-solid:hover{
+.fa-star:hover{
     transform: translateY(1px);
+	/* transform: translateX(1px); */
     z-index: 500;
     animation: spin 3s linear infinite
 }

@@ -53,10 +53,10 @@ function ProfileButton({ user }) {
             <li>{user.username}</li>
             <div className="center-content">
               <NavLink exact to={`/users/${sessionUser.id}`} >
-                <button className="user-link-button">My Page</button>
+                <button className="user-link-button airbnz-button">My Page</button>
               </NavLink>
               <NavLink exact to={'/'}>
-                <button className="user-link-button" onClick={logout}>Log Out</button>
+                <button className="user-link-button airbnz-button" onClick={logout}>Log Out</button>
               </NavLink>
             </div>
           </ul>

@@ -37,17 +37,20 @@
 }
 
 .user-link-button{
-    border-radius: 7px;
+    border-radius: 9px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 26px;
-    background-color: var(--red);
+    /* background-color: var(--red); */
     color: white;
     cursor: pointer;
-    margin-top: 0.5vh;
-    margin-right: 0.5vw;
+    padding: 5px 15px;
+    margin-top: 7px;
+    margin-right: 10px;
+    border: none;
 }
+
 
 /*transition for the icon to have grey bar below (per Abbey help)*/
 .icon:after {

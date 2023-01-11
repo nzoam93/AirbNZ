@@ -110,10 +110,10 @@ const ReservationForm = () => {
         <div id="reserve-button-container">
             {sessionUser ?
                 <Link to={`/users/${sessionUser.id}`}>
-                    <button id="reserve-button" onClick={handleSubmit}>Reserve</button>
+                    <button id="reserve-button" className="airbnz-button" onClick={handleSubmit}>Reserve</button>
                 </Link>
                 :
-                <button id="reserve-button" onClick={handleSubmit}>Reserve</button>
+                <button id="reserve-button" className="airbnz-button">Log in to Reserve</button>
             }
         </div>
         <li id="charge-show">You won't be charged yet</li>

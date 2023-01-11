@@ -101,7 +101,7 @@ const ReservationFormEdit = ({reservation, setShowReservationFormEdit}) => {
         </div>
         <div id="reserve-button-container">
             {/* <Link to={`/users/${sessionUser.id}`}> */}
-                <button id="reserve-button" onClick={handleSubmit}>Reserve</button>
+                <button id="reserve-button" className="airbnz-button" onClick={handleSubmit}>Reserve</button>
             {/* </Link> */}
         </div>
         <li id="charge-show">You won't be charged yet</li>
