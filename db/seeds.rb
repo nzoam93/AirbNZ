@@ -190,6 +190,12 @@ require "open-uri"
       longitude: -122.34722
     )
 
+    # listing6.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house6.jpg"), filename: "house6.jpg")
+    # listing6.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house6room1.jpg"), filename: "house6room1.jpg")
+    # listing6.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house6room2.jpg"), filename: "house6room2.jpg")
+    # listing6.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house6room3.jpg"), filename: "house6room3.jpg")
+    # listing6.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house6room4.jpg"), filename: "house6room4.jpg")
+
     listing7 = Listing.create!(
       owner_id: 1,
       title: '3 Bedroom in Palo Alto',
@@ -205,6 +211,12 @@ require "open-uri"
       latitude: 37.43815,
       longitude: -122.15576
     )
+
+    # listing7.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house7.jpg"), filename: "house7.jpg")
+    # listing7.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house7room1.jpg"), filename: "house7room1.jpg")
+    # listing7.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house7room2.jpg"), filename: "house7room2.jpg")
+    # listing7.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house7room3.jpg"), filename: "house7room3.jpg")
+    # listing7.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house7room4.jpg"), filename: "house7room4.jpg")
 
     listing8 = Listing.create!(
       owner_id: 1,
@@ -222,6 +234,12 @@ require "open-uri"
       longitude: -122.93603
     )
 
+    # listing8.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house8.jpg"), filename: "house8.jpg")
+    # listing8.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house8room1.jpg"), filename: "house8room1.jpg")
+    # listing8.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house8room2.jpg"), filename: "house8room2.jpg")
+    # listing8.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house8room3.jpg"), filename: "house8room3.jpg")
+    # listing8.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house8room4.jpg"), filename: "house8room4.jpg")
+
     listing9 = Listing.create!(
       owner_id: 1,
       title: '6 Bedroom in Vallejo',
@@ -237,6 +255,12 @@ require "open-uri"
       latitude: 38.13613,
       longitude: -122.20323
     )
+
+    # listing9.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house9.jpg"), filename: "house9.jpg")
+    # listing9.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house9room1.jpg"), filename: "house9room1.jpg")
+    # listing9.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house9room2.jpg"), filename: "house9room2.jpg")
+    # listing9.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house9room3.jpg"), filename: "house9room3.jpg")
+    # listing9.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house9room4.jpg"), filename: "house9room4.jpg")
 
     listing10 = Listing.create!(
       owner_id: 1,
@@ -254,6 +278,12 @@ require "open-uri"
       longitude: -122.45891
     )
 
+    # listing10.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house10.jpg"), filename: "house10.jpg")
+    # listing10.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house10room1.jpg"), filename: "house10room1.jpg")
+    # listing10.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house10room2.jpg"), filename: "house10room2.jpg")
+    # listing10.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house10room3.jpg"), filename: "house10room3.jpg")
+    # listing10.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house10room4.jpg"), filename: "house10room4.jpg")
+
     listing11 = Listing.create!(
       owner_id: 1,
       title: '2 Bedroom in Oakland',
@@ -270,6 +300,12 @@ require "open-uri"
       longitude: -122.16334
     )
 
+    # listing11.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house11.jpg"), filename: "house11.jpg")
+    # listing11.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house11room1.jpg"), filename: "house11room1.jpg")
+    # listing11.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house11room2.jpg"), filename: "house11room2.jpg")
+    # listing11.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house11room3.jpg"), filename: "house11room3.jpg")
+    # listing11.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house11room4.jpg"), filename: "house11room4.jpg")
+
     listing12 = Listing.create!(
       owner_id: 2,
       title: '1 Bedroom in Marin',
@@ -285,6 +321,12 @@ require "open-uri"
       latitude: 37.83381,
       longitude: -122.50665
     )
+
+    # listing12.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house12.jpg"), filename: "house12.jpg")
+    # listing12.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house12room1.jpg"), filename: "house12room1.jpg")
+    # listing12.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house12room2.jpg"), filename: "house12room2.jpg")
+    # listing12.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house12room3.jpg"), filename: "house12room3.jpg")
+    # listing12.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs+Cont/house12room4.jpg"), filename: "house12room4.jpg")
 
     puts "Creating reservations..."
     reservation1 = Reservation.create!(
