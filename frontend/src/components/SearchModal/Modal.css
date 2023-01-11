@@ -3,15 +3,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid grey;
+    border: 1px solid #dddddd;
     border-radius: 20px;
     min-width: 28vw;
     margin-bottom: 2px;
     cursor: pointer;
 }
 
+#search-bar:hover{
+    box-shadow: 0 2px 5px grey;
+    /* border-color: var(--red); */
+}
+
 #start-your-search{
-    margin-left: 5px;
+    margin-left: 20px;
 }
 
 
@@ -64,9 +69,9 @@
     background-color: grey;
 } */
 
-.search-button-info:focus{
+/* .search-button-info:focus{
     background-color: lightblue;
-}
+} */
 
 
 

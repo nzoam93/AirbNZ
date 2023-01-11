@@ -41,8 +41,9 @@ export default function DropdownModal() {
 
     return (
         <>
-            <button onClick={toggleDropdownModal} className="btn-modal icon">
-                <i className="fa-solid fa-user-circle fa-2x" />
+            <button onClick={toggleDropdownModal} className="btn-modal" id="profile-button-hamburger">
+                <i className="fa-solid fa-bars" />
+                <i className="fa-solid fa-user-circle" />
             </button>
             {/* shortcircuit conditional below that returns if true */}
             {showDropdownModal && (
