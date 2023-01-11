@@ -1,13 +1,4 @@
-/* body.active-modal {
-    overflow-y: hidden;
-} */
-
 .btn-modal {
-    /* padding: 10px 20px; */
-    /* display: block; */
-    /* margin: 0px auto 0; */
-    /* font-size: 15px; */
-    /* cursor: pointer; */
     margin: 5px;
 }
 
@@ -24,31 +15,29 @@
 .overlay {
     background: rgba(49,49,49,0.8);
 }
+
 .modal-content {
     position: absolute;
-    top: 8%;
+    top: 80px;
     right: 5%;
-    /* font-size: 15px; */
-    /* transform: translate(-50%, -50%); */
     line-height: 2.2; /* makes it so there is space between the lines */
     background: white;
     border-radius: 10px;
-    /* max-width: 150px; */
-    min-width: 20px;
     cursor: pointer;
 }
 
 .modal-content > * > * {
     padding: 10px 30px;
+    width: 200px;
 }
 
 .dropdown-modal-content-item{
     border-bottom: 1px solid var(--grey);
+    border-radius: 10px;
 }
 
 .modal-content > * > *:hover{
     background-color: var(--grey);
-    border-radius: 10px;
 }
 
 #profile-button-hamburger{

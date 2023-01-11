@@ -1,13 +1,13 @@
 
 /* ---------Show Page CSS------------ */
 #listing-title{
-    font-size: 30px;
-    padding: 0 0.5vw;
+    font-size: 25px;
+    padding: 0 3px;
 }
 
 #second-line-on-show{
     margin-top: 8px;
-    padding: 5px 0.5vw;
+    padding: 5px 2px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,7 +20,7 @@
 
 #more-info-show{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 /*left-hand-side of show*/
@@ -88,11 +88,11 @@
 
 /*show page grid css*/
 #photos-container{
-    margin: 1vw;
+    margin: 10px 0;
     justify-content: center;
     display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(4, 20.5vw);
+    gap: 11px;
+    grid-template-columns: repeat(4, 20.75vw);
     grid-template-rows: repeat(2, 220px);
     padding-bottom: 2vh;
 }

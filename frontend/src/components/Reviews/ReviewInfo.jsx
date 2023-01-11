@@ -61,8 +61,8 @@ const ReviewInfo = () => {
 
     return(
         <>
-            <i className="fa-solid fa-star fa-0.5x bold" />
-            <span id="price-span">{numReviews == 0 ? 5 : avgOverallRating} • <a className="underline" href="#reviews-show">{reviews.length} {reviews.length == 1 ? 'Review' : 'Reviews'}</a> </span>
+            <i className="fa-solid fa-star fa-0.5x" />
+            <span id="price-span">{numReviews === 0 ? 5 : avgOverallRating} • <a className="underline" href="#reviews-show">{reviews.length} {reviews.length === 1 ? 'Review' : 'Reviews'}</a> </span>
         </>
     )
 }

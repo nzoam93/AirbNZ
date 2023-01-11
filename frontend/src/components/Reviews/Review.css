@@ -42,7 +42,8 @@
 
 #review-body,
 #review-title {
-    margin: 15px 0
+    margin: 15px 0;
+    line-height: 1.6;
 }
 
 #review-stars {

@@ -9,7 +9,7 @@ import ReviewIndex from "../Reviews/ReviewIndex";
 import ReviewInfo from "../Reviews/ReviewInfo";
 import SinglePin from "../GoogleMapsAPI/SinglePin";
 
-
+import { AiFillStar } from 'react-icons/ai'
 
 
 const ListingShow = () => {
@@ -85,6 +85,7 @@ const ListingShow = () => {
                             </div>
                             <div id="right-offerings-show">
                                 <i className="fa-solid fa-dog show-page-icon" /> Pet Friendly <br />
+                                {/* <AiFillStar /> */}
                                 <i className="fa-solid fa-wind show-page-icon" /> Air Conditioning <br />
                                 <i className="fa-solid fa-car show-page-icon" /> Free parking <br />
                             </div>

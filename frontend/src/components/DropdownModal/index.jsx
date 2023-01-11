@@ -5,13 +5,13 @@ import LoginForm from "../LoginFormModal/LoginForm";
 import SignupForm from "../SignupModal/SignupForm";
 import { Modal } from "../../context/Modal";
 import "./Modal.css";
-import ScavengerHunt from "../ScavengerHunt";
+// import ScavengerHunt from "../ScavengerHunt";
 
 export default function DropdownModal() {
     const [showDropdownModal, setShowDropdownModal] = useState(false);
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [showSignupModal, setShowSignupModal] = useState(false);
-    const [showScavengerHuntModal, setShowScavengerHuntModal] = useState(false)
+    // const [showScavengerHuntModal, setShowScavengerHuntModal] = useState(false)
 
     const dispatch = useDispatch();
 
@@ -34,10 +34,10 @@ export default function DropdownModal() {
         return dispatch(login({credential:`demo@user.io`, password:`password`}))
     }
 
-    const scavengerHuntClick = () => {
-        setShowDropdownModal(!showDropdownModal);
-        setShowScavengerHuntModal(!showScavengerHuntModal);
-    }
+    // const scavengerHuntClick = () => {
+    //     setShowDropdownModal(!showDropdownModal);
+    //     setShowScavengerHuntModal(!showScavengerHuntModal);
+    // }
 
     return (
         <>
@@ -55,7 +55,7 @@ export default function DropdownModal() {
                             <li className="dropdown-modal-content-item" onClick={signupClick}> Sign Up </li>
                             <li className="dropdown-modal-content-item" id="demo-user" onClick={demoLogin}>Demo Login</li>
                             {/* <li> Feature Scavenger Hunt  </li> */}
-                            <li onClick={scavengerHuntClick}>Feature Scavenger Hunt</li>
+                            {/* <li onClick={scavengerHuntClick}>Feature Scavenger Hunt</li> */}
 
                         </ul>
                     </div>
@@ -77,11 +77,11 @@ export default function DropdownModal() {
             )}
 
             {/* Showing scavenger hunt modal if its state is true */}
-            {showScavengerHuntModal && (
+            {/* {showScavengerHuntModal && (
                 <Modal onClose={() => setShowScavengerHuntModal(false)}>
                     <ScavengerHunt />
                 </Modal>
-            )}
+            )} */}
         </>
     );
 }
