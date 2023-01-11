@@ -1,16 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchListings, getListings } from "../../store/listings";
 import ListingIndexItem from "./ListingIndexItem";
 import './Listing.css';
+import AllPins from "../GoogleMapsAPI/AllPins";
+
 
 const ListingIndex = () => {
     const dispatch = useDispatch();
     const listings = useSelector(getListings);
+    const [showGoogleMap, setShowGoogleMap] = useState(false);
 
     useEffect(() => {
         dispatch(fetchListings());
     }, [])
+
+    const toggleMap = () => {
+        setShowGoogleMap(!showGoogleMap)
+    }
 
 
     return(
@@ -20,10 +27,17 @@ const ListingIndex = () => {
                 {listings.map((listing) => <ListingIndexItem listing={listing} key={listing.id}/> )}
             </div>
             <div id="all-listings-map-container">
-                <div id="all-listings-map">
-                    Hello
+                <div onClick={toggleMap} id="all-listings-map" className="airbnz-button">
+                    <p>Show map</p>
+                    <i className="fa-solid fa-map" />
                 </div>
             </div>
+            {/* <AllPins/> */}
+            {showGoogleMap && (
+                <div id="all-pins-holder">
+                    <AllPins />
+                </div>
+            )}
         </>
     )
 }

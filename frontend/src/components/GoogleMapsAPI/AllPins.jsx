@@ -1,11 +1,10 @@
 import { useMemo } from "react";
 import {GoogleMap, useLoadScript, MarkerF} from "@react-google-maps/api";
 import "./GoogleMapsAPI.css"
-import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { getListing } from "../../store/listings";
+import { getListings } from "../../store/listings";
 
-export default function GoogleMapsAPI() {
+export default function AllPins() {
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY
     })
@@ -15,20 +14,25 @@ export default function GoogleMapsAPI() {
 }
 
 function Map() {
-    const {listingId} = useParams();
-    const listing = useSelector(getListing(listingId));
+    const listings = useSelector(getListings);
 
-    // const center = useMemo(() => ({lat: 37.8, lng: -122.3}), [])
-    const center = useMemo(() => ({lat: listing.latitude, lng: listing.longitude}), [])
+    const center = useMemo(() => ({lat: 37.8, lng: -122}), [])
+    // const center = useMemo(() => ({lat: listing.latitude, lng: listing.longitude}), [])
+
+    if(!listings){
+        return null;
+    }
 
     return(
         <>
         <GoogleMap
-            zoom = {11}
+            zoom = {9}
             center ={center}
             mapContainerClassName="map-container"
         >
-        <MarkerF position={{lat: listing.latitude, lng: listing.longitude}} />
+        {listings.map((listing) =>
+            <MarkerF position={{lat: listing.latitude, lng: listing.longitude}} key={listing.id} />
+        )}
         </GoogleMap>
         </>
     )

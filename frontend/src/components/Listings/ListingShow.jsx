@@ -7,7 +7,7 @@ import ReservationForm from "../Reservations/ReservationForm";
 import "./ListingShow.css"
 import ReviewIndex from "../Reviews/ReviewIndex";
 import ReviewInfo from "../Reviews/ReviewInfo";
-import GoogleMapsAPI from "../GoogleMapsAPI";
+import SinglePin from "../GoogleMapsAPI/SinglePin";
 
 
 
@@ -101,7 +101,7 @@ const ListingShow = () => {
             <div id="map-container-on-show">
                 <p className="title-show bold">Where you'll be</p>
                 <div id="listing-map">
-                    <GoogleMapsAPI />
+                    <SinglePin />
                 </div>
             </div>
         </div>

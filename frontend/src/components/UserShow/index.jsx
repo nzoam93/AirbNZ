@@ -17,7 +17,7 @@ const UserShow = () => {
                  <div id="user-reservations-container">
                 {Object.values(reservations).length > 0 ?
                     <p className="title-show">Woohoo! Get excited for your upcoming reservations:</p>
-                    :  <p className="title-show">Looks like you have no reservations yet</p>
+                    :  <p className="title-show">You currently have no upcoming reservations. If you would like to make one, please go to the home page!</p>
                 }
                 <ReservationIndex/>
             </div>

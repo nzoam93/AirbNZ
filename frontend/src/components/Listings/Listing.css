@@ -58,20 +58,24 @@
 #all-listings-map-container{
     display: flex;
     justify-content: center;
+    position: sticky;
+    bottom: 30px;
 }
 
 #all-listings-map{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    position: sticky;
-    top: 90vh;
     height: 50px;
-    width: 200px;
-    border: 1px solid red;
-    border-radius: 10px;
-    background-color: white;
+    width: 150px;
+    border-radius: 22px;
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 5px grey;
+    cursor: pointer;
 }
+
+
 
 
 @media (max-width: 1250px){

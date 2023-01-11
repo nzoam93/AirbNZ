@@ -132,7 +132,7 @@ require "open-uri"
     listing4 = Listing.create!(
       owner_id: 1,
       title: '5 Bedroom in San Rafael',
-      description: 'This is the fourth example',
+      description: 'This is the fourth example. Near San Quentin Beach!',
       address: '123 San Rafael St',
       city: 'San Rafael',
       state: 'CA',
@@ -141,8 +141,8 @@ require "open-uri"
       num_beds: 5,
       num_baths: 3,
       num_guests: 10,
-      latitude: 38.10411,
-      longitude: -122.25643
+      latitude: 37.94228,
+      longitude: -122.48462
     )
 
     # listing4.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house4.jpg"), filename: "house4.jpg")
@@ -155,7 +155,7 @@ require "open-uri"
     listing5 = Listing.create!(
       owner_id: 1,
       title: '3 Bedroom in Richmond',
-      description: 'This is the fifth example',
+      description: 'This is the fifth example. Just steps away from Point Molate Beach Park!',
       address: '123 Richmond St',
       city: 'Richmond',
       state: 'CA',
@@ -164,8 +164,8 @@ require "open-uri"
       num_beds: 3,
       num_baths: 1,
       num_guests: 6,
-      latitude: 38.10411,
-      longitude: -122.25643
+      latitude: 37.94700,
+      longitude: -122.41495
     )
 
     # listing5.photos.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/House+Imgs/house5.jpg"), filename: "house5.jpg")
@@ -177,7 +177,7 @@ require "open-uri"
     listing6 = Listing.create!(
       owner_id: 1,
       title: '1 Bedroom in San Mateo',
-      description: 'This is the sixth example',
+      description: 'This is the sixth example. Just a short drive to Crystal Springs Golf Course!',
       address: '123 San Mateo St',
       city: 'San Mateo',
       state: 'CA',
@@ -186,14 +186,14 @@ require "open-uri"
       num_beds: 1,
       num_baths: 1,
       num_guests: 2,
-      latitude: 38.10411,
-      longitude: -122.25643
+      latitude: 37.56958,
+      longitude: -122.34722
     )
 
     listing7 = Listing.create!(
       owner_id: 1,
       title: '3 Bedroom in Palo Alto',
-      description: 'This is the seventh example',
+      description: 'This is the seventh example. Great for University Students. Very close to campus!',
       address: '123 Palo Alto St',
       city: 'Palo Alto',
       state: 'CA',
@@ -201,13 +201,15 @@ require "open-uri"
       price: 630,
       num_beds: 3,
       num_baths: 2,
-      num_guests: 6
+      num_guests: 6,
+      latitude: 37.43815,
+      longitude: -122.15576
     )
 
     listing8 = Listing.create!(
       owner_id: 1,
       title: '4 Bedroom in Marin',
-      description: 'This is the eighth example',
+      description: 'This is the eighth example. You can walk to Dillon Beach within 15 minutes!',
       address: '123 Marin St',
       city: 'Marin',
       state: 'CA',
@@ -216,14 +218,14 @@ require "open-uri"
       num_beds: 4,
       num_baths: 2,
       num_guests: 8,
-      latitude: 38.10411,
-      longitude: -122.25643
+      latitude: 38.23954,
+      longitude: -122.93603
     )
 
     listing9 = Listing.create!(
       owner_id: 1,
       title: '6 Bedroom in Vallejo',
-      description: 'This is the ninth example',
+      description: 'This is the ninth example. Perfect for those seeking a thrilling adventure at Six Flags!',
       address: '123 Vallejo St',
       city: 'Vallejo',
       state: 'CA',
@@ -232,14 +234,14 @@ require "open-uri"
       num_beds: 6,
       num_baths: 3,
       num_guests: 12,
-      latitude: 38.10411,
-      longitude: -122.25643
+      latitude: 38.13613,
+      longitude: -122.20323
     )
 
     listing10 = Listing.create!(
       owner_id: 1,
       title: '2 Bedroom in SF',
-      description: 'This is the tenth example',
+      description: 'This is the tenth example. Right next to Golden Gate Park!',
       address: '123 San Francisco St',
       city: 'San Francisco',
       state: 'CA',
@@ -248,14 +250,14 @@ require "open-uri"
       num_beds: 2,
       num_baths: 1,
       num_guests: 4,
-      latitude: 38.10411,
-      longitude: -122.25643
+      latitude: 37.77758,
+      longitude: -122.45891
     )
 
     listing11 = Listing.create!(
       owner_id: 1,
       title: '2 Bedroom in Oakland',
-      description: 'This is the eleventh example',
+      description: 'This is the eleventh example. Picturesque location in the Oakland Hills',
       address: '123 Oakland St',
       city: 'Oakland',
       state: 'CA',
@@ -264,14 +266,14 @@ require "open-uri"
       num_beds: 2,
       num_baths: 1,
       num_guests: 4,
-      latitude: 38.10411,
-      longitude: -122.25643
+      latitude: 37.77101,
+      longitude: -122.16334
     )
 
     listing12 = Listing.create!(
       owner_id: 2,
       title: '1 Bedroom in Marin',
-      description: 'This is the twelvth example',
+      description: 'This is the twelvth example. Just a 2 minute drive to the Golden Gate Bridge! Pristine views!',
       address: '123 Marin St',
       city: 'Marin',
       state: 'CA',
@@ -280,8 +282,8 @@ require "open-uri"
       num_beds: 1,
       num_baths: 1,
       num_guests: 2,
-      latitude: 38.10411,
-      longitude: -122.25643
+      latitude: 37.83381,
+      longitude: -122.50665
     )
 
     puts "Creating reservations..."
