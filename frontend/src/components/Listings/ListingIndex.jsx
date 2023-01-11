@@ -17,6 +17,11 @@ const ListingIndex = () => {
 
     const toggleMap = () => {
         setShowGoogleMap(!showGoogleMap)
+        if(showGoogleMap){
+            document.getElementById("show-map-words").innerHTML = "Show map";
+        } else{
+            document.getElementById("show-map-words").innerHTML= "Show items"
+        }
     }
 
 
@@ -33,7 +38,7 @@ const ListingIndex = () => {
             </div>
             <div id="all-listings-map-container">
                 <div onClick={toggleMap} id="all-listings-map" className="airbnz-button">
-                    <p>Show map</p>
+                    <p id="show-map-words">Show map</p>
                     <i className="fa-solid fa-map" />
                 </div>
             </div>
