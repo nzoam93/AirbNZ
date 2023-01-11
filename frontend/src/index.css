@@ -82,7 +82,7 @@ body{
 
 /* makes the icons not appear super large */
 .icon{
-	max-height: 35px;
+	/* max-height: 35px; */
 	/* color: var(--red); exact color from AirBNB website */
 	background-color: transparent;
 	border: none;

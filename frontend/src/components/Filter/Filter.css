@@ -22,6 +22,7 @@
     color: rgba(85, 85, 85, var(--tw-text-opacity));
 } */
 
+/*transition for the icon to have grey bar below (per Abbey help)*/
 .filter-icon:after {
       content: "";
       display: block;

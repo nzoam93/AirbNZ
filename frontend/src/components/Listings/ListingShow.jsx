@@ -35,7 +35,7 @@ const ListingShow = () => {
 
     return(
         <div id="show-page">
-            {console.log("hi from show page")}
+            {/* {console.log("hi from show page")} */}
             <h5 className="bold" id="listing-title">{listing.title}</h5>
             <div className="bold" id="second-line-on-show">
                 <li>

@@ -20,7 +20,7 @@ export default function Modal() {
 
             className="btn-modal icon"
             >
-                <i className="fa-solid fa-magnifying-glass fa-2x" />
+                <i className="fa-solid fa-magnifying-glass" id="search-bar-icon"/>
             </button>
             {/* shortcircuit conditional below that returns if true */}
             {modal && (
