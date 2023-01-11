@@ -1,6 +1,9 @@
 import { useMemo } from "react";
 import {GoogleMap, useLoadScript, MarkerF} from "@react-google-maps/api";
 import "./GoogleMapsAPI.css"
+import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { getListing } from "../../store/listings";
 
 export default function GoogleMapsAPI() {
     const { isLoaded } = useLoadScript({
@@ -12,14 +15,21 @@ export default function GoogleMapsAPI() {
 }
 
 function Map() {
-    const center = useMemo(() => ({lat: 37.8, lng: -122.3}), [])
+    const {listingId} = useParams();
+    const listing = useSelector(getListing(listingId));
+
+    // const center = useMemo(() => ({lat: 37.8, lng: -122.3}), [])
+    const center = useMemo(() => ({lat: listing.latitude, lng: listing.longitude}), [])
+
     return(
+        <>
         <GoogleMap
-            zoom = {10}
+            zoom = {11}
             center ={center}
             mapContainerClassName="map-container"
         >
-        <MarkerF position={{lat: 44, lng: -80}} />
+        <MarkerF position={{lat: listing.latitude, lng: listing.longitude}} />
         </GoogleMap>
+        </>
     )
 }

@@ -1,13 +1,16 @@
 /*right-hand-side of show page*/
 #right-show{
     /* margin-right: 4.5vw; */
+    margin-top: 5px;
     position: sticky;
-    top: 35px;
+    top: 60px;
     width: 365px;
-    height: 663px;
+    height: 610px;
     border: 1px solid #dddddd;
     box-shadow: 0 0 15px #dddddd;
     border-radius: 10px;
+    z-index: 2;
+    background-color: white; /*so that it overwrites during update on editing form*/
 }
 
 #right-show > * {

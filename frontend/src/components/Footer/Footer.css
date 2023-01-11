@@ -8,6 +8,8 @@
     margin: 10px;
     padding-top: 20px;
     border-top: 1px solid var(--grey);
+    /* position: sticky;
+    bottom: 10px; */
 }
 
 

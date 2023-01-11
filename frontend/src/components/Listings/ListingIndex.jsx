@@ -19,6 +19,11 @@ const ListingIndex = () => {
                 {/* <div>Hello from listings</div> */}
                 {listings.map((listing) => <ListingIndexItem listing={listing} key={listing.id}/> )}
             </div>
+            <div id="all-listings-map-container">
+                <div id="all-listings-map">
+                    Hello
+                </div>
+            </div>
         </>
     )
 }
