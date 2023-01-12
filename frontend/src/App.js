@@ -34,7 +34,7 @@ function App() {
 
         <Route exact path="/listings/:listingId" component={ListingShow} />
 
-        <Redirect to="/error" />
+        {/* <Redirect to="/error" /> */}
       </Switch>
       <Footer />
     </>

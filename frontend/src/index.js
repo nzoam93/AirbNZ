@@ -9,6 +9,10 @@ import * as sessionActions from './store/session';
 import { ModalProvider } from "./context/Modal";
 import { createRoot } from 'react-dom/client';
 
+//for search functionality. Then, you have to wrap the app in QueryParamProvider
+import {QueryParamProvider} from 'use-query-params';
+import {ReactRouter5Adapter} from 'use-query-params/adapters/react-router-5';
+
 
 
 //defines the store from the configureStore function
@@ -32,7 +36,9 @@ const renderApplication = () => {
       <ModalProvider>
         <Provider store={store}>
           <BrowserRouter>
-            <App />
+            <QueryParamProvider adapter={ReactRouter5Adapter}>
+              <App />
+            </QueryParamProvider>
           </BrowserRouter>
         </Provider>
       </ModalProvider>
@@ -40,7 +46,7 @@ const renderApplication = () => {
   }
 
   //this is what is actually rendered
-  const container = document.getElementById('root')
+  const container = document.getElementById('root');
   const root = createRoot(container);
   root.render(
     <React.StrictMode>

@@ -2,7 +2,22 @@ class Api::ListingsController < ApplicationController
     before_action :set_listing, only: [:show, :update, :destroy]
 
     def index
-        @listings = Listing.all
+        if params[:search]
+            search_terms = params[:search].downcase.split(" ") #turn into an array with split
+        end
+        if search_terms
+            @search_query = []
+            search_terms.each do |search_term|
+                #LOWER to make it match lowercase entry from frontend
+                @search_query << Listing.where('LOWER(listings.city) LIKE ?', "%#{search_term}%")
+                                        # .or(Listing.where('listings.type LIKE ?', "%#{search_term}%")
+            end
+            #this takes the intersection of all the listings (i.e. "San" and "Francisco")
+            @listings = @search_query.reduce(:and)
+        else
+            @listings = Listing.all
+        end
+
     end
 
     def show

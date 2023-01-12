@@ -18,7 +18,12 @@
 
 #start-your-search{
     margin-left: 20px;
+    border: none;
 }
+
+/* #start-your-search :focus{
+    border: none;
+} */
 
 #search-bar-icon{
     font-size: 19px;

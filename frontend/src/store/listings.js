@@ -5,6 +5,7 @@ import csrfFetch from "./csrf";
 export const RECEIVE_LISTINGS = 'listings/RECEIVE_LISTINGS';
 export const RECEIVE_LISTING = 'listings/RECEIVE_LISTING';
 export const REMOVE_LISTING = 'listings/REMOVE_LISTING';
+export const CLEAR_LISTINGS = 'listings/CLEAR_LISTINGS';
 
 //ACTION CREATORS
 const receive_listings = (listings) => ({
@@ -20,6 +21,11 @@ const recieve_listing = (listing) => ({
 const remove_listing = (listingId) => ({
     type: REMOVE_LISTING,
     listingId
+})
+
+//this is used to clear the listings before the search
+export const clear_listings = () => ({
+    type: CLEAR_LISTINGS
 })
 
 
@@ -48,9 +54,24 @@ export const getListing = (listingId) => (state) => {
 
 //THUNK ACTION CREATORS
 
-//fetch all the listings from backend
-export const fetchListings = () => async (dispatch) => {
-    const response = await fetch ('/api/listings');
+//fetch all the listings from backend (no search)
+// export const fetchListings = () => async (dispatch) => {
+//     const response = await fetch ('/api/listings');
+//     if (response.ok){
+//         const listings = await response.json();
+//         dispatch(receive_listings(listings));
+//     }
+// }
+
+//fetch all the listings from backend (with search)
+export const fetchListings = (search_terms) => async (dispatch) => {
+    //the ?search= is a way to add something into params in the backend
+    let response;
+    if (search_terms){
+        response = await fetch (`/api/listings/?search=${search_terms}`);
+    } else {
+        response = await fetch (`/api/listings/`);
+    }
     if (response.ok){
         const listings = await response.json();
         dispatch(receive_listings(listings));
@@ -118,6 +139,8 @@ const listingsReducer = (state = {}, action) => {
             const newState = {...state};
             delete newState[action.listingId];
             return newState;
+        case CLEAR_LISTINGS:
+            return {};
         default:
             return state;
     }

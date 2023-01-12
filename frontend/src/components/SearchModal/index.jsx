@@ -14,6 +14,7 @@ export default function Modal() {
     //     return <ReactCalendar />
     // }
     return (
+        // <div id='search-bar' onClick={toggleModal}>
         <div id='search-bar' onClick={toggleModal}>
             <p id='start-your-search'>Start your search</p>
             <button

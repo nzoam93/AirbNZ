@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchListings, getListings } from "../../store/listings";
+import { fetchListings, getListings, clear_listings } from "../../store/listings";
 import ListingIndexItem from "./ListingIndexItem";
 import './Listing.css';
 import AllPins from "../GoogleMapsAPI/AllPins";
+import { useQueryParam, StringParam } from "use-query-params";
+
 
 
 const ListingIndex = () => {
@@ -11,9 +13,16 @@ const ListingIndex = () => {
     const listings = useSelector(getListings);
     const [showGoogleMap, setShowGoogleMap] = useState(false);
 
+    //first argument: whatever comes after the ? in the search.
+    //second argument: the data type imported at the top of the file. We do StringParam because our search is done as a string
+    const [listingSearch, setListingSearch] = useQueryParam("search", StringParam);
+
+
+    //clear the listings first so that the search can show only the ones that match the specified outcome
     useEffect(() => {
-        dispatch(fetchListings());
-    }, [])
+        dispatch(clear_listings());
+        dispatch(fetchListings(listingSearch));
+    }, [listingSearch])
 
     const toggleMap = () => {
         setShowGoogleMap(!showGoogleMap)
