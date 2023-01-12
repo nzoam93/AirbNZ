@@ -11,7 +11,6 @@
     width: 21vw;
     /* border: 1px solid green; */
     margin: 5px;
-    font-size: 18px;
     /* color: rgb(79, 72, 72); */
 }
 
@@ -19,13 +18,18 @@
     height: 500px;
 } */
 
-#link{
+/* #link{
     font-size: 25px;
     text-decoration: none;
 }
 
 #link:visited{
     text-decoration: none;
+} */
+
+
+#listing-info{
+    padding-top: 8px;
 }
 
 /*creates spacing between the items in the list */
@@ -38,15 +42,15 @@
 }
 
 #house-img img{
-    height: 21vw;
-    width: 21vw;
+    height: 20vw;
+    width: 20vw;
     border-radius: 20px;
     object-fit: cover;
 }
 
 #house-img img:hover{
-    height: 22vw;
-    width: 22vw;
+    height: 21vw;
+    width: 21vw;
 }
 
 #price-span{
@@ -107,15 +111,15 @@
     }
     #listing-index-item{
         height: 50vw;
-        width: 41vw;
+        width: 39vw;
     }
     #house-img img{
-        height: 41vw;
-        width: 41vw;
+        height: 39vw;
+        width: 39vw;
     }
     #house-img img:hover{
-        height: 42vw;
-        width: 42vw;
+        height: 40vw;
+        width: 40vw;
     }
 }
 

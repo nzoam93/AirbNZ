@@ -5,6 +5,7 @@
 }
 
 .all-pins-map-container{
+    position: absolute;
     margin: 5vh 5vw;
     width: 90vw;
     height: 90vh;

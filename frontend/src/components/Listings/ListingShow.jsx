@@ -37,12 +37,12 @@ const ListingShow = () => {
         <div id="show-page">
             {/* {console.log("hi from show page")} */}
             <h5 className="bold" id="listing-title">{listing.title}</h5>
-            <div className="bold" id="second-line-on-show">
+            <div id="second-line-on-show">
                 <li>
                     <ReviewInfo />
                     {"•" } {listing.city}, {listing.state}, United States
                 </li>
-                <li> Share Save</li>
+                {/* <li> Share Save</li> */}
             </div>
             <div id="photos-container">
                 {/* <div className="item1 grid-img">{houseImg}</div>

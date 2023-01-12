@@ -89,6 +89,7 @@ body{
 
 .nonbold{
 	font-weight: normal;
+	font-family: "airbnzFont";
 }
 
 .underline{
@@ -103,16 +104,6 @@ body{
 	border: none;
 	cursor: pointer;
 }
-
-/* .icon:hover{
-	color: aqua;
-    padding: 5px;
-    box-shadow: 5px 10px #888888;
-	background-color: rgb(213, 199, 199);
-
-	padding: 2px;
-    border-bottom: solid 2px #888888;
-} */
 
 .show-page-icon{
 	font-size: 21px;
@@ -145,11 +136,6 @@ li{
 	background-position: right center;
 }
 
-/* .grey{
-	color: grey;
-} */
-
-
 /* spin stuff a la Daphne */
 
 /* div{
@@ -171,7 +157,6 @@ li{
 
 .fa-star:hover{
     transform: translateY(1px);
-	/* transform: translateX(1px); */
     z-index: 500;
     animation: spin 3s linear infinite
 }
