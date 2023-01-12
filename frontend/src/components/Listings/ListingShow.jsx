@@ -9,9 +9,6 @@ import ReviewIndex from "../Reviews/ReviewIndex";
 import ReviewInfo from "../Reviews/ReviewInfo";
 import SinglePin from "../GoogleMapsAPI/SinglePin";
 
-import { AiFillStar } from 'react-icons/ai'
-
-
 const ListingShow = () => {
     const dispatch = useDispatch();
     const {listingId} = useParams();

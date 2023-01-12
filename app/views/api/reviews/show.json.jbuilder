@@ -7,3 +7,8 @@ json.username @review.reviewer.username
 
 json.create_date @review.created_at.strftime("%b %e, %Y")
 json.update_date @review.updated_at.strftime("%b %e, %Y")
+
+#.reviewer is the review association
+#.photo is the user association
+#.url is the AWS method
+json.profile_pic @review.reviewer.photo.url

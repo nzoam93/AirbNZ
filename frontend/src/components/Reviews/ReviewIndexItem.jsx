@@ -24,7 +24,7 @@ const ReviewIndexItem = ({review}) => {
         setShowReviewFormEdit(!showReviewFormEdit);
     }
 
-    const profileImg = <img src={assetImg} alt="house"/>
+    const defaultProfileImg = <img src={assetImg} alt="house"/>
 
     const handleDelete = () => {
         dispatch(deleteReview(review.id))
@@ -34,7 +34,11 @@ const ReviewIndexItem = ({review}) => {
         <>
             <div id="review-container">
                 <div id="user-review-info">
-                    <div id="profile-img">{profileImg}</div>
+                    {review.profilePic ?
+                        <div id="profile-img"><img src={review.profilePic} alt="profilePic" /></div>
+                        :
+                        <div id="profile-img">{defaultProfileImg}</div>
+                    }
                     <div id="username-and-time">
                         <div id="review-username">{review.username}</div>
                         <div id="review-time">{review.createDate}</div>

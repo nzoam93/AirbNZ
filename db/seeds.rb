@@ -47,11 +47,16 @@ require "open-uri"
       password: 'password'
     )
 
+    user1.photo.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/userphoto1.jpg"), filename: "userphoto1.jpg")
+
     user2 = User.create!(
       username: 'Noam',
       email: 'noam@gmail.com',
       password: 'password'
     )
+
+    user2.photo.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/userphoto2.jpg"), filename: "userphoto2.jpg")
+
 
     # More users
     # 10.times do

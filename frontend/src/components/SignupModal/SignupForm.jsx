@@ -86,9 +86,15 @@ function SignupForm() {
         />
       </div>
       <br />
-      
+      {/* <div id="icons-on-signup-container">
+        <i tabIndex={1} className="fa-solid fa-kiwi-bird fa-2x user-icon" />
+        <i tabIndex={1} className="fa-solid fa-otter fa-2x user-icon" />
+        <i tabIndex={1} className="fa-solid fa-cat fa-2x user-icon" />
+        <i tabIndex={1} className="fa-solid fa-dog fa-2x user-icon" />
+      </div>
+      <br /> */}
       <div className='login-signup-item-container'>
-        <button type="submit" className='login-signup-item' id='login-signup-submit-button'>Sign Up</button>
+        <button type="submit" className='login-signup-item airbnz-button' id='login-signup-submit-button'>Sign Up</button>
       </div>
     </form>
   );

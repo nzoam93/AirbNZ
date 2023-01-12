@@ -63,7 +63,7 @@ function LoginForm() {
       </div>
       <br />
       <div className='login-signup-item-container'>
-        <button type="submit" className='login-signup-item' id='login-signup-submit-button'>Log In</button>
+        <button type="submit" className='login-signup-item airbnz-button' id='login-signup-submit-button'>Log In</button>
       </div>
     </form>
   );
