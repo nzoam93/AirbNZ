@@ -46,7 +46,7 @@ require "open-uri"
       email: 'demo@user.io',
       password: 'password'
     )
-
+                                
     user1.photo.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/userphoto1.jpg"), filename: "userphoto1.jpg")
 
     user2 = User.create!(

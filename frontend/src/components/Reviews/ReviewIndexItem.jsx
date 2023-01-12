@@ -55,8 +55,8 @@ const ReviewIndexItem = ({review}) => {
                     <div className="review-button" onClick={handleDelete}>Delete Review</div>
                 </div> : ""
                 }
-            </div>
             {showReviewFormEdit ? <ReviewFormEdit review = {review} setShowReviewFormEdit = {setShowReviewFormEdit}/> : ""}
+            </div>
         </>
     )
 }
