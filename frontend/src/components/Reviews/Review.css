@@ -100,8 +100,8 @@
 
 #all-reviews{
     display: grid;
-    grid-template-columns: 45% 43%;
-    column-gap: 7%;
+    grid-template-columns: 45% 45%;
+    column-gap: 9.5%;
 }
 
 
