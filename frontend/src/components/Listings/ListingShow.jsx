@@ -1,4 +1,4 @@
-import { useEffect} from "react";
+import { useEffect, useReducer} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchListing, getListing } from "../../store/listings";
@@ -13,6 +13,7 @@ const ListingShow = () => {
     const dispatch = useDispatch();
     const {listingId} = useParams();
     const listing = useSelector(getListing(listingId));
+
     const houseImg = <img src={assetImg} alt="house"/>
 
     useEffect(() => {
@@ -60,8 +61,8 @@ const ListingShow = () => {
                             <p className="title-show">Entire home hosted by {listing.ownerName}</p>
                             <p>{listing.numGuests} guests • {listing.numBeds} bedrooms • {listing.numBaths} bathrooms</p>
                         </div>
-                        <div id="profile-picture-show">{houseImg}</div>
-                        {/* <div id="profile-picture-show"><img src={listing.photoUrls[0]} alt="photo1" /></div> */}
+                        {/* <div id="profile-picture-show">{houseImg}</div> */}
+                        <div id="profile-picture-show"><img src={listing.profileImg} alt="profile-img" /></div>
                     </div>
                     <div id="specialties-show">
                         <i className="fa-solid fa-wifi show-page-icon" /> Fast Wifi <br />
@@ -82,7 +83,6 @@ const ListingShow = () => {
                             </div>
                             <div id="right-offerings-show">
                                 <i className="fa-solid fa-dog show-page-icon" /> Pet Friendly <br />
-                                {/* <AiFillStar /> */}
                                 <i className="fa-solid fa-wind show-page-icon" /> Air Conditioning <br />
                                 <i className="fa-solid fa-car show-page-icon" /> Free parking <br />
                             </div>

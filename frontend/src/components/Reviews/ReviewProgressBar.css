@@ -14,3 +14,7 @@
     display: flex;
     align-items: center;
 }
+
+#progress-rating > p {
+    padding-left: 10px;
+}
