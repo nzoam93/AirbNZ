@@ -29,7 +29,7 @@ class User < ApplicationRecord
   #has_manys
   has_many :listings,
         foreign_key: :owner_id,
-        class_name: :User,
+        class_name: :Listing,
         dependent: :destroy
 
   has_many :reservations,
