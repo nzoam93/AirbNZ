@@ -48,12 +48,17 @@ const ListingIndex = () => {
                     {listings.map((listing) => <ListingIndexItem listing={listing} key={listing.id}/> )}
                 </div>
             )}
+            {/* Show an error message if there are no listings that match the criteria */}
+            {Object.values(listings).length > 0 ?
             <div id="all-listings-map-container">
                 <div onClick={toggleMap} id="all-listings-map" className="airbnz-button">
                     <p id="show-map-words">Show map</p>
                     <i className="fa-solid fa-map" />
                 </div>
             </div>
+            :
+            <p id="no-listings-message">There are no listings that match your search criteria.</p>
+            }
         </>
     )
 }

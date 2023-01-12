@@ -84,6 +84,15 @@
     cursor: pointer;
 }
 
+#no-listings-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 100px;
+    font-size: 25px;
+    font-style: italic;
+}
 
 
 

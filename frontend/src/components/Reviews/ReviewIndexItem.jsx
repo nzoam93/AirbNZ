@@ -1,8 +1,7 @@
 import React, { useState } from "react"; //do I need to still include this line?
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import assetImg from "../Listings/houseimgs/airbnzphoto.jpg"
-import { deleteReview, getReview, fetchReview, createReview, updateReview } from '../../store/reviews.js';
+import { deleteReview } from '../../store/reviews.js';
 import ReviewFormEdit from "./ReviewFormEdit";
 
 
