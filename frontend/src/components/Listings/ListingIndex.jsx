@@ -27,15 +27,18 @@ const ListingIndex = () => {
 
     return(
         <>
+            {/* show the map if ShowGoogle Map is true  */}
             {showGoogleMap && (
                 <div id="all-pins-holder">
                     <AllPins />
                 </div>
             )}
-            <div id="all-listings">
-                {/* <div>Hello from listings</div> */}
-                {listings.map((listing) => <ListingIndexItem listing={listing} key={listing.id}/> )}
-            </div>
+            {/* show the listing if ShowGoogleMap is false  */}
+            {!showGoogleMap && (
+                <div id="all-listings">
+                    {listings.map((listing) => <ListingIndexItem listing={listing} key={listing.id}/> )}
+                </div>
+            )}
             <div id="all-listings-map-container">
                 <div onClick={toggleMap} id="all-listings-map" className="airbnz-button">
                     <p id="show-map-words">Show map</p>

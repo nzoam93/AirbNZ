@@ -20,8 +20,8 @@
 }
 
 #reservation-index-item{
-    height: 50vw;
-    width: 35vw;
+    height: 45vw;
+    width: 30vw;
     /* border: 1px solid green; */
     font-size: 18px;
     margin-right: 30px;
@@ -29,8 +29,8 @@
 }
 
 #reservation-house-img img{
-    height: 35vw;
-    width: 35vw;
+    height: 30vw;
+    width: 30vw;
     border-radius: 20px;
 }
 
