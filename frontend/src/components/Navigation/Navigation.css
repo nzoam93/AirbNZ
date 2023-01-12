@@ -52,5 +52,37 @@
     border: none;
 }
 
+/*search bar CSS*/
+#search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #dddddd;
+    border-radius: 20px;
+    min-width: 28vw;
+    margin-bottom: 2px;
+    cursor: pointer;
+    height: 42px;
+}
+
+#search-bar:hover{
+    box-shadow: 0 2px 5px grey;
+    /* border-color: var(--red); */
+}
+
+#start-your-search{
+    font-size: 15px;
+    margin-left: 20px;
+    border: none;
+}
+
+#start-your-search :hover, :focus{
+    outline: none;
+}
+
+#search-bar-icon{
+    font-size: 19px;
+}
+
 
 /*transition for the icon to have grey bar below (per Abbey help)*/

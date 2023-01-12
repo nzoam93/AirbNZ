@@ -12,30 +12,32 @@ import UserShow from "./components/UserShow";
 function App() {
   return (
     <>
-      <Navigation />
-      <Switch>
-        <Route exact path="/">
-            <Filter />
-            <ListingIndex/>
-        </Route>
-        <Route exact path="/users/:userId">
-            <UserShow/>
-        </Route>
+      <div id="whole-page-styling">
+        <Navigation />
+        <Switch>
+          <Route exact path="/">
+              <Filter />
+              <ListingIndex/>
+          </Route>
+          <Route exact path="/users/:userId">
+              <UserShow/>
+          </Route>
 
-        {/* <Route exact path="/login">
-          <LoginFormPage />
-        </Route>
-        <Route exact path="/signup">
-          <SignupFormPage />
-        </Route> */}
-        <Route exact path="/error">
-            <PageNotFound />
-        </Route>
+          {/* <Route exact path="/login">
+            <LoginFormPage />
+          </Route>
+          <Route exact path="/signup">
+            <SignupFormPage />
+          </Route> */}
+          <Route exact path="/error">
+              <PageNotFound />
+          </Route>
 
-        <Route exact path="/listings/:listingId" component={ListingShow} />
+          <Route exact path="/listings/:listingId" component={ListingShow} />
 
-        {/* <Redirect to="/error" /> */}
-      </Switch>
+          {/* <Redirect to="/error" /> */}
+        </Switch>
+      </div>
       <Footer />
     </>
   );

@@ -50,6 +50,17 @@ table {
 	border-spacing: 0;
 }
 
+/* added so that I could get the footer to stay at the bottom */
+#root{
+	display: flex;
+	flex-direction: column;
+}
+
+#whole-page-styling{
+	min-height: 88vh;
+}
+/* added so that I could get the footer to stay at the bottom */
+
 
 
 
