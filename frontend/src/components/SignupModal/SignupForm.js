@@ -86,6 +86,7 @@ function SignupForm() {
         />
       </div>
       <br />
+      
       <div className='login-signup-item-container'>
         <button type="submit" className='login-signup-item' id='login-signup-submit-button'>Sign Up</button>
       </div>
