@@ -12,7 +12,7 @@ import { NavLink } from 'react-router-dom';
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
-  const profileImg = <img src={assetImg} alt="house"/>
+  const defaultProfileImg = <img src={assetImg} alt="house"/>
 
   const sessionUser = useSelector(state => state.session.user);
 
@@ -48,7 +48,12 @@ function ProfileButton({ user }) {
       </button>} */}
       {!showMenu && (
         <div className="center-content">
-          <div id="profile-img">{profileImg}</div>
+          {sessionUser.profilePic ?
+              <div id="profile-img"><img src={sessionUser.profilePic} alt="profilePic" /></div>
+              :
+              <div id="profile-img">{defaultProfileImg}</div>
+          }
+          {/* <div id="profile-img">{profileImg}</div> */}
           <ul id="profile-dropdown">
             <li>{user.username}</li>
             <div className="center-content">

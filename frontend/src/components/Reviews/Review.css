@@ -99,7 +99,7 @@
 
 #all-reviews{
     display: grid;
-    grid-template-columns: 43% 43%;
+    grid-template-columns: 45% 43%;
     column-gap: 7%;
 }
 

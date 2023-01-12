@@ -1,6 +1,6 @@
 #progress-container{
     display: grid;
-    grid-template-columns: 22vw 26vw;
+    grid-template-columns: 23vw 22vw;
     column-gap: 9%;
     row-gap: 15px;
 }

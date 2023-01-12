@@ -3,5 +3,5 @@ json.user do
 
     #.photo is the association in user model from AWS
     #.url is the AWS method
-    json.profile_img @user.photo.url
+    json.profile_pic @user.photo.url
 end
