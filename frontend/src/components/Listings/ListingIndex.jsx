@@ -42,7 +42,6 @@ const ListingIndex = () => {
                     <i className="fa-solid fa-map" />
                 </div>
             </div>
-            {/* <AllPins/> */}
         </>
     )
 }

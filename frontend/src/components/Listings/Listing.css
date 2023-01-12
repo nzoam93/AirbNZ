@@ -41,6 +41,7 @@
     height: 21vw;
     width: 21vw;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 #house-img img:hover{
