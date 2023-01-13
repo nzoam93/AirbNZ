@@ -16,7 +16,7 @@ function App() {
         <Navigation />
         <Switch>
           <Route exact path="/">
-              <Filter />
+              {/* <Filter /> */}
               <ListingIndex/>
           </Route>
           <Route exact path="/users/:userId">

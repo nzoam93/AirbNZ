@@ -46,7 +46,7 @@ require "open-uri"
       email: 'demo@user.io',
       password: 'password'
     )
-                                
+
     user1.photo.attach(io: URI.open("https://airbnz-seeds.s3.us-west-1.amazonaws.com/userphoto1.jpg"), filename: "userphoto1.jpg")
 
     user2 = User.create!(
@@ -71,7 +71,7 @@ require "open-uri"
     listing1 = Listing.create!(
       owner_id: 2,
       title: '3 Bedroom in Marin',
-      description: 'This is the first example. You can walk to Dillon Beach within 15 minutes!',
+      description: 'You can walk to Dillon Beach within 15 minutes! You should stay here if you would like to have a great time at the beach!',
       address: '2098 Harrison St',
       city: 'Marin',
       state: 'CA',
@@ -93,7 +93,7 @@ require "open-uri"
     listing2 = Listing.create!(
       owner_id: 2,
       title: '4 Bedroom in Palo Alto',
-      description: 'This is the second example.  Great for University Students. Very close to campus!',
+      description: 'This location is fantastic for any university students or families of students. It is just a short walk to campus!',
       address: '253 Berkeley Way',
       city: 'Palo Alto',
       state: 'CA',
@@ -115,7 +115,7 @@ require "open-uri"
     listing3 = Listing.create!(
       owner_id: 2,
       title: '4 Bedroom in San Jose',
-      description: 'This is the third example',
+      description: 'This location blends the desirability of being in the San Jose metropolis with the proximity of being close to the mountains.',
       address: '279 Carolina St',
       city: 'San Jose',
       state: 'CA',
@@ -137,7 +137,7 @@ require "open-uri"
     listing4 = Listing.create!(
       owner_id: 1,
       title: '5 Bedroom in San Rafael',
-      description: 'This is the fourth example. Near San Quentin Beach!',
+      description: 'Near San Quentin Beach! Also right next to the Richmond Bridge for easy access to the East Bay!',
       address: '123 San Rafael St',
       city: 'San Rafael',
       state: 'CA',
@@ -160,7 +160,7 @@ require "open-uri"
     listing5 = Listing.create!(
       owner_id: 1,
       title: '3 Bedroom in Richmond',
-      description: 'This is the fifth example. Just steps away from Point Molate Beach Park!',
+      description: 'Just steps away from Point Molate Beach Park! Come here with your pups and enjoy a day of playing frisbee at the park. ',
       address: '123 Richmond St',
       city: 'Richmond',
       state: 'CA',
@@ -182,7 +182,7 @@ require "open-uri"
     listing6 = Listing.create!(
       owner_id: 1,
       title: '2 Bedroom in San Mateo',
-      description: 'This is the sixth example. Just a short drive to Crystal Springs Golf Course!',
+      description: 'Perfect location for all fellow golfers! It is just a short drive to Crystal Springs Golf Course. We even provide complimentary golf balls upon check in.',
       address: '123 San Mateo St',
       city: 'San Mateo',
       state: 'CA',
@@ -204,7 +204,7 @@ require "open-uri"
     listing7 = Listing.create!(
       owner_id: 1,
       title: '3 Bedroom in San Francisco',
-      description: 'This is the seventh example.',
+      description: 'Ever wanted to be in the heart of San Francisco? Then this place is the perfect airbNZ for you! Walk to the Mission district, hang out at Dolores Park on a beautiful Saturday afternoon. The possibilities are endless.',
       address: '123 San Francisco St',
       city: 'San Francisco',
       state: 'CA',
@@ -226,7 +226,7 @@ require "open-uri"
     listing8 = Listing.create!(
       owner_id: 1,
       title: '4 Bedroom in Oakland',
-      description: 'This is the eighth example. You are right next to Lake Merritt!',
+      description: 'You are right next to Lake Merritt! Bring your binoculars and come observe all the seabirds and wildlife around the lake!',
       address: '123 Marin St',
       city: 'Oakland',
       state: 'CA',
@@ -249,7 +249,7 @@ require "open-uri"
     listing9 = Listing.create!(
       owner_id: 1,
       title: '6 Bedroom in South Lake Tahoe',
-      description: 'This is the ninth example. Perfect for those who want a relaxing getaway by Lake Tahoe',
+      description: 'Hope you brought your skis! This location is idlyic and is perfect for those who want a relaxing getaway by Lake Tahoe.',
       address: '123 Tahoe St',
       city: 'South Lake Tahoe',
       state: 'CA',
@@ -271,7 +271,7 @@ require "open-uri"
     listing10 = Listing.create!(
       owner_id: 1,
       title: '2 Bedroom in SF',
-      description: 'This is the tenth example. Right next to Golden Gate Park!',
+      description: 'For those that want a break of the hustle and bustle of the city, but still want access to all San Francisco has to offer, this could be the place for you. It is right next to Golden Gate Park, a beautiful park 1.2 times larger than Central Park!',
       address: '123 San Francisco St',
       city: 'San Francisco',
       state: 'CA',
@@ -293,7 +293,7 @@ require "open-uri"
     listing11 = Listing.create!(
       owner_id: 1,
       title: '2 Bedroom in Santa Cruz',
-      description: 'This is the eleventh example. Picturesque location in Santa Cruz',
+      description: 'Picturesque location in Santa Cruz. Close to both the Santa Cruz beach and the mountains!',
       address: '123 Santa Cruz St',
       city: 'Santa Cruz',
       state: 'CA',
@@ -315,7 +315,7 @@ require "open-uri"
     listing12 = Listing.create!(
       owner_id: 2,
       title: '3 Bedroom in Pacifica',
-      description: 'This is the twelvth example. Just a 2 minute walk to the beach! Pristine views!',
+      description: 'Bring your surf board when you come visit. This location is just a 2 minute walk to the beach! Pristine views in all directions!',
       address: '123 Pacifica St',
       city: 'Pacifica',
       state: 'CA',
