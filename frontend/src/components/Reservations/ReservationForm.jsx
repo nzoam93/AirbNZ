@@ -73,6 +73,28 @@ const ReservationForm = () => {
         dispatch(createReservation(data));
     }
 
+    //Display different buttons dependent on the condition
+    const reserveButton = () => {
+        if(!sessionUser){
+            return (
+                <button id="reserve-button" className="airbnz-button">Log in to Reserve</button>
+            )
+        } else {
+            if(checkinDate && checkoutDate && numGuests){
+                return(
+                    <Link to={`/users/${sessionUser.id}`}>
+                        <button id="reserve-button" className="airbnz-button" onClick={handleSubmit}>Reserve</button>
+                    </Link>
+                )
+            }
+            else {
+                return(
+                    <button id="reserve-button" className="airbnz-button">Reserve</button>
+                )
+            }
+        }
+    }
+
     //rendering on the page
     return(
         <div id="right-show">
@@ -107,13 +129,7 @@ const ReservationForm = () => {
                 </div>
             </div>
             <div id="reserve-button-container">
-                {sessionUser ?
-                    <Link to={`/users/${sessionUser.id}`}>
-                        <button id="reserve-button" className="airbnz-button" onClick={handleSubmit}>Reserve</button>
-                    </Link>
-                    :
-                    <button id="reserve-button" className="airbnz-button">Log in to Reserve</button>
-                }
+                {reserveButton()}
             </div>
             <li id="charge-show">You won't be charged yet</li>
             <div id="price-info-show">

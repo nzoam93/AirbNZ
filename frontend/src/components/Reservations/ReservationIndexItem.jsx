@@ -1,7 +1,7 @@
-import React, { useState } from "react"; //do I need to still include this line?
+import React, { useEffect, useState } from "react"; //do I need to still include this line?
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getListing } from "../../store/listings";
+import { fetchListing, getListing } from "../../store/listings";
 import { deleteReservation } from "../../store/reservations";
 import assetImg from "../Listings/houseimgs/airbnzphoto.jpg"
 import ReservationFormEdit from "./ReservationFormEdit";
@@ -11,9 +11,13 @@ const ReservationIndexItem = ({reservation}) => {
     const houseImg = <img src={assetImg} alt="house"/>
     const listingId = reservation.listingId;
     const listing = useSelector(getListing(listingId));
-
-
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchListing(listingId));
+    }, [])
+
+
 
     const[showReservationFormEdit, setShowReservationFormEdit] = useState(false);
     const toggleReservationForm = () => {
@@ -22,6 +26,10 @@ const ReservationIndexItem = ({reservation}) => {
 
     const handleDelete = () => {
         dispatch(deleteReservation(reservation.id));
+    }
+
+    if(!listing){
+        return null;
     }
 
     return(
@@ -33,7 +41,9 @@ const ReservationIndexItem = ({reservation}) => {
                     {/* <div id="reservation-house-img">{houseImg}</div> */}
                 </Link>
                 <div id="reservation-container">
-                    <p id="reservation-title">{reservation.listingTitle}</p>
+                    <div id="reservation-title-container">
+                        <p id="reservation-title">{reservation.listingTitle}</p>
+                    </div>
                     <div id="reservation-info">
                         {reservation.startDate} to {reservation.endDate} • {reservation.numGuests} guests
                     </div>

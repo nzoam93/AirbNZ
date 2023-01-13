@@ -1,16 +1,24 @@
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { fetchReservations } from "../../store/reservations";
 import ReservationIndex from "../Reservations/ReservationIndex";
 import "./UserShow.css"
 
 
 const UserShow = () => {
-    const reservations = useSelector(state => state.reservations)
-    // const sessionUser = useSelector(state => state.session.user)
+    const reservations = useSelector(state => state.reservations);
+    const dispatch = useDispatch();
+    const {userId} = useParams();
+    const sessionUser = useSelector(state => state.session.user)
 
-    // useEffect(() => {
+    useEffect(() => {
+        dispatch(fetchReservations());
+    }, [])
 
-    // }, [sessionUser])
+    if(!reservations){
+        return null;
+    }
 
     return(
         <div id="user-show-page">

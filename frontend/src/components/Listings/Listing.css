@@ -46,6 +46,7 @@
     width: 20vw;
     border-radius: 20px;
     object-fit: cover;
+    transition: all ease-in .4s;
 }
 
 #house-img img:hover{
