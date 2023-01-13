@@ -94,12 +94,12 @@ body{
 }
 
 .bold{
-	font-weight: bold;
+	/* font-weight: bold; */
 	font-family: "airbnzMediumFont";
 }
 
 .nonbold{
-	font-weight: normal;
+	/* font-weight: normal; */
 	font-family: "airbnzFont";
 }
 
