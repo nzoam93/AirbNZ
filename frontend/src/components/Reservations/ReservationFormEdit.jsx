@@ -10,10 +10,14 @@ import "./Reservation.css"
 const ReservationFormEdit = ({reservation, setShowReservationFormEdit}) => {
     const dispatch = useDispatch();
     const listingId = reservation.listingId;
-    const listing = reservation.listing;
+    const listing = useSelector(getListing(listingId));
+    // const numGuestsAllowed = listing.numGuests
     const [checkinDate, setCheckinDate] = useState();
     const [checkoutDate, setCheckoutDate] = useState();
     const [numGuests, setNumGuests] = useState(reservation.numGuests);
+
+
+
 
     //increment and decrement buttons
     const handleSubtract = (e) => {
@@ -25,7 +29,7 @@ const ReservationFormEdit = ({reservation, setShowReservationFormEdit}) => {
 
     const handleAdd = (e) => {
         e.preventDefault();
-        if(numGuests < reservation.numGuests){
+        if(numGuests < listing.numGuests){
             setNumGuests(numGuests + 1)
         }
     }
