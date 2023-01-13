@@ -3,6 +3,7 @@ import {GoogleMap, useLoadScript, MarkerF} from "@react-google-maps/api";
 import "./GoogleMapsAPI.css"
 import { useSelector } from "react-redux";
 import { getListings } from "../../store/listings";
+import { useHistory } from "react-router-dom";
 
 export default function AllPins() {
     const { isLoaded } = useLoadScript({
@@ -15,9 +16,14 @@ export default function AllPins() {
 
 function Map() {
     const listings = useSelector(getListings);
+    const history = useHistory();
 
     const center = useMemo(() => ({lat: 37.8, lng: -122.4}), [])
     // const center = useMemo(() => ({lat: listing.latitude, lng: listing.longitude}), [])
+
+    const handlePinClick = (listing) => {
+        history.push(`/listings/${listing.id}`);
+    }
 
     if(!listings){
         return null;
@@ -31,7 +37,9 @@ function Map() {
             mapContainerClassName="all-pins-map-container"
         >
         {listings.map((listing) =>
-            <MarkerF position={{lat: listing.latitude, lng: listing.longitude}} key={listing.id} />
+            <div>
+                <MarkerF onClick={() => handlePinClick(listing)} position={{lat: listing.latitude, lng: listing.longitude}} key={listing.id} />
+            </div>
         )}
         </GoogleMap>
         </>
