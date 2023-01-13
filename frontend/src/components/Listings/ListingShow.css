@@ -64,6 +64,7 @@
     border-bottom: solid 1px var(--grey);
     padding-bottom: 15px;
     padding-top: 15px;
+    line-height: 1.6;
 }
 
 #offerings-show{
