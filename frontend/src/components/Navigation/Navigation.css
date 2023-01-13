@@ -61,13 +61,13 @@
     border-radius: 20px;
     min-width: 28vw;
     margin-bottom: 2px;
-    cursor: pointer;
+    /* cursor: pointer; */
     height: 42px;
 }
 
 #search-bar:hover{
-    box-shadow: 0 2px 5px grey;
-    /* border-color: var(--red); */
+    /* box-shadow: 0 2px 5px grey; */
+    border-color: var(--red);
 }
 
 #start-your-search{
