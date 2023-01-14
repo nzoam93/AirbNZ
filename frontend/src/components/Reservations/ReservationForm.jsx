@@ -106,9 +106,9 @@ const ReservationForm = () => {
             </div>
             <div id="checkin-info" className="bold">
                 <div id="checkin-container">
-                    <div id="check-in-labels">
-                        <p id="check-in-label">CHECK-IN</p>
-                        <p id="check-out-label">CHECK-OUT</p>
+                    <div className="check-in-label-container">
+                        <p className="label-check-in">CHECK-IN</p>
+                        <p id="label-check-out">CHECK-OUT</p>
                     </div>
                     <div id="reservation-calendar">
                         <AirbnzCalendar
