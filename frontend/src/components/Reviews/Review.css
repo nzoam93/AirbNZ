@@ -104,6 +104,15 @@
     column-gap: 9.5%;
 }
 
+/*collapse all-reviews from 2 columns into 1 column*/
+@media (max-width: 1175px){
+    #all-reviews{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+    }
+}
+
 
 /* #username-and-time > :nth-child(1){
     padding-bottom: 8px;

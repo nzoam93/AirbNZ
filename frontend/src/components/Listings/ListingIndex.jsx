@@ -22,7 +22,7 @@ const ListingIndex = () => {
     useEffect(() => {
         dispatch(clear_listings());
         dispatch(fetchListings(listingSearch));
-    }, [listingSearch])
+    }, [listingSearch, dispatch])
 
     const toggleMap = () => {
         setShowGoogleMap(!showGoogleMap)

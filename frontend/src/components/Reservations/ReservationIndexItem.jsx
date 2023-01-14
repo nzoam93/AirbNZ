@@ -37,7 +37,7 @@ const ReservationIndexItem = ({reservation}) => {
             <div id="reservation-index-item">
                 <Link to={`/listings/${reservation.listingId}`}>
 
-                    <div id="house-img"><img src={listing.photoUrls[0]} alt="house" /></div>
+                    <div id="reservation-house-img"><img src={listing.photoUrls[0]} alt="house" /></div>
                     {/* <div id="reservation-house-img">{houseImg}</div> */}
                 </Link>
                 <div id="reservation-container">

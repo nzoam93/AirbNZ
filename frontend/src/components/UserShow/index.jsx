@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import { fetchReservations } from "../../store/reservations";
 import ReservationIndex from "../Reservations/ReservationIndex";
 import "./UserShow.css"
@@ -9,12 +9,12 @@ import "./UserShow.css"
 const UserShow = () => {
     const reservations = useSelector(state => state.reservations);
     const dispatch = useDispatch();
-    const {userId} = useParams();
-    const sessionUser = useSelector(state => state.session.user)
+    // const {userId} = useParams();
+    // const sessionUser = useSelector(state => state.session.user)
 
     useEffect(() => {
         dispatch(fetchReservations());
-    }, [])
+    }, [dispatch])
 
     if(!reservations){
         return null;

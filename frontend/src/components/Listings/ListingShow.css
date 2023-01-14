@@ -156,6 +156,20 @@
 }
 
 /* Makes it so only one image shows if the screen width is small  */
+
+@media (max-width: 800px){
+    #more-info-show{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #left-show{
+        width: 90%;
+    }
+
+}
+
 @media (max-width: 600px){
     #photos-container{
         justify-content: center;

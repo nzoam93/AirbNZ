@@ -149,8 +149,4 @@
         height: 65vw;
         width: 65vw;
     }
-    /* #root > *{
-        display: flex;
-        flex-direction: column;
-    } */
 }

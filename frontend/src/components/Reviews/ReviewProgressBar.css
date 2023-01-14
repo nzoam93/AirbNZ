@@ -18,3 +18,11 @@
 #progress-rating > p {
     padding-left: 10px;
 }
+
+@media (max-width: 1175px){
+    #progress-container{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+    }
+}
