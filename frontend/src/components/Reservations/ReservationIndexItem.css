@@ -8,10 +8,13 @@
 #reservations-container{
     display: grid;
     grid-template-columns: auto auto auto;
-    height: 34vw;
+    height: fit-content; /*note: this is necessary in order to get the footer to go to the bottom*/
     /* display: flex;
     flex-wrap: wrap; */
     padding: 15px 0;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
 }
 
 #reservation-container{

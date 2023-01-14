@@ -19,7 +19,7 @@ function Map() {
     const listing = useSelector(getListing(listingId));
 
     // const center = useMemo(() => ({lat: 37.8, lng: -122.3}), [])
-    const center = useMemo(() => ({lat: listing.latitude, lng: listing.longitude}), [])
+    const center = useMemo(() => ({lat: listing.latitude, lng: listing.longitude}), [listing.latitude, listing.longitude])
 
     return(
         <>

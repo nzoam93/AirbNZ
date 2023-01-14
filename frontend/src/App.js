@@ -1,8 +1,8 @@
 
 import React from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Navigation from "./components/Navigation";
-import Filter from "./components/Filter";
+// import Filter from "./components/Filter";
 import ListingIndex from "./components/Listings/ListingIndex";
 import PageNotFound from "./components/PageNotFound";
 import Footer from "./components/Footer";

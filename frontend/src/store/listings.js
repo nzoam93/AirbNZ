@@ -89,7 +89,7 @@ export const fetchListing = (listingId) => async (dispatch) => {
 
 //create a new listing in the backend
 export const createListing = (listing) => async (dispatch) => {
-    const response = await fetch (`/api/listings`, {
+    const response = await csrfFetch (`/api/listings`, {
         method: 'POST',
         body: JSON.stringify(listing),
         headers: {
@@ -104,7 +104,7 @@ export const createListing = (listing) => async (dispatch) => {
 
 //update an existing listing in the backend
 export const updateListing = (listing) => async (dispatch) => {
-    const response = await fetch (`/api/listings/${listing.id}`, {
+    const response = await csrfFetch (`/api/listings/${listing.id}`, {
         method: `PUT`,
         body: JSON.stringify(listing),
         headers: {
@@ -119,7 +119,7 @@ export const updateListing = (listing) => async (dispatch) => {
 
 //remove a listing in the backend
 export const deleteListing = (listingId) => async (dispatch) => {
-    const response = await fetch (`/api/listings/${listingId}`, {
+    const response = await csrfFetch (`/api/listings/${listingId}`, {
         method: 'DELETE'
     })
     if (response.ok){

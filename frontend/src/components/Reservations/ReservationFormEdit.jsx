@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
 import { getListing } from "../../store/listings";
 import { updateReservation } from "../../store/reservations";
 import AirbnzCalendar from "../AirbnzCalendar"

@@ -11,7 +11,7 @@ const ReservationIndex = () => {
 
     useEffect(() => {
         dispatch(fetchReservations());
-    }, [])
+    }, [dispatch])
 
 
     return(
