@@ -57,7 +57,8 @@ const ListingIndex = () => {
                 </div>
             </div>
             :
-            <p id="no-listings-message">There are no listings that match your search criteria.</p>
+            // <p id="no-listings-message">There are no listings that match your search criteria.</p>
+            <p id="no-listings-message"></p>
             }
         </>
     )
