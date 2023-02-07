@@ -48,8 +48,8 @@ const ReservationIndexItem = ({reservation}) => {
                         {reservation.startDate} to {reservation.endDate} • {reservation.numGuests} guests
                     </div>
                     <div id="show-page-buttons">
-                        <p onClick={toggleReservationForm} className="show-page-button">Update </p>
-                        <p onClick={handleDelete} className="show-page-button"> Cancel</p>
+                        <p onClick={toggleReservationForm} className="show-page-button">Update <br/> Reservation </p>
+                        <p onClick={handleDelete} className="show-page-button"> Cancel <br/> Reservation</p>
                     </div>
                 </div>
                 {showReservationFormEdit ?

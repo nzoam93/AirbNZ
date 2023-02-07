@@ -59,7 +59,7 @@ require "open-uri"
 
     # More users
     user3 = User.create!(
-      username: 'Dylan',
+      username: 'Kyle',
       email: Faker::Internet.unique.email,
       password: 'password'
     )
@@ -79,7 +79,7 @@ require "open-uri"
       password: 'password'
     )
     user7 = User.create!(
-      username: 'Jake',
+      username: 'Dylan',
       email: Faker::Internet.unique.email,
       password: 'password'
     )
@@ -94,7 +94,7 @@ require "open-uri"
       password: 'password'
     )
     user10 = User.create!(
-      username: 'Kyle',
+      username: 'Jake',
       email: Faker::Internet.unique.email,
       password: 'password'
     )
