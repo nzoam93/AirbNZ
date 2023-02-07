@@ -48,16 +48,16 @@ const ListingShow = () => {
                 {/* <li> Share Save</li> */}
             </div>
             <div id="photos-container">
-                <div className="item1 grid-img">{houseImg}</div>
+                {/* <div className="item1 grid-img">{houseImg}</div>
                 <div className="item2 grid-img">{houseImg}</div>
                 <div className="item3 grid-img">{houseImg}</div>
                 <div className="item4 grid-img">{houseImg}</div>
-                <div className="item5 grid-img">{houseImg}</div>
-                {/* <div className="item1 grid-img"><img src={listing.photoUrls[0]} alt="house" /></div>
+                <div className="item5 grid-img">{houseImg}</div> */}
+                <div className="item1 grid-img"><img src={listing.photoUrls[0]} alt="house" /></div>
                 <div className="item2 grid-img"><img src={listing.photoUrls[1]} alt="room1" /></div>
                 <div className="item3 grid-img"><img src={listing.photoUrls[2]} alt="room2" /></div>
                 <div className="item4 grid-img"><img src={listing.photoUrls[3]} alt="room3" /></div>
-                <div className="item5 grid-img"><img src={listing.photoUrls[4]} alt="room4" /></div> */}
+                <div className="item5 grid-img"><img src={listing.photoUrls[4]} alt="room4" /></div>
             </div>
             <div id="more-info-show">
                 <div id="left-show">

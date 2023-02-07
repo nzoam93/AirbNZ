@@ -77,7 +77,7 @@ const ReservationForm = () => {
     const reserveButton = () => {
         if(!sessionUser){
             return (
-                <button id="reserve-button" className="airbnz-button">Log in to Reserve</button>
+                <a id="reserve-button"  href="#profile-button-hamburger" className="airbnz-button">Please log in to Reserve</a>
             )
         } else {
             if(checkinDate && checkoutDate && numGuests){
