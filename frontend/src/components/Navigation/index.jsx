@@ -46,7 +46,7 @@ function Navigation() {
           <SearchModal />
         </div> */}
         <form id="search-bar">
-          <input onChange={(e) => setSearch(e.target.value)} type="text" id='start-your-search' value={search} placeholder='Search for a city...'/>
+          <input onChange={(e) => setSearch(e.target.value)} type="text" id='start-your-search' value={search} placeholder='Search in the Bay Area...'/>
           <button onClick={handleSearch} className="btn-modal icon">
               <i className="fa-solid fa-magnifying-glass" id="search-bar-icon"/>
           </button>
