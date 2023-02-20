@@ -10,6 +10,7 @@
     right: 0;
     bottom: 0;
     position: fixed;
+    z-index: 3;
 }
 
 .overlay {
@@ -24,6 +25,7 @@
     background: white;
     border-radius: 10px;
     cursor: pointer;
+    z-index: 3;
 }
 
 .modal-content > * > * {
@@ -34,6 +36,7 @@
 .dropdown-modal-content-item{
     border-bottom: 1px solid var(--grey);
     border-radius: 10px;
+    z-index: 3;
 }
 
 .modal-content > * > *:hover{
