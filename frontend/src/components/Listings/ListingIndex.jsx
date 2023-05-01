@@ -17,6 +17,7 @@ const ListingIndex = () => {
     //second argument: the data type imported at the top of the file. We do StringParam because our search is done as a string
     const [listingSearch, setListingSearch] = useQueryParam("search", StringParam);
 
+    //test comment for git push
 
     //clear the listings first so that the search can show only the ones that match the specified outcome
     useEffect(() => {
