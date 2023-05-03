@@ -85,3 +85,5 @@ production:
   # username: airbNZ
   # password: <%= ENV["AIRBNZ_DATABASE_PASSWORD"] %>
   url: <%= ENV['DATABASE_URL'] %>
+
+  #DO I NEED TO CHANGE THIS?
